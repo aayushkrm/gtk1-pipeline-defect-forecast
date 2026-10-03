@@ -1,0 +1,28 @@
+# Never commit raw or confidential data.
+# Raw VTD lives at ../Данные для предварительного изучения/ (outside repo).
+
+# Raw binaries — anywhere in repo
+*.xls
+*.xlsx
+*.xlsm
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.pkl
+
+# Local data / outputs (but keep small experiment summaries)
+data/
+data_raw/
+artifacts/
+outputs/
+.venv/
+__pycache__/
+*.log
+.DS_Store
+
+# Raw tabular dumps inside experiments are excluded; summaries allowed
+experiments/*.csv
+experiments/*.parquet
+experiments/*.xlsx
+experiments/*.xls

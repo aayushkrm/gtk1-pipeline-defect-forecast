@@ -1,0 +1,20 @@
+dataset:
+  reference_section: "Omsk-Novosibirsk 392-526"
+  train_pair: [2016, 2021]
+  test_pair: [2021, 2025]
+  depth_min_pct: 10
+  match_window_m: 2.0
+  offset_tol_m: 0.5
+  orient_tol_h: 1
+  grids: [100, 1000]
+features:
+  pipe: [pipe_type, thickness, length, steel, sy_su, category, anomaly_count_past, mean_depth_past]
+  segment: [density_past, mean_depth_past, max_depth_past, gwan_share, weld_proximity, ext_share]
+  covariate: [year, contractor_proxy_standard]
+models:
+  baselines: [persistence, global_poisson]
+  main: hist_gradient_boosting
+validation:
+  primary_metric: pr_auc
+  operating_point: recall_at_precision_0.7
+  seeds: [0, 1, 2]

@@ -89,3 +89,14 @@
   CONDITIONAL PASS → operational "newly-reported ≥10% @100m" confirmed as primary eval task.
   Next in reviewer order: SRTO-1608 replication (E05 = replication, not feature-rich). E05-features stay gated.
 
+## 2026-10-03 — E05 SRTO-1608 replication (frozen pipeline, external test, executed)
+- Counts (Depth>=10): 462/786/1263 — far sparser than ON. .xls read via xlrd, same R4 schema.
+  train 2016->2021: match 0.368, prev 0.101 (105 pos), B1 0.530 vs base 0.101 (lift +0.43).
+  test 2021->2024: match 0.551, prev 0.061 (63 pos), B1 0.277 vs base 0.061 (lift +0.22). B3 < B1 both pairs.
+- Reading: ranking B1>>base REPLICATES on a second section (qualitative PASS), exactly the
+  predicted pattern — preserved rank-order with lower absolute AP on sparser ground.
+  Per-s Ludwig: recalibrate threshold per section, do not pool. Small-n warning: 63 positives →
+  wide CIs (to be added); no success claimed beyond replication of ranking.
+- Next: reviewer round 3 (E04b+E05); tuned-shrinkage control for E03 (regularised Poisson/NB +
+  residual/shuffle); then small E05-feature ablation ONLY if reviewer releases the gate.
+

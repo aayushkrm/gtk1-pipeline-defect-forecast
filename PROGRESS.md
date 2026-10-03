@@ -14,4 +14,22 @@
 - Ran `experiments/e01_baseline.py` (executed, verified): presence AP 0.968/0.992 (≈base, vacuous); growth AP 0.735→0.872, spear 0.785→0.904; HGB-1feat AP 0.729 ≈ persistence (sanity pass). R@P0.7=1.0 flagged as trivial at 70%+ prevalence — operating point must move to P≥0.85 or count target; not claimed as success.
 - Repo: `gtk1-forecast/` git init, single committer aayushkrm, private GitHub `aayushkrm/gtk1-pipeline-defect-forecast`, pushed main 32578f0. Raw data excluded by `.gitignore`, only de-identified aggregates committed.
 - Next: E05 full-feature HGB + contractor ablation (E06), 100m-vs-1km ablation, matched-label build (pipe+2m) replacing segment-diff proxy, calibration.
+- Next: E05 full-feature HGB + contractor ablation (E06), 100m-vs-1km ablation, matched-label build (pipe+2m) replacing segment-diff proxy, calibration.
+
+## 2026-10-03 — Independent review + E02 matched labels (reviewer must-fix #1-2)
+- Reviewer verdict (ses_efc9ae210ffeuGJ9sA6umdvnou): segment-diff label FAIL, R@P0.7 vacuous FAIL,
+  leakage conditional-PASS on features / FAIL on test-fit threshold, B2/B3 missing FAIL, no CIs FAIL,
+  repro FAIL, GO/NO-GO on growth-AP as signal: NO-GO. Top-3 must-fix accepted as work plan.
+- Ran `experiments/e02_matched.py` (executed, verified): greedy per-pipe match
+  (same pipe + |dd|<=2m + |doff|<=0.5m + |dh|<=1h, cost dd+2doff+0.5dh, no depth tie-break).
+  match_rate tr/te 0.404/0.612, collision 0.320/0.398, vanished-frac 0.596/0.388.
+  prev matched-new 0.761/0.746 vs segdiff 0.746/0.716; agreement 0.761/0.896.
+- Fixed eval: B1 AP 0.945 [0.910,0.974], B2 0.746 (=base), B3 0.787, HGB 0.946 —
+  HGB ties (not beats) B1; R@P0.85 B1 0.910 / HGB 0.92; F1@train-thr 0.888; Brier 0.143.
+- Honest negative: matched labels did NOT de-saturate prevalence (75% segments positive);
+  segment task still too easy; match gap tr/te + 60% vanished confirm method/threshold drift dominates.
+  Decision: pivot target to growth-MAGNITUDE / count (P2) or new-in-clean (rare) — presence retired as headline.
+  Repro fixed: relative data path, git hash + versions logged in results_e02.json.
+- Next: P2 count baseline (Poisson/NB + MAE/Spearman), new-in-clean rare-target check, 100m-vs-1km ablation,
+  contractor/threshold-sensitivity analysis, second-section replication (SRTO-1608).
 

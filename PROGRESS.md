@@ -49,3 +49,30 @@
 - Next: matched-new @100m (honest P1 grid), HGB-count seeds s1/s2 full report + calibration,
   contractor/threshold-sensitivity, SRTO-1608 replication. Reviewer re-check before any large campaign.
 
+## 2026-10-03 — E04 honest P1 @100m + cut sensitivity (pre-registered cut>=10%)
+- Ran `experiments/e04_100m.py` (executed, verified), greedy match, past-only features.
+  cut>=10%: prev tr/te 0.241/0.268 (not saturated); B1 AP 0.644 [0.595,0.690] vs base 0.268
+  (lift +0.38); B3 0.499 < B1; HGB 0.651 / F1@train-thr 0.635 / Brier 0.137 — ties B1 (+0.007, in-CI).
+  cut>=15%: prev 0.120/0.083, match 0.248/0.701; B1 0.364 vs base 0.083; HGB 0.357 ≈ B1.
+- Reading: 100m matched-new is the first REAL task (base 0.27, lift +0.38 over base).
+  No feature lift yet (HGB == persistence) — richer features required for E05
+  (depth stats, pipe attributes, weld proximity, wider neighbours).
+  Cut-fragility proven (prev 0.27→0.08 across cuts; match gaps) — cut>=10% frozen as primary,
+  >=15% as sensitivity only. Vanished-frac/match-gap logged, not hidden.
+- Next: reviewer re-check (in flight); then E05 feature-rich HGB vs B1 with ablation,
+  SRTO-1608 replication, calibration. No ≥80% claim; operating threshold still open.
+
+## 2026-10-03 — Reviewer round 2 verdict (gates E05)
+- (1) E04 @100m: non-saturation real, label validity FAIL — 60%/39% vanished, match gap,
+  collision 0.32/0.40. "New" = initiation + misaligned-old + sensitivity gain.
+  Frame: operational "newly-reported ≥10%", never physical corrosion. (2) Pre-registration PASS
+  as containment, not fix; ranking B1>>base survives both cuts (+0.38→+0.28).
+  (3) E03 MAE win = shrinkage not signal FAIL — Spearman flat; need tuned-shrinkage control
+  (regularised Poisson/NB, residual-after-B1, shuffle control, all seeds).
+  (4) Pivots PASS. (5) Next experiment mandated: matcher×cut robustness matrix + vanished audit
+  (dd {1,2,5m} × cuts {8,10,12,15%}, greedy-vs-Hungarian, vanished/new depth histograms,
+  repair exclusion) BEFORE any E05.
+- GO/NO-GO: (a) 100m matched-new as primary eval task — CONDITIONAL GO (operational framing
+  with match-gap/vanished/cut-sensitivity reported); (b) feature-rich E05 — NO-GO until gate passes.
+- Next: implement robustness matrix (E04b), then SRTO-1608 replication. E05 stays gated.
+

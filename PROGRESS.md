@@ -76,3 +76,16 @@
   with match-gap/vanished/cut-sensitivity reported); (b) feature-rich E05 — NO-GO until gate passes.
 - Next: implement robustness matrix (E04b), then SRTO-1608 replication. E05 stays gated.
 
+## 2026-10-03 — E04b gate result (matcher×cut matrix, executed)
+- Matrix @100m matched-new: dd {1,2,5}m makes ZERO difference (identical match/prev/B1 in every
+  cut) — distance window is not the binding constraint; pipe+offset/orientation decide.
+  Cuts drive everything: prev te 0.27→0.27→0.18→0.08; match te 0.64→0.61→0.66→0.70, tr 0.36→0.40→0.35→0.25.
+  B1 lift survives all cuts: +0.37/+0.38/+0.37/+0.28 over base (0.640/0.644/0.546/0.364).
+- Greedy-vs-Hungarian agree 0.898, same match rate 0.612 — matcher choice not critical (10% disagree logged).
+- Depths base10: med matched 12.0 / new-corr 11.0 / past 13.0 — new slightly shallower,
+  consistent with initiation + sensitivity gain. Clean vanished-row depth audit still open
+  (forward matcher flags future rows only; vanished-frac 0.60/0.39 from E02 stands) — flagged, not hidden.
+- Gate ruling: ranking robust across dd and cuts; absolute numbers cut-conditional.
+  CONDITIONAL PASS → operational "newly-reported ≥10% @100m" confirmed as primary eval task.
+  Next in reviewer order: SRTO-1608 replication (E05 = replication, not feature-rich). E05-features stay gated.
+

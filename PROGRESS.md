@@ -76,6 +76,22 @@
   with match-gap/vanished/cut-sensitivity reported); (b) feature-rich E05 — NO-GO until gate passes.
 - Next: implement robustness matrix (E04b), then SRTO-1608 replication. E05 stays gated.
 
+## 2026-10-03 — Reviewer round 3 + E06 shrinkage + E05b lift CI + guardrails
+- Round-3 verdict: E04b PARTIAL PASS for task, NO-GO E05-features stands (vanished-row depth audit
+  + repair exclusion still open); E05 "hypothesis, not finding" until one number: 95% CI lower bound
+  on test lift; operational framing CONDITIONALLY acceptable with 3 mandatory guardrails;
+  small feature ablation CONDITIONAL GO with 3 controls (train-only, beat-B1+shuffle, CIs+sensitivity).
+- E06 (executed, verified): C1 tuned Poisson still explodes (21.27); C2 log-Ridge MAE 6.48 / RMSE 12.85 /
+  spear 0.772 BEATS HGB-poisson 8.52/16.05/0.735; C3 calibrated-B1 8.87 (≈HGB, residual -0.36);
+  C4 shuffle 11.5–12.9 ≈ mean (pipeline sane, features carry signal). Conclusion: best count model
+  is log-linear, not HGB — E03 HGB quarantined per docs/GUARDRAILS.md, parsimony wins.
+- E05b (executed, verified): SRTO test lift 0.216 CI95 [0.130,0.333], lower>0; train 0.429 [0.338,0.525].
+  Reviewer's criterion MET → replication of ranking confirmed (absolute AP still section-conditional).
+- Added docs/GUARDRAILS.md: newly-reported naming, per-page disclaimer, per-section thresholds,
+  quarantine rules. Adopted going forward (old filenames kept for provenance, noted here).
+- Next: small ablation (5–8 pre-registered features, ON, SRTO held out) with reviewer's 3 controls;
+  vanished-row depth audit + repair exclusion in parallel.
+
 ## 2026-10-03 — E04b gate result (matcher×cut matrix, executed)
 - Matrix @100m matched-new: dd {1,2,5}m makes ZERO difference (identical match/prev/B1 in every
   cut) — distance window is not the binding constraint; pipe+offset/orientation decide.

@@ -33,3 +33,19 @@
 - Next: P2 count baseline (Poisson/NB + MAE/Spearman), new-in-clean rare-target check, 100m-vs-1km ablation,
   contractor/threshold-sensitivity analysis, second-section replication (SRTO-1608).
 
+## 2026-10-03 — E03 count + rare-target + grid ablation (pivot test)
+- Ran `experiments/e03_count.py` (executed, verified): matched-new COUNTS per segment (not binary).
+  Count stats: mean tr/te 10.51/10.10, max_te 132, zero_frac 0.25.
+- P2 results: HGB-poisson MAE 8.52 / RMSE 16.05 / spear 0.735 beats mean-train (11.29/18.41)
+  and persistence (12.33/27.77); Poisson-GLM explodes (RMSE 93.67 — overdispersion, unregularized).
+  First genuine (if modest) MAE lift with matched counts. Spearman ~0.73–0.76 everywhere = count autocorrelation.
+- new-in-clean NEGATIVE: clean segments n=51/27, prev new 0.53/0.41 — even clean ground gets
+  "new" corrosion ~half the time. Not a rare hard target; confirms sensitivity inflation creates
+  newcomers everywhere. Retired as headline; kept as diagnostic.
+- Grid ablation (raw presence, limitation: not matched-new): 100m AP_B1 0.821 vs base 0.369
+  (lift +0.45, n=1331, pos=491) — DO NOT abandon 100m per stop rule (needs >±0.03 to drop);
+  1km 0.961 vs 0.858 (+0.10). 100m has more headroom — candidate P1 grid, but must rebuild
+  with matched-new labels before claiming.
+- Next: matched-new @100m (honest P1 grid), HGB-count seeds s1/s2 full report + calibration,
+  contractor/threshold-sensitivity, SRTO-1608 replication. Reviewer re-check before any large campaign.
+

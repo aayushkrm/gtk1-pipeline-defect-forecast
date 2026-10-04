@@ -156,6 +156,16 @@
 - Next: build the triage-tool prototype on B1 primary (ranked 100m list + heatmap + audit columns +
   per-section thresholds + GUARDRAILS disclaimer); overlay branch kept off-by-default with kill-switch.
 
+## 2026-10-03 — Reviewer round 6 (CONDITIONAL GO) + triage prototype v0 launched
+- Ship review: methodologically safe under freeze (past-only B1, frozen labels, no re-tuning;
+  ranking threshold-free); P@K secondary only with base comparator + bootstrap CI + GUARDRAILS triple
+  + "test spent" label; unshippable omission = missing operational definition on-page (banned badges
+  already out); BUILD NOW (repair logs block only stronger claims; vanished contamination bounded E08).
+- Prototype `triage/build_report.py` implements all conditions: retrospective ON B1 ranking, SVG heatmap,
+  top-20 audit table, P@K with bootstrap CI + base, full triple (match-rate, vanished 0.596/0.388,
+  cut-sensitivity 0.644/0.546/0.364), git hash in JSON, overlay OFF. Launched in background
+  (sh_104905696001ODnSxWUzys2Vwf); outputs recorded on completion only.
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

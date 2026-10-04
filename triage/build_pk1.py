@@ -5,11 +5,21 @@ Tolerant loader vendored (attributed). De-identified aggregates only. Read-only 
 import json, subprocess, sys
 from pathlib import Path
 import numpy as np
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "experiments"))
-from e11_pk1 import load
-from e07b_null import build
-from e07_ablation import raw
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
+from gtk1.io import load_anomalies, normalize as raw
+from gtk1.features import build
 from sklearn.metrics import average_precision_score
+
+SEC = REPO.parent / "Данные для предварительного изучения" / "Парабель-Кузбасс-1 (572-714)"
+
+
+def load(year):
+    import glob
+    fs = sorted(glob.glob(str(SEC / str(year) / "*.xls*")))
+    cands = [f for f in fs if Path(f).name.startswith("Аномалии")]
+    assert cands, f"no anomaly file in {SEC / str(year)}"
+    return load_anomalies(cands[0])
 
 OUT = Path(__file__).resolve().parent
 KMAX = 1400

@@ -1,4 +1,4 @@
-# Supervisor brief — GTK1 status (evidence as of E11, PK1 page v0, E12 running)
+# Supervisor brief — GTK1 status (evidence as of E12 + PK1 refresh; src migration proven)
 
 ## One-line verdict
 Inspection-report triage works and replicates 4/4 sections; physical-corrosion forecasting

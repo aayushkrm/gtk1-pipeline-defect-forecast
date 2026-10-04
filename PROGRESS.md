@@ -199,6 +199,12 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — PK1 path migrated: src-built outputs byte-identical (both paths proven)
+- `triage/build_pk1.py` now imports only `gtk1.{io,features}` (+sklearn); rerun reproduced AP=0.779,
+  base=0.401, match=0.715, P@K exactly. `git diff`: triage_pk1.html UNCHANGED, JSON hash-field-only
+  (fd4cad4→0538414). Both triage paths are thin verified consumers; round-9 migration proof complete.
+- Docs refreshed (TRIAGE_SPEC evidence as of E12+refresh with PK1 triple; BRIEF header current).
+
 ## 2026-10-03 — Reviewer round 9 + src migration proof in flight
 - Round 9: src = shelfware until consumer migrates (parity test insufficient: synthetic-only, tautology
   `or True`, no normalize/R4/tolerant coverage, no consumer). Migration proof required: thin-wrapper

@@ -199,6 +199,14 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Prospective harness built: regression IDENTICAL, forward watchlists out, edge artifact flagged
+- `triage/prospective.py` (past-only B1, per-section thresholds.yaml placeholder, full CSV to ignored
+  outputs/): --check vs shipped pages IDENTICAL both sections (ON-2021, PK1-2022 top-20 cells+scores exact).
+  Forward watchlists: ON-2025 (nonzero 491/1331, top cell 173), PK1-2025 (nonzero 830/1401, top cell 1400).
+- FLAG (not hidden): PK1-2025 #1 cell 1400 has 211 counts vs #2 114 — boundary accumulation
+  (known 140782–140830m overrun rows fall in last cell). Edge-cell guard queued as E13 (pre-registered:
+  exclude boundary cell, recompute top-20); no scoring change until then. ON-2025 top cell 173 unremarkable.
+
 ## 2026-10-03 — PK1 path migrated: src-built outputs byte-identical (both paths proven)
 - `triage/build_pk1.py` now imports only `gtk1.{io,features}` (+sklearn); rerun reproduced AP=0.779,
   base=0.401, match=0.715, P@K exactly. `git diff`: triage_pk1.html UNCHANGED, JSON hash-field-only

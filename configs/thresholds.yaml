@@ -1,0 +1,13 @@
+# Per-section operating thresholds for prospective watchlists.
+# PLACEHOLDER values — recalibration requires the next survey per section.
+# Rule: never pool thresholds across sections (TRIAGE_SPEC.md, GUARDRAILS.md).
+on:
+  survey_basis: 2021
+  flag_top_k: 20
+  review_band_score: 0.10
+  status: uncalibrated
+pk1:
+  survey_basis: 2022
+  flag_top_k: 20
+  review_band_score: 0.10
+  status: uncalibrated

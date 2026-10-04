@@ -1,0 +1,141 @@
+{
+  "section": "pk1",
+  "survey": 2022,
+  "file": "\u0410\u043d\u043e\u043c\u0430\u043b\u0438\u0438.xls",
+  "model": "B1 past-count only (prospective, no future labels)",
+  "recalibration": "placeholder \u2014 per-section thresholds uncalibrated until next survey",
+  "top20": [
+    {
+      "rank": 1,
+      "cell": 1400,
+      "past_count": 144,
+      "score": 1.0
+    },
+    {
+      "rank": 2,
+      "cell": 438,
+      "past_count": 107,
+      "score": 0.7430555555555556
+    },
+    {
+      "rank": 3,
+      "cell": 480,
+      "past_count": 106,
+      "score": 0.7361111111111112
+    },
+    {
+      "rank": 4,
+      "cell": 479,
+      "past_count": 78,
+      "score": 0.5416666666666666
+    },
+    {
+      "rank": 5,
+      "cell": 437,
+      "past_count": 71,
+      "score": 0.4930555555555556
+    },
+    {
+      "rank": 6,
+      "cell": 424,
+      "past_count": 68,
+      "score": 0.4722222222222222
+    },
+    {
+      "rank": 7,
+      "cell": 460,
+      "past_count": 66,
+      "score": 0.4583333333333333
+    },
+    {
+      "rank": 8,
+      "cell": 304,
+      "past_count": 65,
+      "score": 0.4513888888888889
+    },
+    {
+      "rank": 9,
+      "cell": 478,
+      "past_count": 64,
+      "score": 0.4444444444444444
+    },
+    {
+      "rank": 10,
+      "cell": 1366,
+      "past_count": 61,
+      "score": 0.4236111111111111
+    },
+    {
+      "rank": 11,
+      "cell": 471,
+      "past_count": 60,
+      "score": 0.4166666666666667
+    },
+    {
+      "rank": 12,
+      "cell": 72,
+      "past_count": 59,
+      "score": 0.4097222222222222
+    },
+    {
+      "rank": 13,
+      "cell": 422,
+      "past_count": 58,
+      "score": 0.4027777777777778
+    },
+    {
+      "rank": 14,
+      "cell": 423,
+      "past_count": 57,
+      "score": 0.3958333333333333
+    },
+    {
+      "rank": 15,
+      "cell": 412,
+      "past_count": 50,
+      "score": 0.3472222222222222
+    },
+    {
+      "rank": 16,
+      "cell": 427,
+      "past_count": 50,
+      "score": 0.3472222222222222
+    },
+    {
+      "rank": 17,
+      "cell": 408,
+      "past_count": 47,
+      "score": 0.3263888888888889
+    },
+    {
+      "rank": 18,
+      "cell": 461,
+      "past_count": 46,
+      "score": 0.3194444444444444
+    },
+    {
+      "rank": 19,
+      "cell": 1247,
+      "past_count": 46,
+      "score": 0.3194444444444444
+    },
+    {
+      "rank": 20,
+      "cell": 395,
+      "past_count": 44,
+      "score": 0.3055555555555556
+    }
+  ],
+  "score_deciles": [
+    0.0,
+    0.0,
+    0.006944444444444444,
+    0.027777777777777776,
+    0.09722222222222222,
+    0.3472222222222222,
+    1.0
+  ],
+  "nonzero_cells": 752,
+  "n_cells": 1401,
+  "regression_vs_shipped": "IDENTICAL"
+}

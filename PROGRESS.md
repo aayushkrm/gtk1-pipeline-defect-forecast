@@ -132,6 +132,19 @@
   count MAE ~6.5 log-linear; NO red/green badges, NO ≥80% meter. This is what the evidence supports.
 - Next: E07b (constant-check + 100-shuffle null + ablation-vs-full + SRTO holdout), then re-apply for gate.
 
+## 2026-10-03 — Reviewer round 5 (SPLIT verdict) + E09 killer control launched
+- (1) Calibrated null rehabilitates pipeline-sanity only, NOT the +0.03 value-add (Δ-vs-null is the
+  wrong comparison; B1 already beats base +0.38). +0.032 stays "real-but-tiny-and-local".
+- (2) SPLIT gate: B1 primary ACCEPT everywhere; LR-nlag general NO-GO; ON-only experimental
+  CONDITIONAL GO (shadow/off-by-default + kill-switch + disclaimer; SRTO dCI includes +0.032 so it
+  fails to confirm transfer rather than excluding it — hence default-off mandatory).
+- (3) Killer control mandated: spatial-block CV within ON (leave-contiguous-third-out, frozen ≤7/C).
+  If nlag Δ collapses ≤0 → proximity/survey-streak leakage, overlay dead even ON-only.
+  E09 implemented + launched in background (sh_10489fa9d001bViS3wZUSWZLOd). December builds on B1
+  primary regardless; overlay stays non-default until E09 passes.
+- (4) TRIAGE_SPEC numbers updated to reviewer's exact qualifier text (B1 0.644 / LR 0.676 ON;
+  B1 0.277 / LR 0.281 SRTO; count MAE 6.5 unchanged). No ≥80% claim.
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

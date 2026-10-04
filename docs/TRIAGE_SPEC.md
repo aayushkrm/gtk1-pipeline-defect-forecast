@@ -7,7 +7,10 @@ and audit columns (B1 score, model score, match/vanished flags). No red/green pa
 No ≥80% meter. Per-section recalibration control. GUARDRAILS disclaimer on every page.
 
 ## Expected numbers (honest, section-conditional)
-- ON @100m: AP ~0.65±0.05 (~2.4× base 0.27, ≈ persistence; feature lift +0.03 provisional).
+- ON @100m cut≥10%: B1 0.644; LR 0.676, Δ-vs-B1 +0.032 [+0.011,+0.053] **ON-only experimental**
+  (driver nlag −0.039 vs full; cut≥12 replicates +0.040, cut≥15 fails −0.024).
+  SRTO: B1 0.277, LR 0.281, Δ +0.004 [−0.032,+0.039] — **overlay adds zero off-site; ship B1 only there.**
+  Headline stays AP ~0.65±0.05 ON (~2.4× base), ~0.28 SRTO at 6% prevalence.
 - SRTO: substantially lower absolute AP (~0.28 at 6% prevalence); rank-order replicates.
 - Count: MAE ~6.5 via log-linear vs 11.3 mean baseline (HGB quarantined).
 

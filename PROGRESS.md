@@ -207,6 +207,12 @@
   (known 140782–140830m overrun rows fall in last cell). Edge-cell guard queued as E13 (pre-registered:
   exclude boundary cell, recompute top-20); no scoring change until then. ON-2025 top cell 173 unremarkable.
 
+## 2026-10-03 — E13 edge guard done: artifact isolated to itself, ranking stable
+- `--drop-last` implemented (boundary cell excluded, scores renormalized, dropped cell logged).
+  PK1-2025 noedge top-20 overlaps guarded run 19/20 — only cell 1400 leaves; new top1 = cell 438 (114).
+  New top-3: 438/480/1366. Guard adopted as DEFAULT for prospective watchlists (edge cells collect
+  overrun rows by construction); retrospective pages unchanged (frozen evidence).
+
 ## 2026-10-03 — PK1 path migrated: src-built outputs byte-identical (both paths proven)
 - `triage/build_pk1.py` now imports only `gtk1.{io,features}` (+sklearn); rerun reproduced AP=0.779,
   base=0.401, match=0.715, P@K exactly. `git diff`: triage_pk1.html UNCHANGED, JSON hash-field-only

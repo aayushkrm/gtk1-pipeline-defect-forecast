@@ -48,14 +48,25 @@ def main():
     ap.add_argument("--section", choices=("on", "pk1"), required=True)
     ap.add_argument("--survey", type=int, required=True)
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--drop-last", action="store_true",
+                    help="E13 edge guard: exclude boundary cell from ranking (overrun accumulation)")
     a = ap.parse_args()
     cfg = SECTIONS[a.section]
     g, meta = load_section(a.section, a.survey)
     cnt, score, order = rank(g, cfg["kmax"])
+    edge_dropped = None
+    if a.drop_last:
+        edge_dropped = {"cell": cfg["kmax"], "past_count": int(cnt[cfg["kmax"]])}
+        cnt = cnt.copy()
+        cnt[cfg["kmax"]] = -1.0
+        score = cnt / max(cnt[cnt >= 0].max(), 1)
+        order = np.argsort(-score, kind="stable")
+        order = order[order != cfg["kmax"]]
     top = [(r, int(i), int(cnt[i]), float(score[i])) for r, i in enumerate(order[:20], 1)]
     out = {"section": a.section, "survey": a.survey, "file": meta["name"],
            "model": "B1 past-count only (prospective, no future labels)",
            "recalibration": "placeholder — per-section thresholds uncalibrated until next survey",
+           "edge_guard": edge_dropped,
            "top20": [{"rank": r, "cell": i, "past_count": p, "score": s} for r, i, p, s in top],
            "score_deciles": [float(np.percentile(score, q)) for q in (0, 25, 50, 75, 90, 99, 100)],
            "nonzero_cells": int((cnt > 0).sum()), "n_cells": cfg["kmax"] + 1}
@@ -69,12 +80,13 @@ def main():
         print(f"regression_vs_shipped: {out['regression_vs_shipped']}")
         if not ok:
             raise SystemExit("REGRESSION MISMATCH — harness disagrees with shipped page")
-    (Path(__file__).resolve().parent / f"watchlist_{a.section}_{a.survey}.json").write_text(json.dumps(out, indent=2))
+    tag = f"watchlist_{a.section}_{a.survey}" + ("_noedge" if a.drop_last else "")
+    (Path(__file__).resolve().parent / f"{tag}.json").write_text(json.dumps(out, indent=2))
     full = [{"cell": int(i), "km": round(float(i) / 10, 1), "past_count": int(cnt[i]), "score": float(score[i])}
             for i in order]
     outdir = REPO / "outputs"
     outdir.mkdir(exist_ok=True)
-    (outdir / f"watchlist_{a.section}_{a.survey}.csv").write_text(
+    (outdir / f"{tag}.csv").write_text(
         "cell,km,past_count,score\n" + "\n".join(f"{r['cell']},{r['km']},{r['past_count']},{r['score']:.4f}" for r in full))
     print(f"section={a.section} survey={a.survey} nonzero={out['nonzero_cells']}/{out['n_cells']} "
           f"top_cell={top[0][1]} top_score={top[0][3]:.3f}")

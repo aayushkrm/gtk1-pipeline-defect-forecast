@@ -92,6 +92,17 @@
 - Next: small ablation (5–8 pre-registered features, ON, SRTO held out) with reviewer's 3 controls;
   vanished-row depth audit + repair exclusion in parallel.
 
+## 2026-10-03 — E07 relaunched (background) + E08 vanished audit done
+- E07 run was interrupted twice in foreground; script intact (untracked), no partial results.
+  Relaunched in background (sh_10480db7f001B9kFXaBWHioz5n); recording on completion notification.
+- E08 (executed, verified, reverse greedy match, cut>=10, corr-only):
+  train vanished_frac 0.369, test 0.114 (past-side; forward-side 0.596/0.388 from E02 — asymmetry
+  expected: future sets are larger). Matched vs vanished medians IDENTICAL (12/12 train, 13/13 test):
+  vanished are NOT shallower — misses look depth-random (re-detection jitter), not threshold dropout.
+  Deep-vanished tail30: train 0.028 vs matched 0.004 (small repair-suspect excess), test 0.016 vs 0.037
+  (no excess). Repair logs absent from VTD package — exclusion pending partner data (dependency logged).
+- Next: commit E08; on E07 completion notification → record + push; reviewer round 4 over E06/E07/E08.
+
 ## 2026-10-03 — E04b gate result (matcher×cut matrix, executed)
 - Matrix @100m matched-new: dd {1,2,5}m makes ZERO difference (identical match/prev/B1 in every
   cut) — distance window is not the binding constraint; pipe+offset/orientation decide.

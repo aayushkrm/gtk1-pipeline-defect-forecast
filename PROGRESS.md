@@ -216,6 +216,12 @@
 - (2) PK1 page with cut-sensitivity pending: SPLIT — structure-only internal demo OK; quantitative
   headline HOLD until E12 (cheap frozen rerun). E12 (cuts ≥12/≥15) written + launched background
   (sh_...OIxI, 120s stagger); PK1 page build launched background (sh_...U5PB). Numbers on notification only.
+
+## 2026-10-03 — PK1 triage page v0 built (E12 still running)
+- Background run completed: AP=0.779 live == frozen E11 (deterministic). P@10=1.000, P@20=1.000, P@50=0.980.
+  All round-7 display conditions verified on-page (disclaimer, pending-flag "cut≥10% only — ≥12/≥15 PENDING E12",
+  caption, denominators, ON→PK1 per-section wording). 138KB HTML + JSON (git e4155d6).
+- E12 (PK1 cut-sensitivity) still running in background — quantitative PK1 headline stays HOLD until it lands.
 - (3) December build: CONDITIONAL GO — multi-section B1 triage + per-section thresholds + overlay OFF
   + disclaimer triple + no badges/meters. HOLDs only: PK1 thresholds till E12; physics language till
   repair logs. (4) Residual ≥80% risk (for supervisor): "new" conflates initiation + re-detection +

@@ -199,6 +199,13 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Swarm: SRTO-1608 triage page + partner runbook (both verified, committed)
+- `triage/build_srto.py` (src-only imports, zero experiment references) reproduced E05 exactly:
+  AP 0.2767/base 0.0605/match 0.5511; P@10 0.400 [0.100,0.800], P@20 0.450, P@50 0.420 (sparse-ground
+  wide CIs, reported not hidden). All display conditions verified on-page. Third shipped page.
+- `docs/PROSPECTIVE_RUNBOOK.md`: partner procedure (prereqs, --check gate, --drop-last default,
+  recalibration rule, outputs, limitations, troubleshooting). Three-section demo set (ON/PK1/SRTO-1608).
+
 ## 2026-10-03 — Handover hygiene: README as-built, run_tests.sh green, overlay archived
 - README rewritten (was aspirational scaffold; now frozen deliverable + reproduce + rules).
 - `run_tests.sh`: parity + consistency + binary-hygiene in one verified-green run (pytest absent noted).

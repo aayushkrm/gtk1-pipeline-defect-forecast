@@ -199,6 +199,15 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — E14 second 1717 pair: ranking survives, methodology break flagged (weak replication)
+- Executed (frozen, repaired 2024A, 5 placeholders dropped): d≥10 92 vs 440 (4.8× jump — sensitivity/
+  methodology break between 2021→2024, or repair-side effect; cannot separate without source re-export).
+  Match 0.134 (lowest ever; E10 pair had 0.261), prev 0.100 (42 pos), B1 0.201 vs base 0.100,
+  liftCI [0.019,0.212] lower>0 — ranking replicates a 5th time, but barely and dirtily.
+- Decision: NO 1717-2024 triage page (thresholds on a methodology-break pair would be meaningless);
+  pair kept as drift evidence only. Repaired-copy results are internal, never handover-grade.
+  Reinforces PK2-deferral and the per-survey-threshold rule.
+
 ## 2026-10-03 — Round 11 + SRTO-2024A salvage GO + test coverage closed
 - Round 11: no scoring breach; priority ranking hold>(c)doc>(a)salvage>(b)PK2. Forced choice taken
   (freeze December scope). Two buildable gaps closed this turn: SRTO frozen-number + disclaimer +

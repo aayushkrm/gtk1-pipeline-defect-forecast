@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "name": "Аномалии.xls",
+      "bytes": 820224,
+      "mtime": 1789395882.0
+    },
+    {
+      "name": "GTK1_2024_Anomalii_REPAIRED.xlsx",
+      "bytes": 269882,
+      "mtime": 1791096596.1641722,
+      "note": "REPAIRED copy, provenance /tmp repair_spike; source corrupt"
+    }
+  ],
+  "dropped_placeholder_rows": 5,
+  "counts": {
+    "2021_d10": 92,
+    "2024_d10": 440
+  },
+  "match_rate": 0.1340909090909091,
+  "AP": 0.20127032602431313,
+  "base": 0.0997624703087886,
+  "lift": 0.10150785571552454,
+  "lift_CI": [
+    0.019488630495808026,
+    0.2121645288413883
+  ],
+  "n_pos": 42,
+  "n": 421,
+  "repro": {
+    "git": "d2e8868"
+  }
+}

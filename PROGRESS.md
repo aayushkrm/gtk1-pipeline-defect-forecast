@@ -200,6 +200,16 @@
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
   repair queue updated (SRTO-2024A salvageable → PK2-2025A → YN).
 
+## 2026-10-03 — E11 PK1 done: 4/4 sections replicate, methodologically cleanest pair
+- Background run completed (tolerant loader worked; put_cell chatter is xlrd debug noise, harmless).
+  Counts d≥10: 8982 vs 8989 — nearly identical across surveys (stable methodology, unlike ON inflation).
+  Match 0.715 (highest yet), prev 0.401 (562/1401), B1 0.779 vs base 0.401, liftCI [0.348,0.409].
+- Ranking now replicates 4/4 sections (ON 0.644, SRTO-1608 test 0.277, SRTO-1717 0.181, PK1 0.779),
+  with PK1 the tightest CI and cleanest methodology. B1>>base is a cross-section empirical regularity
+  for newly-reported ≥10% @100m — still operational framing (vanished/cut caveats stand), still no ≥80% claim.
+- Next: reviewer round 8 (4-section synthesis + December build approval); PK1 triage page (same v0 template,
+  per-section thresholds); repair queue as before.
+
 ## 2026-10-03 — E11 PK1 2022→2025 launched (background, densest test)
 - Tolerant-xlrd patches vendored into `experiments/e11_pk1.py` (attributed to prior salvage work;
   read-only use; stock xlrd tried first). Frozen pipeline: Depth≥10%, pipe+2m/0.5m/1h greedy,

@@ -190,6 +190,16 @@
 - Next: SRTO-1717 2016→2021 replication attempt (sparse, SRTO-1608-like CIs expected);
   repair-attempt spike on PK1-2019A (timeboxed, salvage-parser reuse).
 
+## 2026-10-03 — Repair spike done + E10 third-section replication (3/3 sections replicate ranking)
+- Salvage verdict (timeboxed, read-only): PK1-2019A NO-GO (45.8% — rows 2864+ absent, unrecoverable;
+  2,859 pristine rows km 0–45 kept as partial supplement); PK1-2025A GO (99.4% via tolerant loader).
+  Revised: PK1 2022→2025 pair fully viable (densest, 1093 segs); 2019→2022 partial on 0–45km viable.
+- E10 SRTO-1717 2016→2021 (executed, frozen pipeline): counts d≥10 113/92, match 0.261, prev 0.031
+  (13 pos), B1 0.181 vs base 0.031, liftCI [0.024,0.415] lower>0. Caveats: 2021 covers ~30/42km;
+  KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
+- Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
+  repair queue updated (SRTO-2024A salvageable → PK2-2025A → YN).
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

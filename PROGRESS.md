@@ -199,6 +199,17 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Reviewer round 10: no scoring breach; tests hardened; PK2 deprioritized; scope freeze
+- Audit: NO new scoring breach (migrations hold, prospective IDENTICAL, E13 isolates artifact).
+  One claim rebutted with evidence: thresholds.yaml EXISTS on disk + tracked (reviewer's ls miss).
+  Doc-sync lag fixed (TRIAGE_SPEC header, GUARDRAILS edge-cell rule).
+- Tautology `or True` removed; real CI check in its place. New `test_consistency.py`: frozen-number
+  tripwire (ON/PK1 AP+base+match, all lift-CI lowers>0, disclaimer strings on pages) — passes, no raw
+  data needed. pytest absent on this machine; tests run as scripts (documented limitation, CI TODO).
+- PK2 2015→2020 correctly deprioritized (schema + threshold break = weeks for a 5th replication that
+  cannot change the primary or support ≥80%). Forced choice taken: FREEZE December scope to B1-only
+  ON+PK1 triage, drop-last default, placeholder thresholds; PK2/overlay-promotion/calibration post-December.
+
 ## 2026-10-03 — Prospective harness built: regression IDENTICAL, forward watchlists out, edge artifact flagged
 - `triage/prospective.py` (past-only B1, per-section thresholds.yaml placeholder, full CSV to ignored
   outputs/): --check vs shipped pages IDENTICAL both sections (ON-2021, PK1-2022 top-20 cells+scores exact).

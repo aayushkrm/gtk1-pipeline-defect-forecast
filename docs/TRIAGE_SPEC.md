@@ -1,4 +1,4 @@
-# TRIAGE-SPEC — honest December deliverable (reviewer rounds 4c–8; evidence as of E12 + PK1 refresh)
+# TRIAGE-SPEC — honest December deliverable (reviewer rounds 4c–10; evidence as of E13 + prospective harness)
 
 ## What ships
 Calibrated **inspection-report triage tool**, not a reliability guarantee:

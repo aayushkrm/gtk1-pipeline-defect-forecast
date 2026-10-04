@@ -43,7 +43,7 @@ def main():
     lc = MET.ap_lift_ci(y2, s, n=200)
     assert lc["n_pos"] == int(y2.sum()) and lc["lift"] == lc["AP"] - lc["base"]
     d, lo, hi = MET.paired_delta_ci(y2, s, np.zeros_like(s), n=200)
-    assert lo <= d <= hi or True
+    assert lo <= d <= hi, "paired CI must bracket its own point estimate"
     print(f"parity OK: match {m2.sum()}/{len(m2)}, build kmax70 pos={y2.sum()}, AP={lc['AP']:.3f}")
 
 

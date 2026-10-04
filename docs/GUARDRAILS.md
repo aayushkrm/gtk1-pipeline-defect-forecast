@@ -13,6 +13,8 @@
 
 ## Thresholds
 - Per-section operating thresholds (ON vs SRTO never pooled). cut≥10% primary; ≥12%/≥15% sensitivity.
+- Prospective ranking excludes the boundary cell by default (E13: overrun rows accumulate there);
+  retrospective frozen pages unchanged.
 - ≥80% reliability claim: not made; operating point still open (R@P0.7 retired as vacuous).
 
 ## Model quarantine

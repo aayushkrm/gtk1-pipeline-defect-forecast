@@ -55,20 +55,25 @@ def run():
     trh = "".join(f"<tr><td>{r}</td><td>{i} ({i/10:.1f} km)</td><td>{p}</td><td>{s:.3f}</td>"
                   f"<td>{'YES' if y else 'no'}</td></tr>" for r, i, p, s, y in rows)
     pk = "".join(f"<li>P@{k}: {p_at_k(k)[0]:.3f} [{p_at_k(k)[1]:.3f},{p_at_k(k)[2]:.3f}] "
-                  f"(base rate {base:.3f})</li>" for k in (10, 20, 50))
+                  f"({int(round(p_at_k(k)[0] * k))}/{k}, base rate {base:.3f})</li>" for k in (10, 20, 50))
+    caption = ("<p><i>Retrospective only on the spent 2021→2025 ON pair (base rate 0.268): P@K is a display "
+               "statistic on frozen labels, not a prospective precision claim. Ranking is threshold-free B1 "
+               "past-count; do not quote 1.000 as future accuracy. Prospective use requires next-survey data + "
+               "per-section recalibration. K = 10/20/50 display-chosen.</i></p>")
     html = f"""<html><head><meta charset='utf-8'><title>GTK1 triage prototype v0 (B1, ON retrospective)</title></head><body>
 <h1>Inspection-report triage — prototype v0 (B1 primary, retrospective demo)</h1>
 <p><b>NOT a physical prediction. Retrospective: test pair 2021→2025 already spent in E04–E09;
 this page re-runs frozen labels for display only (no re-tuning).</b>
 "Newly-reported" = unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match; includes
-initiation + re-detected misaligned old + sensitivity gain. Vanished-frac (forward, E02):
+initiation + re-detected misaligned old + sensitivity gain. Match-rate (test, forward, E02): 0.612.
+Vanished-frac (forward, E02):
 0.596 train / 0.388 test. Cut-sensitivity of B1 AP (E04): 0.644 / 0.546 / 0.364 at ≥10/12/15%.
 Absolute AP is cut- and survey-conditional. Per-section thresholds required — do not pool.</p>
 <p>AP={ap:.3f} base={base:.3f} (frozen E04 number reproduced live: B1 0.644).</p>
 <h2>Linear heatmap</h2>{svg}
 <h2>Top-20 ranked 100m cells (audit)</h2>
 <table border='1'><tr><th>rank</th><th>cell (km)</th><th>past count</th><th>B1 score</th><th>newly-reported 2025</th></tr>{trh}</table>
-<h2>Retrospective precision@K</h2><ul>{pk}</ul>
+<h2>Retrospective precision@K</h2><ul>{pk}</ul>{caption}
 <p>Model: B1 past-count only. Overlay (LR-nlag) OFF by default (ON-only experimental, kill-switch).
 See docs/GUARDRAILS.md, docs/TRIAGE_SPEC.md, PROGRESS.md for audit trail.</p></body></html>"""
     (OUT / "triage_demo.html").write_text(html)

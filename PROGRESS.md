@@ -176,6 +176,20 @@
 - Next: reviewer round 7 (prototype audit: display honesty, P@K framing, ship-readiness);
   PK1/SRTO-1717 scoping for third-section evidence; partner data requests outstanding.
 
+## 2026-10-03 — Round 7 (CONDITIONAL GO, fixes applied) + third-section scoping (no GO w/o repair)
+- Prototype audit: frozen re-run PASS, operational definition PASS, no badges PASS; P@K block
+  PARTIAL FAIL (match-rate missing on-page — fixed: "Match-rate (test, forward, E02): 0.612" added).
+  Required caption inserted verbatim + denominators (10/10, 20/20, 48/50) + K display-chosen note.
+  Regenerated deterministically (AP 0.644 identical, git ea7713d); all strings verified on-page.
+  K=10/20/50 showcase noted as display-chosen (threshold-free ranking, not label leak).
+- Scoping (read-only recon): SRTO-1717 (2016/21/24) CAUTION-best (openable R4 + weld logs all years;
+  2024A corrupt-but-salvageable; ~40 pos segs/survey; 2021 covers ~30km); PK2 (2015/20) CAUTION
+  (schema break + threshold shift, 2025A dead); PK1 NO-GO as pair (only 2022A opens);
+  YN NO-GO (zero usable anomaly surveys). No GO without repair work. Repair queue: PK1-2019A+2025A
+  (unlocks best dataset) → SRTO-2024A (salvageable) → PK2-2025A → YN (worst).
+- Next: SRTO-1717 2016→2021 replication attempt (sparse, SRTO-1608-like CIs expected);
+  repair-attempt spike on PK1-2019A (timeboxed, salvage-parser reuse).
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

@@ -145,6 +145,17 @@
 - (4) TRIAGE_SPEC numbers updated to reviewer's exact qualifier text (B1 0.644 / LR 0.676 ON;
   B1 0.277 / LR 0.281 SRTO; count MAE 6.5 unchanged). No ≥80% claim.
 
+## 2026-10-03 — E09 block-CV done: kill condition NOT met, confirmation weak (heterogeneous)
+- Background run completed; artifacts verified. Fold deltas (LR−B1): +0.032 [+0.001,+0.062] (pos=178),
+  +0.011 [−0.035,+0.049] (pos=109), +0.005 [−0.055,+0.071] (pos=70). No fold ≤0 → proximity-leakage
+  death sentence NOT triggered; but 2/3 CIs cross 0 and effect tracks positivity (denser third holds,
+  sparse thirds tie). Fold CIs mutually overlap and overlap global +0.032 — no contradiction, no confirmation.
+- Ruling (mine, reviewer re-check invited): overlay stays ON-only experimental / off-by-default;
+  B1 primary for December unchanged. The +0.03 is now characterized, not killed and not promoted:
+  dense-ground spillover signal, sparse-ground unproven. TRIAGE_SPEC headline (AP ~0.65±0.05 ON) untouched.
+- Next: build the triage-tool prototype on B1 primary (ranked 100m list + heatmap + audit columns +
+  per-section thresholds + GUARDRAILS disclaimer); overlay branch kept off-by-default with kill-switch.
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

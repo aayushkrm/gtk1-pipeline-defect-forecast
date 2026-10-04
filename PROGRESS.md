@@ -213,6 +213,12 @@
   fallback import removed (was a live ImportError risk). Re-run launched background (sh_...Vyr4);
   proof = AP 0.644 identical + HTML byte-comparable modulo git-hash. Recorded on notification only.
 
+## 2026-10-03 — Migration proof PASS: src-built outputs byte-identical
+- Rerun on `src/gtk1` imports: AP=0.644, base=0.268, match=0.612, P@K identical.
+  `git diff`: triage_demo.html UNCHANGED (byte-identical), triage_demo.json differs ONLY in git-hash
+  field (ea7713d→2be3a6d). Reviewer's exact migration check satisfied for the ON path.
+  src/gtk1 graduates from shelfware to verified consumer-backed package (PK1 path migration queued).
+
 ## 2026-10-03 — src/gtk1/ package + parity tests (reproducible-software track)
 - Consolidated frozen pipeline into importable `src/gtk1/`: io (loaders + tolerant-xlrd + normalize),
   match (greedy/Hungarian), features (7-feat cell build), metrics (AP/CI/paired-delta/P@K/R@P).

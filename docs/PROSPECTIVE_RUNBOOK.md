@@ -153,6 +153,8 @@ JSON top-20 is its head. CSVs are git-ignored by design.
   attach red/green pass-fail badges or reliability meters; do not run without
   `--drop-last` on new surveys (boundary-cell artifact); do not apply to
   sections without a same-section validated pair (PK2/Y-N are out of scope).
+  SRTO-1608 ships as retrospective demo only (third page, sparse-ground wide CIs);
+  no SRTO prospective watchlist or thresholds until a sparse-ground operating point is set.
 
 ## 6. Troubleshooting
 

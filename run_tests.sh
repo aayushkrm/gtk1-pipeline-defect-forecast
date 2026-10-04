@@ -7,7 +7,7 @@ python3 -c "
 import importlib.util
 spec = importlib.util.spec_from_file_location('tc', '$ROOT/src/tests/test_consistency.py')
 tc = importlib.util.module_from_spec(spec); spec.loader.exec_module(tc)
-tc.test_on_frozen(); tc.test_pk1_frozen(); tc.test_lift_cis_lower_above_zero(); tc.test_guardrails_present_on_pages()
+tc.test_on_frozen(); tc.test_pk1_frozen(); tc.test_srto_frozen(); tc.test_src_only_imports(); tc.test_lift_cis_lower_above_zero(); tc.test_guardrails_present_on_pages()
 print('CONSISTENCY OK')
 "
 git -C "$ROOT" ls-files | grep -iE '\.(xls|xlsx|csv|mp4|jpg|png|pkl|parquet)$' && { echo 'FAIL: binaries tracked'; exit 1; } || echo 'HYGIENE OK: no binaries tracked'

@@ -199,6 +199,15 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Round 11 + SRTO-2024A salvage GO + test coverage closed
+- Round 11: no scoring breach; priority ranking hold>(c)doc>(a)salvage>(b)PK2. Forced choice taken
+  (freeze December scope). Two buildable gaps closed this turn: SRTO frozen-number + disclaimer +
+  src-only-import assertions in test_consistency.py; runbook SRTO retrospective-only sentence.
+- Salvage spike: SRTO-2024A GO qualified (99.6% Pipe+Distance keys; 5 placeholder-pipe rows;
+  repaired copy in /tmp repair_spike, repo untouched; depth empty-by-design per class).
+  Unlocks SRTO-1717 2021→2024 second pair — queued (cheap, small section), not run yet.
+- run_tests.sh now covers all 6 consistency tests; full runner green.
+
 ## 2026-10-03 — Swarm: SRTO-1608 triage page + partner runbook (both verified, committed)
 - `triage/build_srto.py` (src-only imports, zero experiment references) reproduced E05 exactly:
   AP 0.2767/base 0.0605/match 0.5511; P@10 0.400 [0.100,0.800], P@20 0.450, P@50 0.420 (sparse-ground

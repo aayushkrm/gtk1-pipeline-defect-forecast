@@ -30,6 +30,22 @@ def test_pk1_frozen():
     assert t["cut_sensitivity"] == {"10": 0.779, "12": 0.574, "15": 0.375}
 
 
+def test_srto_frozen():
+    t = load("triage/triage_srto.json")
+    assert abs(t["AP"] - 0.2767) < 1e-4
+    assert abs(t["base"] - 0.0605) < 1e-4
+    assert abs(t["match_rate"] - 0.5511) < 1e-4
+
+
+def test_src_only_imports():
+    import re
+    for p in ("triage/build_report.py", "triage/build_pk1.py", "triage/build_srto.py",
+              "triage/prospective.py"):
+        src = (REPO / p).read_text()
+        assert "experiments/" not in src, p
+        assert re.search(r"from gtk1\.|from \.gtk1|import gtk1", src), p
+
+
 def _walk(o):
     if isinstance(o, dict):
         for k, v in o.items():
@@ -53,7 +69,7 @@ def test_lift_cis_lower_above_zero():
 
 
 def test_guardrails_present_on_pages():
-    for p in ("triage/triage_demo.html", "triage/triage_pk1.html"):
+    for p in ("triage/triage_demo.html", "triage/triage_pk1.html", "triage/triage_srto.html"):
         h = (REPO / p).read_text()
         for s in ("NOT a physical prediction", "Per-section thresholds", "do not pool"):
             assert s in h, (p, s)

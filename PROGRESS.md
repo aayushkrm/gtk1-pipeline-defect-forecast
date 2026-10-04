@@ -200,6 +200,12 @@
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
   repair queue updated (SRTO-2024A salvageable → PK2-2025A → YN).
 
+## 2026-10-03 — E11 PK1 2022→2025 launched (background, densest test)
+- Tolerant-xlrd patches vendored into `experiments/e11_pk1.py` (attributed to prior salvage work;
+  read-only use; stock xlrd tried first). Frozen pipeline: Depth≥10%, pipe+2m/0.5m/1h greedy,
+  100m matched-new KMAX=1400, B1/B2 + 2000-bootstrap lift CI. ~21k×11k-row match — backgrounded
+  (sh_105855277001RqlcBW1wtjvrAp); numbers recorded on completion only.
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

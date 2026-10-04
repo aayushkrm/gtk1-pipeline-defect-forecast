@@ -198,6 +198,13 @@
   (13 pos), B1 0.181 vs base 0.031, liftCI [0.024,0.415] lower>0. Caveats: 2021 covers ~30/42km;
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
+
+## 2026-10-03 — src/gtk1/ package + parity tests (reproducible-software track)
+- Consolidated frozen pipeline into importable `src/gtk1/`: io (loaders + tolerant-xlrd + normalize),
+  match (greedy/Hungarian), features (7-feat cell build), metrics (AP/CI/paired-delta/P@K/R@P).
+  Experiments keep frozen copies for provenance (no script edits).
+- `src/tests/test_parity.py` passes (executed): match flags identical 60/62, build labels+features
+  identical, metrics == sklearn on synthetic frames (no raw data in tests).
   repair queue updated (SRTO-2024A salvageable → PK2-2025A → YN).
 
 ## 2026-10-03 — E11 PK1 done: 4/4 sections replicate, methodologically cleanest pair

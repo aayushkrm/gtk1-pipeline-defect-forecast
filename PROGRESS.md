@@ -226,6 +226,12 @@
   Match-rate cut-invariant (0.715/0.715/0.690) — further evidence of stable PK1 methodology.
 - Round-8 HOLD released for PK1 thresholds. Refreshing triage_pk1.html triple (pending-flag →
   completed numbers) via background regen; page + results committed on its notification.
+
+## 2026-10-03 — PK1 page refreshed: triple completed, pending-flag gone
+- Regen completed: AP=0.779 identical (deterministic, git fd4cad4). Page carries completed triple
+  "0.779 / 0.574 / 0.375", zero PENDING strings; JSON cut_sensitivity dict {10:0.779,12:0.574,15:0.375}.
+- PK1 evidence package closed: page + E11 + E12 all committed. Two-section triage demo set (ON + PK1)
+  with per-section thresholds and full disclaimers.
 - Background run completed: AP=0.779 live == frozen E11 (deterministic). P@10=1.000, P@20=1.000, P@50=0.980.
   All round-7 display conditions verified on-page (disclaimer, pending-flag "cut≥10% only — ≥12/≥15 PENDING E12",
   caption, denominators, ON→PK1 per-section wording). 138KB HTML + JSON (git e4155d6).

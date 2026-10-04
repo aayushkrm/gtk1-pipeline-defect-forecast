@@ -204,6 +204,9 @@
   methodology break between 2021→2024, or repair-side effect; cannot separate without source re-export).
   Match 0.134 (lowest ever; E10 pair had 0.261), prev 0.100 (42 pos), B1 0.201 vs base 0.100,
   liftCI [0.019,0.212] lower>0 — ranking replicates a 5th time, but barely and dirtily.
+  CORRECTION (reviewer round 12): honest tally stays 4/4 clean — E14 is VOID as replication evidence
+  (fails R2 source-grade + R3 stationarity: ratio 4.78, match 0.134 vs 0.261 prior; R4 pass with a
+  changed instrument is uninterpretable). E14 kept as methodology-break evidence only.
 - Decision: NO 1717-2024 triage page (thresholds on a methodology-break pair would be meaningless);
   pair kept as drift evidence only. Repaired-copy results are internal, never handover-grade.
   Reinforces PK2-deferral and the per-survey-threshold rule.

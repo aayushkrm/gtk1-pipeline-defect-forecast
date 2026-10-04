@@ -8,18 +8,27 @@ No training, no tuning, no raw rows. Read-only raw data.
 import json, subprocess, sys
 from pathlib import Path
 import numpy as np
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "experiments"))
-from e02_matched import load_anom
-from e07b_null import build
-from e07_ablation import raw
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
+from gtk1.io import load_anomalies, normalize as raw
+from gtk1.features import build
+from gtk1 import metrics as MET
 from sklearn.metrics import average_precision_score
+
+ON_DIR = REPO.parent / "Данные для предварительного изучения" / "Омск-Новосибирск (392-526)"
+
+
+def load_anom(year):
+    d = ON_DIR / str(year)
+    fp = next((d / n for n in ("Аномалии.xlsx", "Аномалии_.xlsx") if (d / n).exists()), None)
+    assert fp, f"missing {d}"
+    return load_anomalies(fp)
 
 OUT = Path(__file__).resolve().parent
 KMAX, W = 1330, 100
 
 def run():
     d21, _ = load_anom(2021); d25, _ = load_anom(2025)
-    from e07_ablation import raw
     r21, r25 = raw(d21), raw(d25)
     yte, Xte, mr = build(r21, r25, 10, KMAX)
     past = Xte[:, 0]

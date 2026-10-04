@@ -199,6 +199,20 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Reviewer round 9 + src migration proof in flight
+- Round 9: src = shelfware until consumer migrates (parity test insufficient: synthetic-only, tautology
+  `or True`, no normalize/R4/tolerant coverage, no consumer). Migration proof required: thin-wrapper
+  triage builder + byte-comparable outputs + real-data fixture hashes in CI.
+- December readiness: tasks 1–7 DONE (deps with age caveat; overlay partial). Docs stale (TRIAGE_SPEC "as of
+  E08", BRIEF "E12 running") — refresh queued. Prospective-run harness (ingest + recalibration) not built.
+- Overlay ruling: archive as experimental/lr-nlag-ON-only, OFF + kill-switch, no tuning, no delete
+  (provenance). Ship B1-only paths. "Dead unless prospective dense-ground confirms."
+- No new expensive campaigns: remaining budget → migration proof, docs refresh, prospective readiness,
+  partner requests. Cheap frozen reruns only.
+- Migration: `triage/build_report.py` now imports only `gtk1.{io,features}` (+sklearn); experiment
+  fallback import removed (was a live ImportError risk). Re-run launched background (sh_...Vyr4);
+  proof = AP 0.644 identical + HTML byte-comparable modulo git-hash. Recorded on notification only.
+
 ## 2026-10-03 — src/gtk1/ package + parity tests (reproducible-software track)
 - Consolidated frozen pipeline into importable `src/gtk1/`: io (loaders + tolerant-xlrd + normalize),
   match (greedy/Hungarian), features (7-feat cell build), metrics (AP/CI/paired-delta/P@K/R@P).

@@ -210,6 +210,17 @@
 - Next: reviewer round 8 (4-section synthesis + December build approval); PK1 triage page (same v0 template,
   per-section thresholds); repair queue as before.
 
+## 2026-10-03 — Round 8 (B1 freeze YES, December CONDITIONAL GO) + PK1 page/E12 launched
+- (1) B1 freeze as December primary: YES — 4/4 lift-CIs lower>0; SRTO-1717 weak only for its own
+  thresholds, not the freeze. AP spread (0.18–0.78) mandates per-section recalibration, no pooling.
+- (2) PK1 page with cut-sensitivity pending: SPLIT — structure-only internal demo OK; quantitative
+  headline HOLD until E12 (cheap frozen rerun). E12 (cuts ≥12/≥15) written + launched background
+  (sh_...OIxI, 120s stagger); PK1 page build launched background (sh_...U5PB). Numbers on notification only.
+- (3) December build: CONDITIONAL GO — multi-section B1 triage + per-section thresholds + overlay OFF
+  + disclaimer triple + no badges/meters. HOLDs only: PK1 thresholds till E12; physics language till
+  repair logs. (4) Residual ≥80% risk (for supervisor): "new" conflates initiation + re-detection +
+  sensitivity gain — survey-conditional reporting predictability ≠ physical corrosion predictability.
+
 ## 2026-10-03 — E11 PK1 2022→2025 launched (background, densest test)
 - Tolerant-xlrd patches vendored into `experiments/e11_pk1.py` (attributed to prior salvage work;
   read-only use; stock xlrd tried first). Frozen pipeline: Depth≥10%, pipe+2m/0.5m/1h greedy,

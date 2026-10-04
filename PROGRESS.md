@@ -166,6 +166,16 @@
   cut-sensitivity 0.644/0.546/0.364), git hash in JSON, overlay OFF. Launched in background
   (sh_104905696001ODnSxWUzys2Vwf); outputs recorded on completion only.
 
+## 2026-10-03 — Triage prototype v0 built (B1, deterministic re-run confirmed)
+- Background run completed: AP=0.644 live == frozen E04 (deterministic regeneration, no re-tuning).
+  P@10=1.000 [1.000,1.000], P@20=1.000 [0.950,1.000], P@50=0.960 [0.900,1.000], base 0.268, match 0.612.
+  Artifacts verified: 120KB HTML (heatmap SVG + top-20 audit + P@K + full triple + disclaimer +
+  kill-switch note), JSON with git hash 80672f3.
+- Status: first end-to-end deliverable increment exists (retrospective demo, ON only). Prospective use
+  requires next-survey data + per-section recalibration — stated on page. Overlay still OFF.
+- Next: reviewer round 7 (prototype audit: display honesty, P@K framing, ship-readiness);
+  PK1/SRTO-1717 scoping for third-section evidence; partner data requests outstanding.
+
 ## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
 - Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
   AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).

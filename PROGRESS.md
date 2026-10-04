@@ -132,6 +132,19 @@
   count MAE ~6.5 log-linear; NO red/green badges, NO ≥80% meter. This is what the evidence supports.
 - Next: E07b (constant-check + 100-shuffle null + ablation-vs-full + SRTO holdout), then re-apply for gate.
 
+## 2026-10-03 — E07b done: null calibrated, driver found, SRTO holdout fails feature lift
+- Background run completed; artifacts verified. Constant-check PASS (const=base exactly, gap +0.0000) —
+  AP path sane; E07 single-shuffle excess was chance (null−base CI [−0.066,+0.275] / [−0.058,+0.314] includes 0).
+  Δ LR vs null-mean +0.311 [+0.263,+0.354] / +0.297 [+0.238,+0.363] — LR beats calibrated null decisively.
+- Ablation-vs-full (driver answered): dropping nlag costs −0.039/−0.036 (dominant); npipes −0.008/−0.002;
+  n_past only −0.002/+0.002 (collinear with lags); maxd/meand/gwan/mech ≈ noise (±0.006).
+  The +0.03 lift is spatial spillover (neighbor counts), still autocorrelation-family — explains fragility.
+- SRTO holdout of LR lift: LR 0.281 vs B1 0.277, dCI [−0.032,+0.039] — feature lift does NOT transfer;
+  LR==B1 off-site. B1 ranking itself replicated earlier (E05b lift CI lower>0); only the +0.03 overlay is ON-only.
+- Net: task framing stands everywhere; feature overlay provisional ON-only. Shipped-model implication:
+  B1/persistence-family ranker as primary (transfers), LR-nlag overlay experimental (ON-only flag).
+  Re-applying to reviewer for gate ruling (round 5).
+
 ## 2026-10-03 — E04b gate result (matcher×cut matrix, executed)
 - Matrix @100m matched-new: dd {1,2,5}m makes ZERO difference (identical match/prev/B1 in every
   cut) — distance window is not the binding constraint; pipe+offset/orientation decide.

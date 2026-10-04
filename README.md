@@ -1,36 +1,34 @@
-# GTK1 — Forecasting defects on main gas pipelines
+# GTK1 — Inspection-report triage for main gas pipelines (frozen scope: B1 primary)
 
-Private R&D repo. Raw VTD data is **never committed** (see `.gitignore`).
+Private R&D repo. Raw VTD data is **never committed** (see `.gitignore`; verified clean).
 Data lives outside this repo at `../Данные для предварительного изучения/`.
 
-## Problem (short)
-Predict where / which defects appear or grow on pipeline sections,
-from past ILI anomalies + pipe/weld logs. Target: ≥80% reliability
-for a chosen, honestly validated task.
-
-Primary tasks (from data study):
-1. `1km-binary`: new corrosion ≥10% in 4–5y (PR-AUC, recall@P=0.7).
-2. `1km-count`: new-anomaly count /5y (Poisson/NB, MAE, Spearman).
-3. Pipe high-risk, 4. matched Δdepth, 5. regime-change detection.
-
-## Layout
-- `src/etl/` — salvage-tolerant parsers, threshold normalization, pipe join
-- `src/features/` — pipe-level + 100m/1km aggregates
-- `src/models/` — baselines (persistence, Poisson, HGB) → GBM
-- `src/validation/` — longitudinal hold-out (train past → test future), group-by-section
-- `configs/` — dataset + model configs
-- `docs/` — PROBLEM, DATA, VALIDATION, LIMITS
-- `experiments/` — dated cheap diagnostics, never tuned on test
+## What this delivers (honest, evidence-backed)
+Ranked 100m-segment watchlists for **newly-reported ≥10% defects** (operational definition in
+docs/GUARDRAILS.md — NOT physical corrosion prediction). Validated past→future on 4 sections:
+ON AP 0.644/base 0.268; SRTO-1608 test 0.277/0.061; SRTO-1717 0.181/0.031; PK1 0.779/0.574/0.375
+at ≥10/12/15%. No ≥80% reliability claim is supportable — see docs/SUPERVISOR_BRIEF.md.
 
 ## Reproduce
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python -m src.etl.build_dataset --config configs/base.yaml
-python -m src.models.baseline --config configs/base.yaml
+python3 src/tests/test_parity.py            # synthetic parity, no data needed
+python3 triage/prospective.py --section on --survey 2025 [--drop-last]
+python3 triage/prospective.py --section on --survey 2021 --check   # regression gate
+bash run_tests.sh                             # all offline checks
 ```
 
-## Rules
-- No raw `.xls/.xlsx/.csv` in git. Only derived, de-identified aggregates <1MB.
-- No test tuning, no cherry-picking, report negatives.
-- See `PROGRESS.md` for audit log.
+## Layout (as-built, not as-planned)
+- `src/gtk1/` — frozen pipeline: io (loaders + tolerant-xlrd + normalize), match (greedy/Hungarian),
+  features (7-feat 100m build), metrics (AP/CI/paired-delta/P@K). Both triage paths are thin consumers
+  (byte-identical migration proofs in PROGRESS.md).
+- `src/tests/` — parity (synthetic) + consistency (frozen-number tripwire, no data needed).
+- `experiments/` — E01–E12 frozen scripts + result JSONs (audit trail; scripts untouched since run).
+- `triage/` — retrospective demo pages (ON, PK1) + prospective harness + forward watchlists.
+- `configs/` — base.yaml (legacy plan) + thresholds.yaml (per-section placeholders, uncalibrated).
+- `docs/` — PROBLEM, DATA, VALIDATION, GUARDRAILS, TRIAGE_SPEC, SUPERVISOR_BRIEF, OVERLAY_STATUS.
+- `outputs/` — ignored full watchlist CSVs.
+
+## Rules (enforced by reviewer rounds 1–10)
+- Past-only features; no test tuning; negatives reported; overlay OFF by default (kill-switch).
+- Every number ships with match-rate, vanished-frac, cut-sensitivity (docs/GUARDRAILS.md).
+- Raw `.xls/.xlsx/.csv/.mp4/.jpg` never committed. Single committer.

@@ -55,7 +55,7 @@ def run():
 this page re-runs frozen labels for display only (no re-tuning).</b>
 "Newly-reported" = unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match; includes
 initiation + re-detected misaligned old + sensitivity gain. Match-rate (test, forward): {mr:.3f}
-(vanished = {1-mr:.3f}). Cut-sensitivity: <b>cut≥10% only — ≥12%/≥15% PENDING (E12 queued).</b>
+(vanished = {1-mr:.3f}). Cut-sensitivity (E12, frozen): B1 0.779 / 0.574 / 0.375 at ≥10/12/15% (all lift-CIs lower>0).
 Stable methodology note: d≥10% counts 8982 vs 8989 across surveys (unlike ON inflation).
 Absolute AP is cut- and survey-conditional. Per-section thresholds required — PK1 only, do not pool.</p>
 <p>AP={ap:.3f} base={base:.3f} (frozen E11 number reproduced live).</p>
@@ -75,7 +75,8 @@ per-section recalibration. K = 10/20/50 display-chosen.</i></p>
     except Exception:
         gh = "nogit"
     (OUT / "triage_pk1.json").write_text(json.dumps(
-        {"git": gh, "AP": ap, "base": base, "match_rate": mr, "cut_sensitivity": "pending E12",
+        {"git": gh, "AP": ap, "base": base, "match_rate": mr,
+         "cut_sensitivity": {"10": 0.779, "12": 0.574, "15": 0.375},
          "top20": rows, "p_at_k": {k: {"est": p_at_k(k)[0], "CI": [p_at_k(k)[1], p_at_k(k)[2]]} for k in (10, 20, 50)}}, indent=2))
     print(f"git={gh} AP={ap:.3f} base={base:.3f} match={mr:.3f} " +
           " ".join(f"P@{k}={p_at_k(k)[0]:.3f}" for k in (10, 20, 50)))

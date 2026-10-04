@@ -218,6 +218,14 @@
   (sh_...OIxI, 120s stagger); PK1 page build launched background (sh_...U5PB). Numbers on notification only.
 
 ## 2026-10-03 — PK1 triage page v0 built (E12 still running)
+
+## 2026-10-03 — E12 done: PK1 triple complete, quantitative headline UNBLOCKED
+- cut≥12%: match 0.715, prev 0.238 (334 pos), B1 0.574 vs base 0.238, liftCI [0.289,0.387].
+  cut≥15%: match 0.690, prev 0.099 (138 pos), B1 0.375 vs base 0.099, liftCI [0.208,0.354].
+  PK1 triple: 0.779 / 0.574 / 0.375 — ranking survives all cuts with lower>0 (unlike ON's 15% fade).
+  Match-rate cut-invariant (0.715/0.715/0.690) — further evidence of stable PK1 methodology.
+- Round-8 HOLD released for PK1 thresholds. Refreshing triage_pk1.html triple (pending-flag →
+  completed numbers) via background regen; page + results committed on its notification.
 - Background run completed: AP=0.779 live == frozen E11 (deterministic). P@10=1.000, P@20=1.000, P@50=0.980.
   All round-7 display conditions verified on-page (disclaimer, pending-flag "cut≥10% only — ≥12/≥15 PENDING E12",
   caption, denominators, ON→PK1 per-section wording). 138KB HTML + JSON (git e4155d6).

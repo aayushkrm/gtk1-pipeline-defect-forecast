@@ -199,6 +199,12 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-03 — Handover hygiene: README as-built, run_tests.sh green, overlay archived
+- README rewritten (was aspirational scaffold; now frozen deliverable + reproduce + rules).
+- `run_tests.sh`: parity + consistency + binary-hygiene in one verified-green run (pytest absent noted).
+- docs/OVERLAY_STATUS.md: LR-nlag archived OFF with promotion rule (prospective dense-ground
+  confirmation + null re-pass + reviewer round). Ship B1-only.
+
 ## 2026-10-03 — Reviewer round 10: no scoring breach; tests hardened; PK2 deprioritized; scope freeze
 - Audit: NO new scoring breach (migrations hold, prospective IDENTICAL, E13 isolates artifact).
   One claim rebutted with evidence: thresholds.yaml EXISTS on disk + tracked (reviewer's ls miss).

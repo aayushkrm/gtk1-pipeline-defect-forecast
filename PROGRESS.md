@@ -103,6 +103,35 @@
   (no excess). Repair logs absent from VTD package — exclusion pending partner data (dependency logged).
 - Next: commit E08; on E07 completion notification → record + push; reviewer round 4 over E06/E07/E08.
 
+## 2026-10-03 — E07 ablation done (first significant Δ vs B1, with caveats)
+- Background run completed; artifacts verified (results_e07.json: features+3 cuts+repro).
+  cut>=10%: LR 0.676 vs B1 0.644, Δ=+0.032 CI [+0.011,+0.053] (lower>0); HGB 0.652 Δ=+0.008 [-0.017,+0.033] (tie).
+  cut>=12%: LR 0.586 Δ=+0.040 [+0.014,+0.063] (replicates); HGB Δ=+0.034 [-0.003,+0.069] (borderline).
+  cut>=15%: LR 0.340 vs B1 0.364, Δ=-0.024 (negative; sparse, prev_te 0.083) — features fail where
+  positives are few. F1@train-thr 0.638/0.590/0.440; Brier 0.138/0.106/0.074.
+- ANOMALY (not hidden): shuffle-control AP 0.336/0.289/0.136 sits ABOVE base (0.268/0.181/0.083).
+  Near-constant predictor should score ≈base; +0.07 excess unexplained (chance transfer from
+  1331×7 noise fit, or intercept/threshold artifact). LR lift (+0.032) therefore treated as
+  provisional — small effect + shuffle excess = caution, not a win claim.
+- Ablation "weakest-dropped" output ambiguous (dropped-subset deltas vs B1, not vs full) — schema
+  to be fixed in E07b if rerun; strongest-driver question still open.
+- Next: reviewer round 4 (E06/E07/E08) — questions: (a) is +0.032 with shuffle excess publishable
+  internally as signal? (b) E05-features gate status? (c) deliverable framing for December?
+
+## 2026-10-03 — Reviewer round 4: lift downgraded, gate shut, deliverable spec set
+- (a) +0.032 NOT publishable: shuffle−base excess (+0.068/+0.108/+0.053) exceeds the lift at every cut —
+  null uncalibrated, CIs uninterpretable; one permutation is not a null. Deciding controls mandated:
+  constant-predictor check (must equal base ±0.005), N≥100 shuffle null, paired CI of Δ vs
+  mean(shuffle) with C frozen by train-CV. C-selection confirmed train-only (StratifiedKFold on
+  train in e07_ablation.py — suspicion rebutted, frozen-C rule adopted regardless).
+- (b) E05-features (≤12) still NO-GO: E04b conditional-pass stands, E05 licenses task not features,
+  E08 helps framing but repair exclusion open, E07 beat-shuffle FAIL + sensitivity partial-FAIL +
+  ablation schema broken. Permitted: E07b at frozen ≤7 with all fixes + SRTO holdout of LR lift.
+- (c) Honest December deliverable: calibrated triage tool (rank 100m segments, heatmap + uncertainty
+  + audit columns, per-section thresholds, GUARDRAILS disclaimer on page); ON AP ~0.65±0.05 (~2.4× base);
+  count MAE ~6.5 log-linear; NO red/green badges, NO ≥80% meter. This is what the evidence supports.
+- Next: E07b (constant-check + 100-shuffle null + ablation-vs-full + SRTO holdout), then re-apply for gate.
+
 ## 2026-10-03 — E04b gate result (matcher×cut matrix, executed)
 - Matrix @100m matched-new: dd {1,2,5}m makes ZERO difference (identical match/prev/B1 in every
   cut) — distance window is not the binding constraint; pipe+offset/orientation decide.

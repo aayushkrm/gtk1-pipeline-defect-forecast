@@ -200,6 +200,16 @@
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
 ## 2026-10-06 — Research swarm: 4 tracks, 49 sources, all committed
+- (INDEX extended with wave 2 below.)
+
+## 2026-10-06 — Research wave 2: 4 tracks, ~50 sources, all committed
+- Parallel subagents: T5 ILI tool physics + POD (12 src; KEY: 10–15%t in POD ramp explains 2.5–5×
+  jumps; growth credible only above both surveys' POD90), T6 integrity practice (12 src; triage =
+  PoF-side screening; KBD<0.9 conservative flag), T7 RUL + Russian sources (11 src, 4 Russian;
+  Gaznadzor-2019 baseline 36–56% accuracy supports no-80% position), T8 data engineering (14 src;
+  PODS schemas, weld-master action list). websearch flaky across tracks (fallbacks noted per-file).
+- No extra plugins installable (catalog + keys) — built-ins + public APIs sufficed, stated in INDEX.
+
 - Parallel subagents: T1 ILI growth + sizing error (14 src), T2 spatial/tabular (10),
   T3 community Kaggle/HF/GitHub/PHMSA (12 items), T4 shift/metrics/calibration (13).
   websearch was HTTP-400 — verified via OpenAlex/arXiv APIs + webfetch instead (noted per-track).

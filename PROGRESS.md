@@ -213,6 +213,16 @@
 - (Wave 5 below — 20 tracks total now indexed.)
 
 ## 2026-10-06 — Research wave 5: providers confirmed keyed, 4 tracks banked (20 total)
+- (Wave 6 below — 24 tracks total now indexed.)
+
+## 2026-10-06 — Research wave 6: direct-Exa verified live, 4 tracks banked (24 total)
+- Fixed the tool question properly: $EXA_API_KEY present in agent shell, curl-verified working
+  (Zhang&Zhou hit); Firecrawl/Parallel/TinyFish reachable only via user-side routed failover
+  (absent from agent env). Briefs now mandate dual-channel use + per-file channel disclosure.
+- T21 cracks (Paris/SCC/EMAT/SSWC/ECA), T22 internal corrosion (de Waard/NORSOK/TOLC/UT-reference),
+  T23 GIS covariates (SoilGrids/DEM/HCA join method + SK-42 trap), T24 market packaging (tiers,
+  POC shapes, on-premise constraint, honest-claim templates). ~38.5k words total.
+
 - Corrected the record: OpenChamber panel shows Exa/Firecrawl/Parallel/TinyFish keyed + auto-failover
   (Tavily empty); briefs told agents to exploit per-provider strengths + retry. INDEX tooling note fixed.
 - T17 primaries with extracted values (POF tables, API-1163 workflow, binomial gates); T18 academic deep

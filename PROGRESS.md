@@ -209,6 +209,15 @@
 - Tracks 10/11/12 banked earlier; track 9 (benchmarks) landed on its completion notification and is
   now indexed + committed (Mendeley sandbox URLs, C-MAPSS smoke test, baseline anchors, synthetic stack).
 
+## 2026-10-06 — Research wave 4: 4 tracks banked (16 total); tool question answered honestly
+- T13 welds, T14 dents, T15 ECDA fusion (+partner items 6–9), T16 regulatory (allowed/forbidden claim
+  rule; RU = инструмент планирования, не ЭПБ). All committed.
+- Exa/Firecrawl/Parallel/TinyFish: NOT connected here — no integrations, no API keys, no catalog
+  entries. Offered: paste keys and I wire them same-turn; otherwise built-ins + public APIs stand.
+
+- Tracks 10/11/12 banked earlier; track 9 (benchmarks) landed on its completion notification and is
+  now indexed + committed (Mendeley sandbox URLs, C-MAPSS smoke test, baseline anchors, synthetic stack).
+
 - Parallel subagents: T5 ILI tool physics + POD (12 src; KEY: 10–15%t in POD ramp explains 2.5–5×
   jumps; growth credible only above both surveys' POD90), T6 integrity practice (12 src; triage =
   PoF-side screening; KBD<0.9 conservative flag), T7 RUL + Russian sources (11 src, 4 Russian;

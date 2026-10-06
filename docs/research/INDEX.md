@@ -61,3 +61,12 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   field-scale twin of our vanished-frac argument, 192.939 half-life + 7-yr cap horizon justification.
   Strengthens limitations section with named evidence.
 - Track 9 (benchmarks/datasets) still in progress — indexed on its completion notification, not here.
+
+## Wave 3 completion (2026-10-06 — track 9 benchmarks landed)
+- `track9_benchmarks.md` (11 items): Mendeley 4-run ILI set deep-dive (343 MB, CC-BY 4.0, direct URLs —
+  USE as matcher sandbox); C-MAPSS/PHM08 (USE FD001 smoke test); Saxena metrics + PHM08 asymmetric
+  score + time-dependent PR (ADAPT into eval); Velázquez-259 + Bastek-2026 + JPSE-2025 RMSE 0.368 mm
+  (honest-baseline anchors, blocked CV); NIST CORR-DATA + PHMSA incidents (public domain); SKAB
+  protocol-only; in-house synthetic stack (GRF + clustered points + POD layer); 6/11 downloadable.
+- EGIG confirmed members-only (rejected in-file). Mendeley row counts need post-download audit.
+- December-scope actions recorded in-file; none change frozen scope.

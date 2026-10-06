@@ -203,6 +203,12 @@
 - (INDEX extended with wave 2 below.)
 
 ## 2026-10-06 — Research wave 2: 4 tracks, ~50 sources, all committed
+- (Wave 3 partial + completion below — 12 tracks total now indexed.)
+
+## 2026-10-06 — Research wave 3 complete: 12 tracks indexed
+- Tracks 10/11/12 banked earlier; track 9 (benchmarks) landed on its completion notification and is
+  now indexed + committed (Mendeley sandbox URLs, C-MAPSS smoke test, baseline anchors, synthetic stack).
+
 - Parallel subagents: T5 ILI tool physics + POD (12 src; KEY: 10–15%t in POD ramp explains 2.5–5×
   jumps; growth credible only above both surveys' POD90), T6 integrity practice (12 src; triage =
   PoF-side screening; KBD<0.9 conservative flag), T7 RUL + Russian sources (11 src, 4 Russian;

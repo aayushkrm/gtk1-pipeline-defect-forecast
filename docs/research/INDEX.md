@@ -91,10 +91,11 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   100-m cells by P(newly-reported ≥10%) per section/survey pair, supports verification
   prioritisation"; forbidden = physical-corrosion, ≥80%, reassessment-extension,
   fitness-certification, pooled or E14 numbers; RU handover = инструмент планирования, не ЭПБ.
-- Tooling CORRECTED + VERIFIED 2026-10-06: $EXA_API_KEY is live in agent shell — direct Exa
-  neural search via curl works (Zhang&Zhou hit confirmed). Firecrawl/Parallel/TinyFish keys live
-  only in the user keyring: reached via routed websearch failover. Strategy: direct-Exa for semantic
-  queries + routed search for the rest + PROTOCOL ladder; record per-file what served what.
+- Tooling CORRECTED + VERIFIED + CLIENTS BUILT 2026-10-06: `src/research_tools/` holds
+  exa.py/firecrawl.py/parallel.py/tinyfish.py (env-keyed, SKIP when absent) + quad.py
+  (ThreadPoolExecutor: all four CONCURRENTLY, URL-deduped) + test_providers.py self-test.
+  Live self-test: exa OK; other three SKIP (keys in user keyring only, absent from agent env).
+  Schemas verified vs official docs (Firecrawl v2/search, Parallel v1/search, TinyFish GET+research_paper).
 - December-scope actions recorded in-file; none change frozen scope.
 
 ## Wave 5 (2026-10-06 — primaries, academic deep search, Russian texts, vendor gray literature)

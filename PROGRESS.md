@@ -216,6 +216,15 @@
 - (Wave 6 below — 24 tracks total now indexed.)
 
 ## 2026-10-06 — Research wave 6: direct-Exa verified live, 4 tracks banked (24 total)
+- (Quad-provider client layer below.)
+
+## 2026-10-06 — Quad-provider search layer built; 1 of 4 keys reachable (ball in user court)
+- `src/research_tools/`: per-provider clients (schemas verified vs official docs) + quad.py concurrent
+  fan-out + self-test. Live self-test: exa OK (3 hits), firecrawl/parallel/tinyfish SKIP (keys absent
+  from agent env — they sit in the user keyring only). Architecture for "all four in parallel" is
+  DONE and proven; only key custody blocks full activation.
+- PROTOCOL tooling section updated. Subagent briefs now mandate dual-channel use (direct clients +
+  routed search) with per-file channel disclosure.
 - Fixed the tool question properly: $EXA_API_KEY present in agent shell, curl-verified working
   (Zhang&Zhou hit); Firecrawl/Parallel/TinyFish reachable only via user-side routed failover
   (absent from agent env). Briefs now mandate dual-channel use + per-file channel disclosure.

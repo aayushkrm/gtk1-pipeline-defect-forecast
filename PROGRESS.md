@@ -199,6 +199,15 @@
   KP-2016 mixed provenance. Ranking replicates 3/3 sections (ON, SRTO-1608, SRTO-1717).
 - Next: PK1 2022→2025 replication (tolerant loader, densest test — strongest generalization check yet);
 
+## 2026-10-06 — Research swarm: 4 tracks, 49 sources, all committed
+- Parallel subagents: T1 ILI growth + sizing error (14 src), T2 spatial/tabular (10),
+  T3 community Kaggle/HF/GitHub/PHMSA (12 items), T4 shift/metrics/calibration (13).
+  websearch was HTTP-400 — verified via OpenAlex/arXiv APIs + webfetch instead (noted per-track).
+  No research plugins exist in catalog and no API keys available — built-ins sufficed.
+- Gated decisions (none change December scope): Voronoi-matcher ablation candidate; hurdle P2
+  architecture candidate; Mendeley 4-run sandbox for method tests; calibrate→reweight order;
+  negatives kept (no ID-less paper, no harmonization standard, Hawkes rejected, no fit open data).
+
 ## 2026-10-03 — E14 second 1717 pair: ranking survives, methodology break flagged (weak replication)
 - Executed (frozen, repaired 2024A, 5 placeholders dropped): d≥10 92 vs 440 (4.8× jump — sensitivity/
   methodology break between 2021→2024, or repair-side effect; cannot separate without source re-export).

@@ -48,3 +48,16 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
 - Gated follow-ups (none change December scope): POD90-aware matched analysis (growth credible only
   above both POD90s); hurdle-P2 + RSF-survival experiment order (RSF → per-medium CatBoost → one gated
   transfer test); Mendeley sandbox + PODS field map for ETL hardening.
+
+## Wave 3 (2026-10-06 — deployment, corrosion science, failure analyses; benchmarks pending)
+- `track10_deployment.md` — triage UX (ranked pull lists + override logging, never badges), CORP plots
+  for analysts only, MLOps recalibration decision table mapping to PHMSA §192.947, four evidence lines
+  backing the no-badges rule. Directly supports triage pages + runbook wording.
+- `track11_corrosion.md` — soil-resistivity proxies, NBS rate-decay prior, FBE-vs-tape shielding ×
+  25–30y life, CP criteria request list, stray-current/MIC flags, ERW-vs-spiral spectra, NACE 0.4 mm/y
+  upper-bound prior. Feature-request list for partner data; no model change.
+- `track12_failures.md` — PHMSA/NTSB miss cases (San Bruno, Marshall $800M+, Bellingham, Carlsbad),
+  $91k/dig vs 10³–10⁴× failure economics (repair-priority math), Danville 441-vs-16 re-analysis as
+  field-scale twin of our vanished-frac argument, 192.939 half-life + 7-yr cap horizon justification.
+  Strengthens limitations section with named evidence.
+- Track 9 (benchmarks/datasets) still in progress — indexed on its completion notification, not here.

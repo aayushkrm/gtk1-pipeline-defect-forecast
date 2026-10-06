@@ -91,7 +91,31 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   100-m cells by P(newly-reported ≥10%) per section/survey pair, supports verification
   prioritisation"; forbidden = physical-corrosion, ≥80%, reassessment-extension,
   fitness-certification, pooled or E14 numbers; RU handover = инструмент планирования, не ЭПБ.
-- Tooling for waves: Exa/Firecrawl/Parallel/TinyFish NOT available in this environment (no
-  integrations, no API keys) — all tracks used built-in websearch/webfetch + public APIs
-  (OpenAlex, arXiv, Mendeley, HF/Kaggle public pages), fallbacks noted per-file.
+- Tooling CORRECTED 2026-10-06 (user showed OpenChamber panel: all providers keyed —
+  Exa via EXA_API_KEY + saved Firecrawl/Parallel/TinyFish keys, auto-failover on; Tavily empty).
+  Earlier "no integrations" note was wrong (agent-side catalog shows one websearch tool only).
+  Strategy: vary phrasings per provider strength (Exa neural search, Firecrawl extraction of
+  JS/bot-walled pages); on failure RETRY (failover may serve it); record per-file what worked.
 - December-scope actions recorded in-file; none change frozen scope.
+
+## Wave 5 (2026-10-06 — primaries, academic deep search, Russian texts, vendor gray literature)
+- `track17_primaries.md` (10 items, 7 with extracted values): filled POF Table A4-2 via NTSB docket
+  (min-depth @90% POD body 8/10/10/8%t, HAZ 12/14/14/12%t; depth ±10%t@80%/±15%@90%); POF 100
+  a90/50-vs-95 + MFL/UT floors + locations; POF 330 blind/open/partially-blind + velocity ladder;
+  POF 310 NDE tolerance ladder; POF 311 parsed schema; DigIt ratio-t + Agresti–Coull; API-1163-E3
+  workflow via Irth; PRCI IM-1-06 login-walled (numbers recorded). Computed binomial gates (29/29).
+- `track18_academic.md` (12 src + 2 recorded negatives): PCGR 4-ILI eval (57,678 anomalies), IRTH
+  analytic model + unity plots, Smith 755-pipe joint DNN (closest ID-less analogue), GIE matrix
+  matcher, Beyene-2024 time-dependent PR; NEGATIVES: no 2022–26 Voronoi follow-up, no POD-as-input
+  paper. Citation graph mapped (Caleyo→Ben Seghier→Mesghali/Miao; biostatistics zero cross-citation).
+- `track19_russian_primary.md` (12 items, 9 Russian primaries): FNiP-517 via Wayback (reg №61745,
+  validity, scope; 517 renumbering flagged negative); GOST 51164-98 exact CP numbers via Garant;
+  STO factors 1.74/1.80 + durability 10 + transverse-SCC life formula (t_ост=0.33 yr worked);
+  3 NEW VTD papers (VNIIGAZ MLP ≥92%, Pinigin 0.02 mm/yr mismatch, Syzrantsev fatigue);
+  VNIIGAZ numbers (8/9 shop-weld accidents, 36–56%, Ukhta polygon); TIU 2024–26 + Gubkin lists.
+  Full STO 112/1050 texts purchase-only (flagged).
+- `track20_vendor.md` (14 items): ROSEN MFL-A Plus/Ultra + RoCombo exact POD/tolerance; Baker
+  Hughes×TC Energy ML tolerance; TC Energy 5-vendor pull-through (IPC2024); OneBridge 40–60% dig
+  study + 6-model comparison; TDW kNN matching-error; Enbridge IECM + Gazprom/VNIIgaz 2022
+  disclosures; PODS 7 + 1-of-21 compliance. Negatives: CorrSight-pipeline nonexistent, Weatherford
+  ILI exited, Transneft/Gazprom ML metrics undisclosed.

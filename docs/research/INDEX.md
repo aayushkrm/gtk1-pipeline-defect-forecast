@@ -30,3 +30,21 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
    calibrators across contractors — formalizes our no-pooling rule.
 5. Negative results kept: no ID-less forecasting paper exists; no harmonization standard exists;
    Hawkes rejected; Kaggle/HF have no fit tabular data. These close avenues, which is progress.
+
+## Wave 2 (2026-10-06, 4 tracks, ~50 sources; websearch flaky — worked for some tracks, HTTP-400 for others with API fallbacks noted per-file)
+- `track5_ili_tools.md` — MFL/UT/EMAT physics, UHR resolution, API-1163 L1/2/3 + PRCI unity plots, POF
+  specs, calibration digs. KEY MECHANISM: 10–15%t sits in the POD ramp (POD90 12–15% body, 18–24%
+  near weld) — small threshold changes explain our 2.5–5× count jumps; real growth credible only on
+  matched pairs above BOTH surveys' POD90.
+- `track6_integrity.md` — B31G/RSTRENG, DNV-RP-F101, B31.8S taxonomy, RBI dig programs, Pd/MAOP/KBD
+  semantics. Position: triage outputs are PoF-side screening feeding dig workflows; KBD<0.9 is a
+  conservative Level-1-family flag; cut-sensitivity + per-section thresholds have direct precedent.
+- `track7_rul_russian.md` — C-MAPSS lessons, survival/RSF, transfer learning, 4 Russian-language sources
+  (cyberleninka TIU/Gorny/VNIIGAZ, STO summaries, TIU/Gubkin schools). CITABLE BASELINE: Gaznadzor-
+  coauthored 2019 paper reports VTD-based repair-planning accuracy only ~36–56%, 52–54% of SCC pipes
+  invisible to ILI — supports the no-80%-claim position. Deep sequence models rejected (3 snapshots).
+- `track8_data_eng.md` — run alignment, odometer/AGM correction, tally reconciliation, PODS 7/UPDM
+  schemas (ADAPT), API-1163 DQA gates, 4-step weld-log-master action list for our ETL.
+- Gated follow-ups (none change December scope): POD90-aware matched analysis (growth credible only
+  above both POD90s); hurdle-P2 + RSF-survival experiment order (RSF → per-medium CatBoost → one gated
+  transfer test); Mendeley sandbox + PODS field map for ETL hardening.

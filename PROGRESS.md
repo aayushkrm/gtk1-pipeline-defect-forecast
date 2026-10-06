@@ -210,6 +210,17 @@
   now indexed + committed (Mendeley sandbox URLs, C-MAPSS smoke test, baseline anchors, synthetic stack).
 
 ## 2026-10-06 — Research wave 4: 4 tracks banked (16 total); tool question answered honestly
+- (Skip-audit + PROTOCOL below.)
+
+## 2026-10-06 — No-skip protocol codified + 16-track skip audit passed
+- `docs/research/PROTOCOL.md`: fallback ladder (search→fetch→OpenAlex→arXiv→mirrors→secondaries→
+  recorded negative), per-file disclosure, minimums, HARD boundaries (no paywall purchases, no
+  logins, no credential use). All future research briefs cite it first.
+- Skip audit over all 16 tracks (grep for could-not/unable/failed/skipped/paywalled): hits are
+  domain language or already-handled fallbacks (secondaries, mirrors, API verification, all noted
+  per-file). Only residual: paywalled-standard full texts via summaries — allowed boundary, flagged
+  per item, purchase decision left to user. No cleanup wave needed.
+
 - T13 welds, T14 dents, T15 ECDA fusion (+partner items 6–9), T16 regulatory (allowed/forbidden claim
   rule; RU = инструмент планирования, не ЭПБ). All committed.
 - Exa/Firecrawl/Parallel/TinyFish: NOT connected here — no integrations, no API keys, no catalog

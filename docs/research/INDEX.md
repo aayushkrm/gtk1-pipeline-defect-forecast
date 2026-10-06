@@ -1,5 +1,8 @@
 # Research index — literature + community sweep (2026-10-06, while awaiting partner data)
 
+Standing orders: `PROTOCOL.md` (no-skip fallback ladder, disclosure rule, minimums, hard boundaries).
+Every future research prompt must cite it first — this is how the no-skip directive reaches subagents.
+
 Tooling note: websearch returned HTTP 400 all day, so tracks verified via OpenAlex/arXiv
 APIs + webfetch; some publisher pages bot-walled (noted per-track). No extra research plugins
 exist in the tool catalog and no API keys are available — built-ins only. No Exa/Firecrawl/

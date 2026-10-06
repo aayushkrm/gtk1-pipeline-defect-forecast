@@ -69,4 +69,26 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   (honest-baseline anchors, blocked CV); NIST CORR-DATA + PHMSA incidents (public domain); SKAB
   protocol-only; in-house synthetic stack (GRF + clustered points + POD layer); 6/11 downloadable.
 - EGIG confirmed members-only (rejected in-file). Mendeley row counts need post-download audit.
+
+## Wave 4 (2026-10-06 — welds, dents, ECDA fusion, regulatory claim landscape)
+- `track13_welds.md` (15 src): weld-defect taxonomy + MFL POD asymmetry, API-1104-A vs BS-7910 vs CSA
+  workmanship/ECA split, spiral-weld ±100mm dead zone, coincident-indicator triage, Hillsboro/Gulf
+  South missed-weld ruptures, YOLOv8/AUT + RIAWELC/GDXray pretrain path for our X-ray images.
+  Output: 5-point label/feature spec (two-tier labels, 7 weld-proximity features, per-survey POD priors).
+- `track14_dents.md` (16 src): ILI dent characterization, Chubb/Fowler strain limits, EPRG-vs-FM,
+  49 CFR 192.933 interaction rules, wrinkle/ovality (ovality negative verified), API-1183 dent programs,
+  DNV 3D matching + bending-strain ML. Output: clock×weld×colocation flags needing no depth (fits
+  depth-N/A rows), ordinal dent encoding, 4 provisional label/feature decisions.
+- `track15_ecda.md` (11 src): SP0502 four steps, CIPS/DCVG/ACVG trade-offs + PHMSA head-to-head,
+  2026 8,338-record field framework, disbondment invisibility cap, AGM/IMU failure modes +
+  weld-anchored fix, ROSEN V-ILI/NIPA fusion tooling. Output: NEW partner-request items 6–9
+  (chainage-referenced survey exports, AGM lists, rectifier telemetry, per-km coating/disbondment).
+- `track16_regulatory.md` (11 src, 3 Russian-regulatory): PHMSA Subpart O + ADB-2026-06, API 1176/1183,
+  ISO 19345, DNV-ST-F101, ФНиП РТН-517, ГОСТ Р 51164-98, ЭПБ practice. CORE RULE: allowed = "ranks
+  100-m cells by P(newly-reported ≥10%) per section/survey pair, supports verification
+  prioritisation"; forbidden = physical-corrosion, ≥80%, reassessment-extension,
+  fitness-certification, pooled or E14 numbers; RU handover = инструмент планирования, не ЭПБ.
+- Tooling for waves: Exa/Firecrawl/Parallel/TinyFish NOT available in this environment (no
+  integrations, no API keys) — all tracks used built-in websearch/webfetch + public APIs
+  (OpenAlex, arXiv, Mendeley, HF/Kaggle public pages), fallbacks noted per-file.
 - December-scope actions recorded in-file; none change frozen scope.

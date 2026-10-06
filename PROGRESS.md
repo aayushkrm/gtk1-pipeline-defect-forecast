@@ -210,6 +210,15 @@
   now indexed + committed (Mendeley sandbox URLs, C-MAPSS smoke test, baseline anchors, synthetic stack).
 
 ## 2026-10-06 — Research wave 4: 4 tracks banked (16 total); tool question answered honestly
+- (Wave 5 below — 20 tracks total now indexed.)
+
+## 2026-10-06 — Research wave 5: providers confirmed keyed, 4 tracks banked (20 total)
+- Corrected the record: OpenChamber panel shows Exa/Firecrawl/Parallel/TinyFish keyed + auto-failover
+  (Tavily empty); briefs told agents to exploit per-provider strengths + retry. INDEX tooling note fixed.
+- T17 primaries with extracted values (POF tables, API-1163 workflow, binomial gates); T18 academic deep
+  search + citation graph + 2 recorded negatives; T19 Russian primary texts (FNiP/GOST/STO numbers,
+  3 new VTD papers); T20 vendor gray literature (exact POD/tolerance numbers, disclosed negatives).
+
 - (Skip-audit + PROTOCOL below.)
 
 ## 2026-10-06 — No-skip protocol codified + 16-track skip audit passed

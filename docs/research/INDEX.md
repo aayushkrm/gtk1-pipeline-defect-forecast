@@ -91,11 +91,10 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   100-m cells by P(newly-reported ≥10%) per section/survey pair, supports verification
   prioritisation"; forbidden = physical-corrosion, ≥80%, reassessment-extension,
   fitness-certification, pooled or E14 numbers; RU handover = инструмент планирования, не ЭПБ.
-- Tooling CORRECTED 2026-10-06 (user showed OpenChamber panel: all providers keyed —
-  Exa via EXA_API_KEY + saved Firecrawl/Parallel/TinyFish keys, auto-failover on; Tavily empty).
-  Earlier "no integrations" note was wrong (agent-side catalog shows one websearch tool only).
-  Strategy: vary phrasings per provider strength (Exa neural search, Firecrawl extraction of
-  JS/bot-walled pages); on failure RETRY (failover may serve it); record per-file what worked.
+- Tooling CORRECTED + VERIFIED 2026-10-06: $EXA_API_KEY is live in agent shell — direct Exa
+  neural search via curl works (Zhang&Zhou hit confirmed). Firecrawl/Parallel/TinyFish keys live
+  only in the user keyring: reached via routed websearch failover. Strategy: direct-Exa for semantic
+  queries + routed search for the rest + PROTOCOL ladder; record per-file what served what.
 - December-scope actions recorded in-file; none change frozen scope.
 
 ## Wave 5 (2026-10-06 — primaries, academic deep search, Russian texts, vendor gray literature)
@@ -119,3 +118,21 @@ TinyFish keys exist here; nothing was skipped for lack of them (public APIs cove
   study + 6-model comparison; TDW kNN matching-error; Enbridge IECM + Gazprom/VNIIgaz 2022
   disclosures; PODS 7 + 1-of-21 compliance. Negatives: CorrSight-pipeline nonexistent, Weatherford
   ILI exited, Transneft/Gazprom ML metrics undisclosed.
+
+## Wave 6 (2026-10-06 — cracks, internal corrosion, GIS covariates, market packaging)
+- `track21_cracks.md` (19 src): Paris constants C=5.21e-13/m=3.0 + PRCI-2024 refit, Song/SwRI SCC model
+  (KISCC 20–21 MPa√m, dormancy), EMAT-2023 guidance, TDW SSWC + PPSA hook-crack truth (±35 mils @80%,
+  zero in-service growth), EIFS hierarchical Bayes, particle-filter FCG, IOP RF-vs-Paris 2025.
+  Negatives: RP-1176/PRCI full texts walled, ConvLSTM paywalled (kept as marker).
+- `track22_internal.md` (15 src): de Waard 0.1× BOLC→TOLC + 0.25 ml/m²s condensation rate, NORSOK ~6×
+  conservative, TOLC invalid with H2S, CK981DZ >99% field efficiency, UT-as-reference internal pits,
+  CFD-XGBoost R² 0.95 (turbulence/velocity dominant). Decisions: INT forecaster out of December scope;
+  gated flow-proxy spec; partner-request wording (H2S, inhibitor/monitoring exports, INT tool identity).
+- `track23_gis.md` (17 src): SoilGrids v2 (250m, CC-BY) + HWSD + NSIDC permafrost + Ran-2021 MAGT/ALT;
+  Copernicus GLO-30/SRTM + TWI→corrosion chain; 192.5/192.903 PIR + ENTRUST sliding-mile; CorView CP;
+  Wang-Bayesian 110km, Edrisi XGBoost R² 0.925 spatial-OOF; GOST 32453-2017 SK-42 ~140m trap;
+  8.75→2.02m odometer error budget. Exact per-100m feature list + 6-step join + RU request wording.
+- `track24_market.md` (12 items + 3 verbatim claim examples): vendor tiers (consultative/SaaS-undisclosed
+  pricing — recorded negative), Cenosco/CorrosionRADAR/Senslytics rounds, ENMAX+TC Energy POC shapes,
+  PODS-open/OAI two-layer repo-boundary rule, Transneft-Diaskan AI + 65%-maturity on-premise constraint,
+  honest-claim phrasings adapted. Direct December-packaging relevance.

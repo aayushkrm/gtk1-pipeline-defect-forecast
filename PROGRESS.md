@@ -237,6 +237,18 @@
 - (Recompute recompute_verify below — NN + AP outputs re-derived.)
 
 ## 2026-10-07 — Recompute: NN rates CONFIRMED (raw), E05/E10 AP exact, one false alarm owned
+- (E12 independent recompute below — second strict-equality false alarm, tolerance verdict.)
+
+## 2026-10-07 — E12 recompute: CONFIRMED within reporting precision
+- Independent src-path rerun: match/prev/B1/base/n_pos identical to 4–5 decimals on both cuts
+  (B1 0.57374 vs 0.5737; 0.37499 vs 0.375; n_pos 334/138 exact). My script's == verdict fired only
+  on rounding (committed full-precision vs recomputed 4dp) — same error class as the NN denominator
+  mistake. Tolerance-based comparison is the rule going forward.
+- Bootstrap CIs agree to 3dp at cut12; cut15 lower 0.201 vs 0.208 — Monte Carlo noise from RNG-state
+  sequencing (e12 shares one RNG across cuts; recompute reseeds per call). Both lowers stay >0;
+  nothing moves. Wart logged: shared-RNG makes CIs order-dependent.
+- Ledger closed except: E14 outputs (source lost) and HGB/LR stochastic fits (seeds fixed, scripts
+  frozen — reruns prove code path, not new facts).
 - NN ±2m recomputed: raw pipe-agnostic 0.7263/0.5338 reproduce 72.6%/53.4% EXACTLY — the original
   numbers were raw-frame rates and my interim d10 run (81.0/69.8) used the wrong denominator, not
   the reports. Correction: my challenge was miscalibrated, not their arithmetic. d10-vs-raw gap is

@@ -234,6 +234,15 @@
 - (Triple re-verification below — every repo number rechecked.)
 
 ## 2026-10-07 — Triple re-verification: 3 swarms, corrections applied, 1 loss logged
+- (Recompute recompute_verify below — NN + AP outputs re-derived.)
+
+## 2026-10-07 — Recompute: NN rates CONFIRMED (raw), E05/E10 AP exact, one false alarm owned
+- NN ±2m recomputed: raw pipe-agnostic 0.7263/0.5338 reproduce 72.6%/53.4% EXACTLY — the original
+  numbers were raw-frame rates and my interim d10 run (81.0/69.8) used the wrong denominator, not
+  the reports. Correction: my challenge was miscalibrated, not their arithmetic. d10-vs-raw gap is
+  itself evidence: filtering inflates apparent persistence (logged in DATA.md).
+- E05 train/test + E10 recomputed EXACT (AP/base/match/pos all match committed JSONs to 4 decimals).
+  UNRECOMPUTED items closed except E14 (source lost) and E12 cuts (queued).
 - ON/YN track: raw-vs-normalized counts exact; weld overlap 11788/11858 exact; salvage counts exact;
   pipe log exact; odometer ranges exact. NN-match rates 72.6%/53.4% UNVERIFIED (needs matching rerun).
 - PK track: E11 bit-identical recompute; PK2 medians/shares exact; GWAN shares exact.

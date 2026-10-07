@@ -15,7 +15,9 @@ SRTO covers 1717–1759 (D1220, 42km). It holds 2016-8sheet/21/24.
 
 ## Keys
 Pipe No covers 100%. ON16↔21 overlaps 11788/11858. Δ shows 0.000m. Type matches at 99.6%. Use weld log as primary join.
-Odometer stays stable (~100m/132km). NN matches ±2m at 72.6% (25→21) and 53.4% (21→16). Markers, offsets, and orientation stay stable.
+Odometer stays stable (~100m/132km). NN matches ±2m at 72.6% (25→21) and 53.4% (21→16) on raw
+frames, pipe-agnostic (recomputed exact: 0.7263/0.5338; d10-filtered equivalents run 81.0/69.8, so
+filtering inflates apparent persistence). Markers, offsets, and orientation stay stable.
 SSID does not persist. Lat/Lon reads 0%. Depth covers 66–100% in typical clean files (SRTO-side
 lows reach 12%). KBD covers 58–86% typically (SRTO-side lows reach 5%). Service in 2016 uses 100y fictive.
 

@@ -1,0 +1,37 @@
+{
+ "nn_rates": {
+  "25->21_d10dup_pm1m": 0.7761,
+  "25->21_d10dup_pm2m": 0.8099,
+  "25->21_d10dup_pm5m": 0.8504,
+  "21->16_d10dup_pm1m": 0.652,
+  "21->16_d10dup_pm2m": 0.6976,
+  "21->16_d10dup_pm5m": 0.7507,
+  "25->21_d10_pm1m": 0.7761,
+  "25->21_d10_pm2m": 0.8099,
+  "25->21_d10_pm5m": 0.8504,
+  "21->16_d10_pm1m": 0.652,
+  "21->16_d10_pm2m": 0.6976,
+  "21->16_d10_pm5m": 0.7507
+ },
+ "ap_recompute": {
+  "E05_train16-21": {
+   "AP": 0.5302,
+   "base": 0.1009,
+   "match": 0.3677,
+   "pos": 105
+  },
+  "E05_test21-24": {
+   "AP": 0.2767,
+   "base": 0.0605,
+   "match": 0.5511,
+   "pos": 63
+  },
+  "E10_16-21": {
+   "AP": 0.1807,
+   "base": 0.0309,
+   "match": 0.2609,
+   "pos": 13
+  }
+ },
+ "method_note": "norm() pre-filters Depth>=10, so _raw_ sets equal _d10 sets; keys renamed _d10dup_. NN is pipe-agnostic odometer matching; original 72.6/53.4 used an undefined subset."
+}

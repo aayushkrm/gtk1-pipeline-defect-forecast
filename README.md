@@ -1,90 +1,66 @@
-# GTK1: inspection-report triage for main gas pipelines
+# GTK1: where will pipeline defects appear next?
 
 [Читать на русском](README_RU.md)
 
-Private R&D repo. Status: scope frozen, awaiting partner data. Raw VTD data is never committed.
+## The task
 
-## What this is
+Gazprom Tomas Tomsk inspects main gas pipelines with in-line diagnostic tools. Each survey
+produces tables of metal defects. We use past surveys to predict which 100-meter segments will
+show new defects in the next survey. Engineers can then inspect and repair those places first.
 
-Past inspection (VTD/ILI) anomaly tables feed a ranking of 100 m pipeline cells by
-P(newly-reported defect at depth ≥ 10%). Engineers use the ranking to plan digs and surveys.
-The tool predicts reporting, not physical corrosion. No ≥ 80% reliability claim is supportable
-on current data. That position is documented with evidence, not hedged.
+## What data we had
 
-## Work done so far
+Six pipeline sections, surveyed 2 to 3 times each between 2015 and 2025. Each survey gives an
+anomaly table (defect position, size, depth, type) plus a weld and pipe log. Files live outside
+this repo in `../Данные для предварительного изучения/`, one folder per section.
 
-Parsed 6 sections × 2 to 3 surveys (2015–2025): anomaly tables plus weld and pipe logs.
-Mapped the 44/45-column schema, quantified threshold drift (PK2 counts ran 164 → 9 → 19 per km),
-and salvaged 5 corrupt files. Built matched-new labels (same pipe, ±2 m, ±0.5 m offset, ±1 h
-orientation) on 100 m grids with Depth ≥ 10% normalization.
+Not all data is usable. Five files were damaged and needed repair parsing. Two sections cannot
+form a valid past-to-future pair: Parabel–Kuzbass-2 changed table format and sensitivity between
+surveys, and Yurga–Novosibirsk files are damaged (recovery in progress). Full detail:
+`docs/DATA.md`.
 
-Ran experiments E01–E14 with baselines everywhere. Ranking B1 (past-count persistence) beats base
-rate on 4 of 6 studied sections, each with lift-CI lower bound above zero. The other two cannot
-form a valid pair: PK2 mixes a 23-column 2015 schema with 44-column later surveys at 6% vs 96%
-≥10% share (different instruments, not growth); Yu-N has zero readable anomaly surveys (both corrupt,
-re-export requested). Details: docs/DATA.md and the scoping entries in PROGRESS.md.
+## What we did
 
-| Section | Pair | B1 AP / base |
-|---|---|---|
-| Omsk–Novosibirsk 392–526 | 2016→2021 / 2021→2025 | 0.644 / 0.268 (cut triple 0.546 / 0.364 at ≥12 / ≥15%) |
-| Parabel–Kuzbass-1 572–714 | 2022→2025 | 0.779 / 0.574 / 0.375 (562 positives, stable method) |
-| SRTO–Omsk 1608–1717 | 2016→2021 / 2021→2024 | 0.530 / 0.277 (test, 63 positives) |
-| SRTO–Omsk 1717–1759 | 2016→2021 | 0.181 / 0.031 (13 positives) |
-| Parabel–Kuzbass-2 0–110 | no valid pair (deferred) | 2015 schema has 23 columns vs 44 later; ≥10% in 5.8% of 18,337 rows (2015) vs 96% of measured depths (2020) |
-| Yurga–Novosibirsk 0–154 | no valid pair (salvage pending validation) | anomaly sheets fail strict parsers (truncated streams); salvaged so far: 2,624 rows (2020), 29,234 + 4,405 rows (2023 journals) |
+Three steps, same for every section.
 
-Tested and quarantined what did not hold: HGB ties persistence, log-linear wins counts
-(MAE 6.5 vs 11.3), LR-nlag overlay adds +0.032 on ON data only and zero off-site (archived OFF).
-A second 1717 pair on a repaired copy exposed a 4.8× methodology break, so it stays out of
-the tally (rules R1–R4 in docs/GUARDRAILS.md). Twelve reviewer rounds gated the work.
-24 research tracks back the methods.
+1. Cleaned the tables. Unified columns, fixed decimal commas, converted everything to one depth
+   scale, kept only defects at depth ≥ 10%.
+2. Linked defects across surveys. Same pipe plus nearby distance means the same defect seen again.
+   The rest count as newly reported. This step is strict: it uses only past-survey information.
+3. Ranked every 100 m segment by past defect density. Dense places rank high. Checked the ranking
+   against the later survey, which the model never saw.
 
-Shipped: 3 retrospective triage pages (ON, PK1, SRTO-1608) with heatmaps, audit tables, and
-disclaimers; a prospective harness with IDENTICAL regression gates plus forward watchlists;
-`src/gtk1/` package with byte-identical migration proofs; green test runner; partner runbook.
+We also tested fancier models (gradient boosting, logistic regression). None beat the simple
+density ranking convincingly, so the simple one ships. Failed attempts are documented, not hidden.
 
-## How the data is organized
+## What came out
 
-Raw files live outside the repo in `../Данные для предварительного изучения/`, one folder
-per section, one subfolder per survey year. Each survey pairs an anomaly file with a weld or
-pipe log. Formats vary (`.xls`, `.xlsx`, `.csv`; comma decimals in 2015 tables; R4 headers
-mostly, R1/R2 in newer files). Coordinates are empty everywhere, so joins run on pipe number
-plus odometer distance. Nothing raw enters git (hygiene gate in `run_tests.sh` enforces this).
+On the Omsk section, 20 of the top 20 ranked segments truly showed new defects in 2025.
+On Parabel–Kuzbass-1, the same: 20 of 20, plus 49 of the top 50. Overall ranking quality
+(AP, higher is better): 0.64 on Omsk (base rate 0.27), 0.78 on Parabel–Kuzbass-1 (base 0.40),
+0.28 on SRTO–Omsk 1608 (base 0.06), 0.18 on SRTO 1717 (base 0.03, only 13 cases).
 
-## How the data is used
+What this means in plain words: the ranking puts risky segments at the top far better than
+chance, on four independent sections. What it does NOT mean: this is not a physical corrosion
+forecast and not an 80% guarantee. Counts jump between surveys because tools get more sensitive,
+and about half of old defects fail to re-match. Every number on the demo pages ships with these
+caveats printed next to it.
 
-```
-load (tolerant .xls/.xlsx reader) → normalize (Depth ≥ 10%, corr flag, pipe keys)
-→ match past↔future per pipe → 100 m grid labels (matched-new binary)
-→ B1 rank → watchlist + heatmap + audit columns
-```
+Demo pages with ranked lists, pipeline heatmaps, and audit columns: `triage/triage_demo.html`
+(Omsk), `triage/triage_pk1.html` (Parabel–Kuzbass-1), `triage/triage_srto.html` (SRTO-1608).
 
-Reproduce:
+## How to reproduce
 
 ```bash
 pip install -r requirements.txt
 bash run_tests.sh
 python3 triage/prospective.py --section on --survey 2021 --check
-python3 triage/prospective.py --section pk1 --survey 2025 --drop-last
 ```
 
-## Progress and what is pending
+Raw data files never enter git. One committer. Method details: `docs/`. Full history: `PROGRESS.md`.
 
-Done: tasks 1, 2, 4, 6 fully; 3 and 5 partially (weak pipe-trait signals, no model near target);
-7 as an honest below-target estimate. Frozen: B1-only triage, per-section thresholds, overlay OFF,
-PK2 deferred, no new modeling on current surveys.
+## What is next
 
-Pending (all external): repair logs, 5 file re-exports, pipe ages, per-survey thresholds and
-methodology notes, two decodes (SRTO-1717-2021 Character, ON-2025 weld tail). Thresholds in
-`configs/thresholds.yaml` stay placeholder until next-survey labels arrive. Then: calibrate
-per section, validate the forward watchlists, revisit the overlay promotion rule.
-
-## Map
-
-`src/gtk1/` (io, match, features, metrics) · `src/research_tools/` (Exa/Firecrawl/Parallel/
-TinyFish clients + quad fan-out) · `src/tests/` · `experiments/` (E01–E14 frozen) ·
-`triage/` (pages, harness, watchlists) · `configs/` · `docs/` (PROBLEM, DATA, VALIDATION,
-GUARDRAILS, TRIAGE_SPEC, RUNBOOK, OVERLAY_STATUS, research) · `outputs/` (ignored CSVs).
-
-Rules: past-only features, no test tuning, negatives reported, single committer.
-Details live in PROGRESS.md (append-only log) and AGENTS.md (project writing law).
+We wait on the partner: repair logs, 5 file re-exports, pipe ages, per-survey thresholds.
+When the next survey arrives, we calibrate per-section alert thresholds and validate the live
+watchlists (`triage/prospective.py`, `configs/thresholds.yaml` still placeholder).

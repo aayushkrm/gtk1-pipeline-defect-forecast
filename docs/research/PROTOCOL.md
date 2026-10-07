@@ -1,4 +1,4 @@
-# Research protocol — standing orders for every research (sub)agent (effective 2026-10-06)
+# Research protocol: standing orders for every research (sub)agent (effective 2026-10-06)
 
 ## No-skip rule (user directive, absolute)
 If one tool or search fails, find another way. Never skip and miss anything. Forbidden outcomes: silent omission of a briefed sub-topic. "could not access" with no fallback attempt. Single-source reliance where verification was possible.

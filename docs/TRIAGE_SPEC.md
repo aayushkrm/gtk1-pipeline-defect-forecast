@@ -1,14 +1,13 @@
-# TRIAGE-SPEC — honest December deliverable (reviewer rounds 4c–10; evidence as of E13 + prospective harness)
+# TRIAGE-SPEC: honest December deliverable (reviewer rounds 4c–10; evidence as of E13 + prospective harness)
 
 ## What ships
-Ship a calibrated **inspection-report triage tool**. Do not ship a reliability guarantee.
-Rank 100m segments by P(newly-reported ≥10% defect). Add linear heatmap with uncertainty bands.
-Add audit columns (B1 score, model score, match/vanished flags). Show no red/green pass-fail badges.
+Ship a calibrated inspection-report triage tool. Do not ship a reliability guarantee.
+Rank 100m segments by P(newly-reported ≥10% defect). Add linear heatmap with uncertainty bands and audit columns (B1 score, model score, match/vanished flags). Show no red/green pass-fail badges.
 Show no ≥80% meter. Apply per-section recalibration control. Show GUARDRAILS disclaimer on every page.
 
 ## Expected numbers (honest, section-conditional)
-- Report ON @100m cut≥10% as B1 0.644. Report LR 0.676. Report Δ-vs-B1 +0.032 [+0.011,+0.053] **ON-only experimental**. Note driver nlag −0.039 vs full. Note cut≥12 replicates +0.040. Note cut≥15 fails −0.024.
-  Report SRTO as B1 0.277, LR 0.281, Δ +0.004 [−0.032,+0.039] — **overlay adds zero off-site; ship B1 only there.**
+- Report ON @100m cut≥10% as B1 0.644, LR 0.676, Δ-vs-B1 +0.032 [+0.011,+0.053] ON-only experimental. Driver nlag −0.039 vs full. Cut≥12 replicates +0.040. Cut≥15 fails −0.024.
+  Report SRTO as B1 0.277, LR 0.281, Δ +0.004 [−0.032,+0.039]. Overlay adds zero off-site; ship B1 only there.
   Keep headline at AP ~0.65±0.05 ON (~2.4× base), ~0.28 SRTO at 6% prevalence.
 - Report SRTO absolute AP as substantially lower (~0.28 at 6% prevalence). Confirm rank-order replicates.
   Report SRTO-1717 as 0.181/0.031 (13 pos, liftCI lower>0; 2021 covers ~30/42km).

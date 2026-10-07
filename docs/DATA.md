@@ -1,4 +1,4 @@
-# DATA — schemas, keys, QC (from read-only study of 32 files)
+# DATA: schemas, keys, QC (from read-only study of 32 files)
 
 ## Sections
 ON covers 392–526 (D1220, 132km). It holds 2016/21/25.
@@ -9,7 +9,7 @@ SRTO covers 1608–1717 (D1220, 104km). It holds 2016/21/24.
 SRTO covers 1717–1759 (D1220, 42km). It holds 2016-8sheet/21/24.
 
 ## Schemas
-- Anomaly tables use 44/45 cols. They use R4 header (R2/R1 in damaged/new). They contain [SSID] + Distance + weld offsets + long-seam offsets + Pipe No + length + pipe Type + clocks + markers + feature/character/size/desc + abbrs + orientations + thickness/length/width/depth + location + comments + lat/lon/alt (empty) + Danger/KBD/Pd/MAOP/Psw/Pf/Service. Tail order flips 2016 vs 2021+.
+- Anomaly tables use 44/45 cols with R4 header (R2/R1 in damaged/new). They contain [SSID] + Distance + weld offsets + long-seam offsets + Pipe No + length + pipe Type + clocks + markers + feature/character/size/desc + abbrs + orientations + thickness/length/width/depth + location + comments + lat/lon/alt (empty) + Danger/KBD/Pd/MAOP/Psw/Pf/Service. Tail order flips 2016 vs 2021+.
 - Pipe tables use 20→30 cols. They contain Pipe No + Distance + length + type + thickness + clocks + count + SMYS/Sy + SMTS/Su + category + factors + k1 + insulation + weld + [SSID/steel/temp/paspport kn,n,m,KCV,Pmaor].
 - Special cases need separate handling. 2015 uses 23-col (No-in-TA, comma decimals, no SSID/passport). otchet-2023 uses 11 sheets (anomaly journal 20 + features 18 + pipe log 10, pipe rows mixed in). KP-2016 uses 42-col mixed.
 
@@ -19,13 +19,13 @@ Odometer stays stable (~100m/132km). NN matches ±2m at 72.6% (25→21) and 53.4
 SSID does not persist. Lat/Lon reads 0%. Depth covers 66–100%. KBD covers 58–86%. Service in 2016 uses 100y fictive.
 
 ## QC (must handle in ETL)
-Treat these files as corrupt. Handle YN-20A, PK1-19A/T, PK2-25A, SRTO-1717-24A, otchet-23, and PK1-25T as salvage only. They show bad CRC/XML, shifts, and `3.3e-307` garbage.
-Treat these files as truncated. ON25-T holds 27km vs 132km anomalies. PK1-25T loses −65KB. Empty tails drop.
-Map renames by meaning. Map ARTD→GOUG (mech). Map TECH→ARTD (tech). Track Danger position. Map SMYS→Sy. Map Depth%→value+unit.
-Fix units before use. Long-seam col labels m but holds mm values. Parse comma decimals in 2015 + markers. Parse h:min strings. Split on `Pipe 1W` separators.
-Check content skew. PK2-25 shows GWAN 78%. PK1-25 shows GWAN 50% (edge-offset ×10057 — campaign?). SRTO-1717-24 shows Danger 82% empty.
+Treat these files as corrupt: YN-20A, PK1-19A/T, PK2-25A, SRTO-1717-24A, otchet-23, and PK1-25T are salvage only. They show bad CRC/XML, shifts, and `3.3e-307` garbage.
+Treat these files as truncated: ON25-T holds 27km vs 132km anomalies. PK1-25T loses −65KB. Empty tails drop.
+Map renames by meaning: ARTD→GOUG (mech), TECH→ARTD (tech). Track Danger position. Map SMYS→Sy. Map Depth%→value+unit.
+Fix units before use. Long-seam col labels m but holds mm values. Parse comma decimals in 2015 + markers and h:min strings. Split on `Pipe 1W` separators.
+Check content skew. PK2-25 shows GWAN 78%. PK1-25 shows GWAN 50% (edge-offset ×10057, campaign?). SRTO-1717-24 shows Danger 82% empty.
 
 ## Normalization (mandatory)
-Apply Depth≥10%. Apply unified class map. Add year/contractor/standard covariate.
+Apply Depth≥10% and unified class map. Add year/contractor/standard covariate.
 Match on same pipe + distance ±2m + offset ±0.5m + orient ±1h. Flag the rest as new/vanished with uncertainty flag.
 Use ON 2016→2021→2025 as reference pair. Request 5 re-exports, pipe ages, and per-survey thresholds.

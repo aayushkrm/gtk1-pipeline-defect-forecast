@@ -1,7 +1,7 @@
-# GUARDRAILS — mandatory language and reporting rules (reviewer round 3)
+# GUARDRAILS: mandatory language and reporting rules (reviewer round 3)
 
 ## Naming (code, metrics, filenames, slides)
-- Say `newly-reported ≥10%`. Say `report-forecast`. NEVER say `new corrosion / initiation / growth` as a physical claim. Define "New" as unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match. Include true initiation + re-detected misaligned old + sensitivity gain. Prove this scope by 60%/39% vanished-frac and cut-driven prevalence 0.27→0.08.
+- Say `newly-reported ≥10%` and `report-forecast`. NEVER say `new corrosion / initiation / growth` as a physical claim. Define "New" as unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match. Include true initiation + re-detected misaligned old + sensitivity gain. Prove this scope by 60%/39% vanished-frac and cut-driven prevalence 0.27→0.08.
 
 ## Disclaimer (every results page / slide / handover)
 > "New = unmatched future ≥10% row under pipe+2m/0.5m/1h match; includes re-detection.
@@ -9,7 +9,7 @@
 > match-rate, vanished-frac, cut-sensitivity column (≥10% primary, ≥12%/≥15% sensitivity).
 
 ## Thresholds
-- Set operating thresholds per section (ON vs SRTO never pooled). Use cut≥10% primary. Use ≥12%/≥15% sensitivity.
+- Set operating thresholds per section (ON vs SRTO never pooled). Use cut≥10% primary with ≥12%/≥15% sensitivity.
 - Exclude the boundary cell from prospective ranking by default (E13: overrun rows accumulate there). Leave retrospective frozen pages unchanged.
 
 ## Replication tally rules (R1–R4; reviewer round 12 — a pair counts iff ALL hold)

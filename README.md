@@ -1,10 +1,10 @@
-# GTK1 — Inspection-report triage for main gas pipelines (frozen scope: B1 primary)
+# GTK1: Inspection-report triage for main gas pipelines (frozen scope: B1 primary)
 
 Private R&D repo. Never commit raw VTD data (see `.gitignore`; verified clean).
 Store data outside this repo at `../Данные для предварительного изучения/`.
 
 ## What this delivers (honest, evidence-backed)
-This repo ranks 100m-segment watchlists for **newly-reported ≥10% defects**.
+This repo ranks 100m-segment watchlists for newly-reported ≥10% defects.
 Read the operational definition in docs/GUARDRAILS.md.
 This is NOT physical corrosion prediction.
 It validates past→future on 4 sections: ON AP 0.644/base 0.268; SRTO-1608 test 0.277/0.061; SRTO-1717 0.181/0.031; PK1 0.779/0.574/0.375 at ≥10/12/15%.
@@ -26,7 +26,7 @@ bash run_tests.sh                             # all offline checks
   Find byte-identical migration proofs in PROGRESS.md.
 - `src/tests/` holds parity tests (synthetic).
   It also holds consistency checks (frozen-number tripwire, no data needed).
-- `experiments/` holds E01–E12 frozen scripts + result JSONs.
+- `experiments/` holds E01-E12 frozen scripts + result JSONs.
   It serves as audit trail.
   Scripts stay untouched since run.
 - `triage/` holds retrospective demo pages (ON, PK1) + prospective harness + forward watchlists.
@@ -34,7 +34,7 @@ bash run_tests.sh                             # all offline checks
 - `docs/` holds PROBLEM, DATA, VALIDATION, GUARDRAILS, TRIAGE_SPEC, SUPERVISOR_BRIEF, OVERLAY_STATUS.
 - `outputs/` holds ignored full watchlist CSVs.
 
-## Rules (enforced by reviewer rounds 1–10)
+## Rules (enforced by reviewer rounds 1-10)
 - Use past-only features.
 - Do not tune on test.
 - Report negatives.

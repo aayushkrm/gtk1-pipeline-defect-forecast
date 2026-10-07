@@ -219,6 +219,14 @@
 - (Style audit below — full coverage verified.)
 
 ## 2026-10-07 — Style audit: full coverage confirmed, 2 scanner artifacts, 0 real violations
+- (Humanizer pass below — both laws now enforced.)
+
+## 2026-10-07 — Humanizer pass: ~100 tells removed, facts intact, tests green
+- Three agents applied the humanizer skill over the 11 styled docs (dashes→periods/colons,
+  bold decoration out except mandated warnings, shout-caps lowered, triads/openers/closers cut,
+  corrective contrasts kept where they fix a real misreading). Exempt classes untouched again.
+- Verified: net ~100+/101- prose-only diff; range hyphens unambiguous in context; run_tests.sh green;
+  frozen numbers + disclaimer strings intact. Committed below.
 - Question: is every doc rewritten under the AGENTS.md rule? Answer: yes, except the classes the
   rule itself exempts (frozen track evidence, frozen result outputs, PROGRESS history, verbatim
   triage captions). `/Users/akm/Tsu Project/AGENTS.md` exists and is byte-IDENTICAL to the repo copy.

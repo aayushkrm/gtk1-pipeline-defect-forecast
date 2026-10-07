@@ -1,8 +1,8 @@
-# VALIDATION — no leakage, no cherry-picking
+# VALIDATION: no leakage, no cherry-picking
 
 1. Longitudinal hold-out: train on (2016→2021), test on (2021→2025).
    Never tune on test.
-   Use reference: ON 392–526.
+   Use reference: ON 392-526.
    Replicate on SRTO-1608, PK2 (threshold-corrected).
 2. Group-by-section: run leave-one-section-out for generalization claim.
 3. Baselines first: test segment persistence (past density), global rate (Poisson), pipe persistence.

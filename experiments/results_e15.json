@@ -1,0 +1,750 @@
+{
+  "files": [
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 523729,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": true,
+          "strict_rows": 1909
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 14
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Омск-Новосибирск (392-526)/2016/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 4838400,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 11862
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Омск-Новосибирск (392-526)/2016/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 1222296,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet4.xml",
+          "crc": true,
+          "strict_rows": 61
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": true,
+          "strict_rows": 4457
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 15
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Омск-Новосибирск (392-526)/2021/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 5153280,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 20
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 11883
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Омск-Новосибирск (392-526)/2021/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии_.xlsx",
+      "bytes": 1444827,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 13
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 6600
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Омск-Новосибирск (392-526)/2025/Аномалии_.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 6817792,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 3475
+        }
+      ],
+      "verdict": "RECOVERABLE",
+      "why": "needs tolerant-xlrd patches",
+      "path": "Омск-Новосибирск (392-526)/2025/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 4134828,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 14
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        }
+      ],
+      "verdict": "RECOVERABLE",
+      "bad_parts": [
+        "xl/worksheets/sheet3.xml"
+      ],
+      "path": "Отчет ВТД_Ю-Н_0-154/2020/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xlsx",
+      "bytes": 1627113,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": true,
+          "strict_rows": 14097
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 14
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Отчет ВТД_Ю-Н_0-154/2020/Поперечные сварные швы.xlsx"
+    },
+    {
+      "file": "otchet_скорр.xlsx",
+      "bytes": 8527088,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 114
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 103
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        },
+        {
+          "part": "xl/worksheets/sheet4.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        },
+        {
+          "part": "xl/worksheets/sheet5.xml",
+          "crc": true,
+          "strict_rows": 14161
+        },
+        {
+          "part": "xl/worksheets/sheet6.xml",
+          "crc": true,
+          "strict_rows": 327
+        },
+        {
+          "part": "xl/worksheets/sheet7.xml",
+          "crc": true,
+          "strict_rows": 81
+        },
+        {
+          "part": "xl/worksheets/sheet8.xml",
+          "crc": true,
+          "strict_rows": 829
+        },
+        {
+          "part": "xl/worksheets/sheet9.xml",
+          "crc": true,
+          "strict_rows": 587
+        },
+        {
+          "part": "xl/worksheets/sheet10.xml",
+          "crc": true,
+          "strict_rows": 6198
+        },
+        {
+          "part": "xl/worksheets/sheet11.xml",
+          "crc": true,
+          "strict_rows": 16
+        }
+      ],
+      "verdict": "RECOVERABLE",
+      "bad_parts": [
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml"
+      ],
+      "path": "Отчет ВТД_Ю-Н_0-154/2023/otchet_скорр.xlsx"
+    },
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 1387569,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 18
+        }
+      ],
+      "verdict": "RECOVERABLE",
+      "bad_parts": [
+        "xl/worksheets/sheet3.xml"
+      ],
+      "path": "Парабель-Кузбасс-1 (572-714)/2019/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xlsx",
+      "bytes": 1578698,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 18
+        }
+      ],
+      "verdict": "RECOVERABLE",
+      "bad_parts": [
+        "xl/worksheets/sheet3.xml"
+      ],
+      "path": "Парабель-Кузбасс-1 (572-714)/2019/Поперечные сварные швы.xlsx"
+    },
+    {
+      "file": "Аномалии.xls",
+      "bytes": 6195200,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 10743
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-1 (572-714)/2022/Аномалии.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 3715072,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 14097
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-1 (572-714)/2022/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии.xls",
+      "bytes": 21744640,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 21767
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-1 (572-714)/2025/Аномалии.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 8189952,
+      "sheets": [],
+      "verdict": "DEAD",
+      "why": "stock: AssertionError; tolerant: AssertionError",
+      "path": "Парабель-Кузбасс-1 (572-714)/2025/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Таблица дефектов 2015.xlsx",
+      "bytes": 2833901,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 152
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 18338
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-2 (0-110)/2015/Таблица дефектов 2015.xlsx"
+    },
+    {
+      "file": "Трубный журнал 2015.xls",
+      "bytes": 2701824,
+      "sheets": [
+        {
+          "part": "Трубный журнал",
+          "crc": null,
+          "strict_rows": 14244
+        },
+        {
+          "part": "для гришина",
+          "crc": null,
+          "strict_rows": 4984
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-2 (0-110)/2015/Трубный журнал 2015.xls"
+    },
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 295801,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 7
+        },
+        {
+          "part": "xl/worksheets/sheet3.xml",
+          "crc": true,
+          "strict_rows": 1028
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 29
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-2 (0-110)/2020/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 2967040,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 34
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 12391
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "Парабель-Кузбасс-2 (0-110)/2020/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "аномалии.xlsx",
+      "bytes": 1162273,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": false,
+          "strict_rows": 0,
+          "note": "unreadable stream"
+        }
+      ],
+      "verdict": "PARTIAL",
+      "bad_parts": [
+        "xl/worksheets/sheet1.xml"
+      ],
+      "path": "Парабель-Кузбасс-2 (0-110)/2025/аномалии.xlsx"
+    },
+    {
+      "file": "трубные_элементы.csv",
+      "bytes": 2721545,
+      "verdict": "PARTIAL",
+      "why": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd1 in position 2055: invalid continuation byte",
+      "path": "Парабель-Кузбасс-2 (0-110)/2025/трубные_элементы.csv"
+    },
+    {
+      "file": "Аномалии.xls",
+      "bytes": 473088,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 581
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2016/Аномалии.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 3847168,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 9419
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2016/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии.xls",
+      "bytes": 2277376,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 3172
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2021/Аномалии.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 2215424,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 9422
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2021/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии1.xls",
+      "bytes": 2422272,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 2348
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2024/Аномалии1.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 4315136,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 6299
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1608 – 1717)/2024/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "СРТО - ОМСК - Узел редуцирования газа - КП.xls",
+      "bytes": 2674176,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 19
+        },
+        {
+          "part": "Сводка результатов",
+          "crc": null,
+          "strict_rows": 49
+        },
+        {
+          "part": "Выявленные особенности",
+          "crc": null,
+          "strict_rows": 4265
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 355
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 3814
+        },
+        {
+          "part": "Реперы",
+          "crc": null,
+          "strict_rows": 18
+        },
+        {
+          "part": "Элементы обустройства",
+          "crc": null,
+          "strict_rows": 65
+        },
+        {
+          "part": "Отводы",
+          "crc": null,
+          "strict_rows": 152
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1717-1759)/2016/СРТО - ОМСК - Узел редуцирования газа - КП.xls"
+    },
+    {
+      "file": "Аномалии.xls",
+      "bytes": 820224,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 20
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Аномалии",
+          "crc": null,
+          "strict_rows": 1455
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1717-1759)/2021/Аномалии.xls"
+    },
+    {
+      "file": "Поперечные сварные швы.xls",
+      "bytes": 893952,
+      "sheets": [
+        {
+          "part": "Общая информация",
+          "crc": null,
+          "strict_rows": 20
+        },
+        {
+          "part": "Применяемые стандарты",
+          "crc": null,
+          "strict_rows": 9
+        },
+        {
+          "part": "Поперечные сварные швы",
+          "crc": null,
+          "strict_rows": 3815
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1717-1759)/2021/Поперечные сварные швы.xls"
+    },
+    {
+      "file": "Аномалии.xlsx",
+      "bytes": 271654,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 13
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 1220
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1717-1759)/2024/Аномалии.xlsx"
+    },
+    {
+      "file": "Поперечные сварные швы.xlsx",
+      "bytes": 331914,
+      "sheets": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "crc": true,
+          "strict_rows": 13
+        },
+        {
+          "part": "xl/worksheets/sheet2.xml",
+          "crc": true,
+          "strict_rows": 3814
+        }
+      ],
+      "verdict": "CLEAN",
+      "path": "СРТО-Омск_(1717-1759)/2024/Поперечные сварные швы.xlsx"
+    }
+  ],
+  "repro": {
+    "git": "e6c8641"
+  }
+}

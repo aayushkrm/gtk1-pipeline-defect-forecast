@@ -231,6 +231,17 @@
 - (Yu-N salvage counts below.)
 
 ## 2026-10-07 — Yu-N salvage: 2023 journals recovered, pair validation queued (E15)
+- (E15 full audit below — user-challenged re-verification of all 32 files.)
+
+## 2026-10-07 — E15 audit: user more right than the old table; 3 corrections logged
+- 24 CLEAN / 5 RECOVERABLE / 1 DEAD / 2 PARTIAL (both partials are strictness artifacts, corrected
+  to RECOVERABLE with known methods). Full per-file table in results_e15.json.
+- Corrections: SRTO-1717-2024A "corrupt" was wrong (1,220 rows strict-clean; broken dimension tag
+  only); PK2-2025A recoverable via proven salvage (2,162 rows); PK2 csv via encoding flag.
+  PK1-2025 weld DEAD under both xlrd paths, olefix queued, not final.
+- Absent-at-any-cost list: PK1-2019 rows 2864+, ON/PK1-2025 weld tails, YN-2023 garbled majority.
+  Pair verdicts stand (PK2 comparability, Yu-N E15 validation, E14 void). No pair was ever lost to
+  strict-parser failure alone.
 - Background counter finished: sheet3 (особенностей) 25.84MB → 29,234/29,497 well-formed (99.1%);
   sheet4 (аномалий) 23.73MB → 4,405/28,717 well-formed (15.3%, duplication-garble pattern like PK1-2019).
   Row-start count ≈ summary-stats magnitude, so most markers are repeats, not records.

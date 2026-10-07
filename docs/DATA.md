@@ -21,6 +21,14 @@ filtering inflates apparent persistence). Markers, offsets, and orientation stay
 SSID does not persist. Lat/Lon reads 0%. Depth covers 66–100% in typical clean files (SRTO-side
 lows reach 12%). KBD covers 58–86% typically (SRTO-side lows reach 5%). Service in 2016 uses 100y fictive.
 
+## Tool generations (supervisor list, 2026-10-07 — explains sensitivity jumps between surveys)
+Calipers and geometry: СО-1200, ПМО-1200Б, ПМОБ-1200, ПРТН-1200-256. Metal loss: ДМТ-2-1200Б-2560,
+ДМТ2Б-1200-2560, ДМТ2Б-1200-1024 (2560/1024 = sensor counts; higher counts resolve smaller defects).
+Combined: ДМТП2Б-1200-768, ДМТП2Б-1200-1408, ДМТП-2-1200Б-768. Newer generations and denser sensor
+arrays report more rows for the same pipe. Always record tool per survey before comparing counts
+across years; a count jump after a tool upgrade is sensitivity, not growth, until matched-pair
+analysis says otherwise.
+
 ## QC (must handle in ETL)
 Treat these files as salvage-only: YN-20A (2,624 rows recovered), PK1-19A/T (2,859 pristine rows,
 tail absent), PK2-25A (2,162 rows recovered), otchet-23 (journals partial). SRTO-1717-24A reads fully

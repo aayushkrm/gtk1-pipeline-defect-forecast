@@ -234,6 +234,21 @@
 - (User-verified endpoints below.)
 
 ## 2026-10-07 — User independently confirmed Yu-N coverage in Numbers
+- (Supervisor cross-check below — 14 agreements, 3 nuances.)
+
+## 2026-10-07 — Supervisor file survey cross-checked against E15: agree almost everywhere
+- Supervisor opened every file in Excel; we parsed every file strictly. Same verdicts on 14 of 17
+  cells: ON fully clean; YN-2020 welds clean + anomalies salvage-only; PK1-2022 clean; PK2-2015/2020
+  clean; PK2-2025 pipes clean + anomalies salvage-only; SRTO-1608 2016/2021 clean; SRTO-1717-2016 opens.
+- Three nuances, all resolved without conflict: (a) PK1-2019 "does not open" (Excel) vs our 2,859
+  salvaged rows — same file, lenient vs strict reading; (b) PK1-2025 "both need recovery" vs our
+  anomalies-CLEAN — strict xlrd fails, tolerant loader reads 99.4%; (c) SRTO-1717-2021/2024 "anomalies
+  need recovery" vs our CLEAN reads — Excel shows a repair prompt (broken dimension tag on 2024;
+  538 empty filler rows + 30/42km coverage on 2021) while all rows parse. Content caveats stand in both
+  accounts; only the word "clean" needed the qualifier "container-clean, content-caveated".
+- Supervisor tool list (10 tools: calipers, geometry, metal-loss, combined generations with sensor
+  counts 2560/1024/1408/768) saved in DATA.md with the sensitivity-jump rule: record tool per survey
+  before comparing counts across years.
 - (Round-14 closure below — re-analysis objective COMPLETE.)
 
 ## 2026-10-07 — Round 14: re-analysis objective COMPLETE (GO, residuals named)

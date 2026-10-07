@@ -222,6 +222,12 @@
 - (Humanizer pass below — both laws now enforced.)
 
 ## 2026-10-07 — Humanizer pass: ~100 tells removed, facts intact, tests green
+- (Coverage clarification below.)
+
+## 2026-10-07 — Coverage note: 6 studied, 4 validated (README clarified EN+RU)
+- Supervisor question answered: all six folders studied (schemas in DATA.md, scoping recon, salvage
+  spikes). PK2 deferred (schema + threshold break, rounds 10–11); Yu-N blocked (zero readable anomaly
+  surveys, re-export requested). README tables now read "4 of 6 studied sections" with reasons.
 - (Supervisor-facing rewrite below.)
 
 ## 2026-10-07 — SUPERVISOR_BRIEF removed; README rewritten EN+RU

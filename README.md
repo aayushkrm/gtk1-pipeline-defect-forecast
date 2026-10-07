@@ -19,7 +19,10 @@ and salvaged 5 corrupt files. Built matched-new labels (same pipe, ±2 m, ±0.5 
 orientation) on 100 m grids with Depth ≥ 10% normalization.
 
 Ran experiments E01–E14 with baselines everywhere. Ranking B1 (past-count persistence) beats base
-rate on 4 of 4 sections, each with lift-CI lower bound above zero:
+rate on 4 of 6 studied sections, each with lift-CI lower bound above zero. The other two cannot
+form a valid pair: PK2 mixes a 23-column 2015 schema with 44-column later surveys at 6% vs 96%
+≥10% share (different instruments, not growth); Yu-N has zero readable anomaly surveys (both corrupt,
+re-export requested). Details: docs/DATA.md and the scoping entries in PROGRESS.md.
 
 | Section | Pair | B1 AP / base |
 |---|---|---|

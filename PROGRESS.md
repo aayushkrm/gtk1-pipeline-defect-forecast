@@ -663,3 +663,17 @@
 - Next: reviewer round 3 (E04b+E05); tuned-shrinkage control for E03 (regularised Poisson/NB +
   residual/shuffle); then small E05-feature ablation ONLY if reviewer releases the gate.
 
+## 2026-10-07 — Independent review round 15 (6 subagent sessions, direct file verification)
+- Verdict: honest triage demo, not a corrosion forecast. Replication is 3 clean (ON, SRTO-1608, PK1)
+  plus E10 weak (n_pos=13 < R4 minimum 30) plus E14 void. Tally still reads 4/4 in GUARDRAILS and READMEs.
+- Code faults confirmed by direct read: match.py silent Hungarian pass; depth filter before match;
+  global xlrd patch with no guard; normalize crash on missing columns; empty-bootstrap crash;
+  prospective score_deciles include the masked edge cell; base.yaml dead; parity tests cover one
+  synthetic case only. E10 drops 2021 provenance; E05 B3 reads future frame; missing off/ori auto-pass
+  has no audit; frozen copies lack hash pins; E09 builds features before split.
+- Docs: PROBLEM/VALIDATION still describe 1 km plus recall@P0.7 while code ships 100 m AP; runbook is
+  strongest doc but lacks a label-build command; research INDEX top note is stale after quad clients
+  landed; DATA map is strong with two stale numbers (YN 2624 vs 2621 usable; ON25 27 km span uncommitted).
+- Hygiene: tests green but narrow; 137 files tracked, zero binaries, secrets env-only; tree dirty
+  (M AGENTS.md plus 4 untracked validate/salvage scripts). No sign-off until fix list clears.
+

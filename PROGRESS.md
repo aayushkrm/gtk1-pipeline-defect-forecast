@@ -231,6 +231,22 @@
 - (Yu-N salvage counts below.)
 
 ## 2026-10-07 — Yu-N salvage: 2023 journals recovered, pair validation queued (E15)
+- (Triple re-verification below — every repo number rechecked.)
+
+## 2026-10-07 — Triple re-verification: 3 swarms, corrections applied, 1 loss logged
+- ON/YN track: raw-vs-normalized counts exact; weld overlap 11788/11858 exact; salvage counts exact;
+  pipe log exact; odometer ranges exact. NN-match rates 72.6%/53.4% UNVERIFIED (needs matching rerun).
+- PK track: E11 bit-identical recompute; PK2 medians/shares exact; GWAN shares exact.
+  CORRECTED: PK2 drift 55 → 19.1/km (no denominator reproduces 55); edge-offset ×10057 → 10428;
+  csv method = UTF-8/errors=replace; PK1-2019 weld tail also absent (14072 dim, 9060 valid to 89.8km).
+- SRTO track: E05/E10 inputs exact; 93-vs-92 explained (one depth row lacks Distance); 1608-2024 weld
+  stops at 70.5km (new truncation noted); depth/KBD global ranges qualified to typical-clean with
+  SRTO-side lows. AP math UNRECOMPUTED by scope (inputs verified, not outputs).
+- LOSS logged: /tmp repair_spike purged by the OS — E14 repaired copy gone, re-derivation blocked
+  until re-salvage. Committed E14 results stand as run artifacts. Lesson: salvage outputs go to
+  ignored outputs/ next time, never /tmp.
+- On 100% confidence: unattainable by audit; delivered instead is triple-checked evidence with every
+  residual uncertainty named above. That is the honest maximum.
 - (E15 full audit below — user-challenged re-verification of all 32 files.)
 
 ## 2026-10-07 — E15 audit: user more right than the old table; 3 corrections logged

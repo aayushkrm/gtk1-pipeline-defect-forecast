@@ -14,7 +14,7 @@ on current data. That position is documented with evidence, not hedged.
 ## Work done so far
 
 Parsed 6 sections × 2 to 3 surveys (2015–2025): anomaly tables plus weld and pipe logs.
-Mapped the 44/45-column schema, quantified threshold drift (PK2 counts ran 164 → 9 → 55 per km),
+Mapped the 44/45-column schema, quantified threshold drift (PK2 counts ran 164 → 9 → 19 per km),
 and salvaged 5 corrupt files. Built matched-new labels (same pipe, ±2 m, ±0.5 m offset, ±1 h
 orientation) on 100 m grids with Depth ≥ 10% normalization.
 

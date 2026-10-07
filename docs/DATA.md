@@ -16,14 +16,18 @@ SRTO covers 1717–1759 (D1220, 42km). It holds 2016-8sheet/21/24.
 ## Keys
 Pipe No covers 100%. ON16↔21 overlaps 11788/11858. Δ shows 0.000m. Type matches at 99.6%. Use weld log as primary join.
 Odometer stays stable (~100m/132km). NN matches ±2m at 72.6% (25→21) and 53.4% (21→16). Markers, offsets, and orientation stay stable.
-SSID does not persist. Lat/Lon reads 0%. Depth covers 66–100%. KBD covers 58–86%. Service in 2016 uses 100y fictive.
+SSID does not persist. Lat/Lon reads 0%. Depth covers 66–100% in typical clean files (SRTO-side
+lows reach 12%). KBD covers 58–86% typically (SRTO-side lows reach 5%). Service in 2016 uses 100y fictive.
 
 ## QC (must handle in ETL)
-Treat these files as corrupt: YN-20A, PK1-19A/T, PK2-25A, SRTO-1717-24A, otchet-23, and PK1-25T are salvage only. They show bad CRC/XML, shifts, and `3.3e-307` garbage.
+Treat these files as salvage-only: YN-20A (2,624 rows recovered), PK1-19A/T (2,859 pristine rows,
+tail absent), PK2-25A (2,162 rows recovered), otchet-23 (journals partial). SRTO-1717-24A reads fully
+under strict parse (earlier corrupt label was wrong; only its dimension tag is broken). PK1-25T weld
+log defeats all parsers so far; olefix attempt queued. They show bad CRC/XML, shifts, and `3.3e-307` garbage.
 Treat these files as truncated: ON25-T holds 27km vs 132km anomalies. PK1-25T loses −65KB. Empty tails drop.
 Map renames by meaning: ARTD→GOUG (mech), TECH→ARTD (tech). Track Danger position. Map SMYS→Sy. Map Depth%→value+unit.
 Fix units before use. Long-seam col labels m but holds mm values. Parse comma decimals in 2015 + markers and h:min strings. Split on `Pipe 1W` separators.
-Check content skew. PK2-25 shows GWAN 78%. PK1-25 shows GWAN 50% (edge-offset ×10057, campaign?). SRTO-1717-24 shows Danger 82% empty.
+Check content skew. PK2-25 shows GWAN 78%. PK1-25 shows GWAN 50% (edge-offset ×10428, campaign?). SRTO-1717-24 shows Danger 82% empty.
 
 ## Normalization (mandatory)
 Apply Depth≥10% and unified class map. Add year/contractor/standard covariate.

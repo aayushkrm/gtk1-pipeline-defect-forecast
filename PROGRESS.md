@@ -246,6 +246,13 @@
 - (Plain-language pass below for non-technical readers.)
 
 ## 2026-10-07 — READMEs simplified for supervisor (humanizer, jargon out)
+- (PK2 user-verified below.)
+
+## 2026-10-07 — PK2-2025 user-verified in LibreOffice (2,162 rows to 70,553 m)
+- LibreOffice shows exactly the salvaged content: last row 2162, last Distance 70,553.015.
+  Coverage is ~62% of the ~113 km section. README rows updated in both languages (no longer "broken",
+  now with exact coverage). Pair verdict unchanged (2020→2025 still lacks full ground; 2015→2020 still
+  schema-blocked).
 - Technical terms replaced with plain words (rust for corrosion, chance level for base, color maps
   for heatmaps); scores read as "0.644 vs 0.268 chance". All numbers unchanged and verified.
   Both languages. Tests green.

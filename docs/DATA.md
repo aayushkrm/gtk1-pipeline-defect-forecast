@@ -24,8 +24,10 @@ lows reach 12%). KBD covers 58–86% typically (SRTO-side lows reach 5%). Servic
 ## QC (must handle in ETL)
 Treat these files as salvage-only: YN-20A (2,624 rows recovered), PK1-19A/T (2,859 pristine rows,
 tail absent), PK2-25A (2,162 rows recovered), otchet-23 (journals partial). SRTO-1717-24A reads fully
-under strict parse (earlier corrupt label was wrong; only its dimension tag is broken). PK1-25T weld
-log defeats all parsers so far; olefix attempt queued. They show bad CRC/XML, shifts, and `3.3e-307` garbage.
+under strict parse (only its dimension tag is broken; sharedStrings CRC fails but sheets are clean —
+see re-salvage, bit-identical re-derivation). PK1-25T weld log recovered via FAT-chain olefix
+(12,927×28, 12,475 pipes to 128.8km; method in experiments/salvage_pk1_weld.py, CSV in outputs/).
+They show bad CRC/XML, shifts, and `3.3e-307` garbage.
 Treat these files as truncated: ON25-T holds 27km vs 132km anomalies. PK1-25T loses −65KB. Empty tails drop.
 Map renames by meaning: ARTD→GOUG (mech), TECH→ARTD (tech). Track Danger position. Map SMYS→Sy. Map Depth%→value+unit.
 Fix units before use. Long-seam col labels m but holds mm values. Parse comma decimals in 2015 + markers and h:min strings. Split on `Pipe 1W` separators.

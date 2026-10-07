@@ -1,4 +1,5 @@
-# E15 full integrity audit — 32 files, strict + tolerant (user-challenged re-verification)
+# E15 full integrity audit — 32 files, strict + tolerant (user-challenged re-verification,
+olefix closed the last DEAD after this file was written: final tally 24 CLEAN / 6 RECOVERABLE)
 
 Method: per file — container check (ZIP CRCs / OLE open), sheet list, strict full-row parse per
 sheet, tolerant fallback. Read-only. Tally: 24 CLEAN, 5 RECOVERABLE, 1 DEAD, 2 PARTIAL

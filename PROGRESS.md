@@ -234,6 +234,18 @@
 - (User-verified endpoints below.)
 
 ## 2026-10-07 — User independently confirmed Yu-N coverage in Numbers
+- (Round-14 closure below — re-analysis objective COMPLETE.)
+
+## 2026-10-07 — Round 14: re-analysis objective COMPLETE (GO, residuals named)
+- Ledger: every README/DATA/TRIAGE_SPEC number derived; two stale wordings synced (DATA olefix
+  status, E15 tally 24/6/0). YN BLOCKED rests on two readers + re-parse. E14 void stands with
+  bit-identical reproducibility. 4/4 tally, R1–R4, 0 DEAD files.
+- Residuals (external/prospective only): partner repair logs + re-exports + ages + thresholds;
+  next-survey prospective confirmation with per-section recalibration; HGB/LR seed-frozen fits;
+  shared-RNG CI order dependence. None blocks COMPLETE — all are named with next checks.
+- Supervisor sentence: re-ran every number from raw files, fixed drift/offset/band/tail/denominator/
+  equality/tally errors, proved B1 ranking on 4/4 clean pairs with YN blocked for evidenced data
+  reasons; only partner re-exports plus next-survey confirmation remain.
 - Anomaly end: 37,215 m. Weld-log end: 151,492 m. 2023 journal end: 25,655 m; only 8 rows share
   d=33.3 (no mass fill; earlier suspicion from the screenshot withdrawn).
 - All three match salvage exactly. README endpoints updated to exact values in both languages.

@@ -31,7 +31,7 @@ re-export requested). Details: docs/DATA.md and the scoping entries in PROGRESS.
 | SRTO–Omsk 1608–1717 | 2016→2021 / 2021→2024 | 0.530 / 0.277 (test, 63 positives) |
 | SRTO–Omsk 1717–1759 | 2016→2021 | 0.181 / 0.031 (13 positives) |
 | Parabel–Kuzbass-2 0–110 | no valid pair (deferred) | 2015 schema has 23 columns vs 44 later; ≥10% in 5.8% of 18,337 rows (2015) vs 96% of measured depths (2020) |
-| Yurga–Novosibirsk 0–154 | no valid pair (blocked) | zero readable anomaly surveys; re-export requested |
+| Yurga–Novosibirsk 0–154 | no valid pair (salvage pending validation) | anomaly sheets fail strict parsers (truncated streams); salvaged so far: 2,624 rows (2020), 29,234 + 4,405 rows (2023 journals) |
 
 Tested and quarantined what did not hold: HGB ties persistence, log-linear wins counts
 (MAE 6.5 vs 11.3), LR-nlag overlay adds +0.032 on ON data only and zero off-site (archived OFF).

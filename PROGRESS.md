@@ -228,6 +228,17 @@
 - (Direct audit below — numbers re-derived by hand, one wording tightened.)
 
 ## 2026-10-07 — Direct audit of the 6-section table: all claims verified, 1 precision fix
+- (Yu-N salvage counts below.)
+
+## 2026-10-07 — Yu-N salvage: 2023 journals recovered, pair validation queued (E15)
+- Background counter finished: sheet3 (особенностей) 25.84MB → 29,234/29,497 well-formed (99.1%);
+  sheet4 (аномалий) 23.73MB → 4,405/28,717 well-formed (15.3%, duplication-garble pattern like PK1-2019).
+  Row-start count ≈ summary-stats magnitude, so most markers are repeats, not records.
+- Status change: Yu-N moves from "blocked" to "salvageable, pair TBD". Pair still unclaimed:
+  needs salvage-parse + Distance/column validation + schema check (2020 is 45-col SSID format vs 2023
+  new-format journals — possible PK2-class comparability break). Queued as E15 validation experiment.
+- README Yu-N rows corrected in both languages (counts stated, no pair claimed). Re-export request stands
+  as the clean fix regardless.
 - Re-ran everything personally against raw files (no subagent): 6 folders, 39 files (32 data + 7
   .DS_Store). PK2-2015: 23 cols, n=18,337, med 5.0, 5.8% ≥10. PK2-2020: n=1,026, med 11.0, 96.1% of
   measured depths (76.2% of rows). PK2-2025A corrupt (ParseError). YN-2020A corrupt; YN-2023 journals

@@ -240,6 +240,13 @@
 - (Yu-N hard check below — 14/14.)
 
 ## 2026-10-07 — Yu-N hard check: 14/14 CONFIRMED, zero corrections
+- (README rebuild below — full tables from re-derived distributions.)
+
+## 2026-10-07 — READMEs rebuilt: 6-section inventory + defect mix, all numbers re-derived
+- `experiments/char_dist.py` measured all 13 readable survey slices fresh (one loader-keyword bug
+  found and fixed mid-run; YN slices passed first try). Every share in both READMEs divides out
+  from those counts (spot-verified: ON GWAN 128/590/1506, PK1-25 GWAN>corr, SRTO inversion,
+  PK2 97%, SRTO-1717 37% empty, YN mixes). Caught one draft error pre-commit (PK1 P@50 49/50).
 - `experiments/verify_yn_hard.py` re-derived every Yu-N number: 3 sheets, strict-parse failure,
   2,621 salvaged rows to 37,215.645 m, monotonic, weld log 14,095 rows to 151,492.155 m, 100.0%
   anomaly-to-weld join within 12 m, 11 sheets, pipe log 14,160×10, 4,400 salvaged rows to

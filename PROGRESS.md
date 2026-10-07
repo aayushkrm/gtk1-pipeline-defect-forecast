@@ -677,3 +677,22 @@
 - Hygiene: tests green but narrow; 137 files tracked, zero binaries, secrets env-only; tree dirty
   (M AGENTS.md plus 4 untracked validate/salvage scripts). No sign-off until fix list clears.
 
+## 2026-10-07 — Review fixes applied (3 subagent workstreams, verified, pushed)
+- Docs: tally now 3 clean + E10 weak + E14 void (GUARDRAILS rules text untouched); PROBLEM/VALIDATION
+  synced to 100 m matched-new + R1-R4 (recall@P0.7 retired); READMEs EN+RU corrected with LR exception
+  and runbook pointer, numbers unchanged; DATA uses 2,621 usable YN rows; INDEX tooling note current;
+  base.yaml deleted (verified unimported); AGENTS newline fixed. track*.md frozen, untouched.
+- Code guards (outputs verified identical on current data): Hungarian raises with shape info; empty
+  bootstrap returns NaN + warning; xlrd patch idempotent with BAD_SST counts; normalize raises explicit
+  errors and drops non-finite dist; --drop-last deciles on kept cells only (no -1); requirements pinned
+  (matplotlib==3.8 from bound, not installed here); parity tests +9 edge groups.
+- Deliberate non-fix: depth-before-match KEPT as R1 frozen semantics. Match-after-cut would move ON
+  0.644->0.632 and SRTO 0.277->0.235 and void R1 for all pairs. Threshold-crossers count as
+  newly-reported by design; documented in features.py + parity test. v2 pipeline needs version bump +
+  full recompute + reviewer approval, not a silent edit.
+- Experiments: E10 logs both legs (numbers bit-identical); E05 B3 rebuilt past-only (numbers identical,
+  leak path never fired); auto-pass audit 0.0000 on ON (path dead there); E09 guard-band variant added
+  (verdict unchanged); E14 missing-copy guard; frozen_pins repurposed to audited-drift detector.
+- Watchlist regen: pk1_2025_noedge top20 identical, deciles[0] -0.0088 -> 0.0. Both --check gates IDENTICAL.
+  Committed salvage/validate/audit/pins scripts (no secrets, no absolute paths).
+

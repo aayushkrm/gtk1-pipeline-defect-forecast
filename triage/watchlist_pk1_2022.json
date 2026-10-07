@@ -4,6 +4,7 @@
   "file": "\u0410\u043d\u043e\u043c\u0430\u043b\u0438\u0438.xls",
   "model": "B1 past-count only (prospective, no future labels)",
   "recalibration": "placeholder \u2014 per-section thresholds uncalibrated until next survey",
+  "edge_guard": null,
   "top20": [
     {
       "rank": 1,

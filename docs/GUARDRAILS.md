@@ -17,8 +17,8 @@
 - R3 stationarity screen: future/past d≥10 ratio in [0.5,2.0] AND match ≥0.20 or ≥50% of same-section prior.
 - R4 lift-CI lower>0 with n_pos≥30. R2∧R3 are instrument-validity gates; R4 is the statistical gate.
 - Failing R2/R3 with passing R4 = instrument changed ("newly-reported" changed meaning) → void as
-  replication evidence, kept as break evidence only. Current tally: 4/4 clean (ON, SRTO-1608,
-  SRTO-1717 via E10, PK1); E14 void (repaired copy, ratio 4.78, match 0.134). No consumer may read
+  replication evidence, kept as break evidence only. Current tally: 3 clean (ON, SRTO-1608,
+  PK1) + E10 weak/insufficient (SRTO-1717, suggestive only) + E14 void (repaired copy, ratio 4.78, match 0.134). No consumer may read
   results_e14* (handover pages assert only ON/PK1/SRTO-1608 frozen numbers).
 - ≥80% reliability claim: not made; operating point still open (R@P0.7 retired as vacuous).
 

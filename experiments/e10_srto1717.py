@@ -25,25 +25,24 @@ def load(year, sheet="Аномалии"):
     df = pd.read_excel(fp, sheet_name=sheet, header=3,
                        engine="xlrd" if fp.endswith(".xls") else "openpyxl")
     df.columns = [str(c).strip() for c in df.columns]
-    return df, {"name": Path(fp).name, "bytes": Path(fp).stat().st_size}
+    st = Path(fp).stat()
+    return df, {"name": Path(fp).name, "bytes": st.st_size, "mtime": st.st_mtime}
 
 def run():
     d16, h16 = load(2016)
-    d21, _ = load(2021)
+    d21, h21 = load(2021)
     r16, r21 = raw(d16), raw(d21)
-    ytr = None
     y, X, mr = build(r16, r21, 10, KMAX)
     b1 = X[:, 0] / max(X[:, 0].max(), 1)
     base = float(y.mean())
     ap = float(average_precision_score(y, b1)) if y.sum() else 0.0
-    b3ayes = None
     rng = np.random.default_rng(0)
     bs = []
     for _ in range(2000):
         i = rng.integers(0, len(y), len(y))
         if y[i].sum() > 0:
             bs.append(float(average_precision_score(y[i], b1[i]) - y[i].mean()))
-    out = {"files": [h16[0] if isinstance(h16, tuple) else h16],
+    out = {"files": [h16, h21],
            "counts": {"2016": int((r16["depth"] >= 10).sum()), "2021": int((r21["depth"] >= 10).sum())},
            "match_rate": mr, "prev": base, "n_pos": int(y.sum()),
            "B1_AP": ap, "base": base, "lift_CI95": [float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))]}

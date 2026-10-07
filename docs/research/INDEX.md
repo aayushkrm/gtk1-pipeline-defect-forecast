@@ -2,7 +2,7 @@
 
 Standing orders live in `PROTOCOL.md`. It defines no-skip fallback ladder, disclosure rule, minimums, hard boundaries. Cite it first in every future research prompt. This passes the no-skip directive to subagents.
 
-Tooling note: websearch returned HTTP 400 all day. Tracks verified via OpenAlex/arXiv APIs + webfetch. Some publisher pages are bot-walled (noted per-track). No extra research plugins exist in the tool catalog. No API keys are available. Work used built-ins only. No Exa/Firecrawl/TinyFish keys exist here. Nothing was skipped for lack of them (public APIs covered the need).
+Tooling note: websearch returned HTTP 400 during Wave 1. Tracks verified via OpenAlex/arXiv APIs + webfetch. Some publisher pages are bot-walled (noted per-track). Current state: quad clients live in `src/research_tools/` (exa.py/firecrawl.py/parallel.py/tinyfish.py + quad.py + test_providers.py, env-keyed, SKIP when absent). Live self-test: Exa OK; Firecrawl/Parallel/TinyFish SKIP without keys (keys in user keyring only, absent from agent env).
 
 ## Track files (5,643 words, 49 sources/items)
 - `track1_ili_growth.md`: ILI growth + sizing-error models (14 sources). Core finding: NO paper forecasts from ID-less threshold-drifting tables. Dann–Maes + Voronoi matching + operator vetting is the methodology core. Stochastic processes contribute priors only.

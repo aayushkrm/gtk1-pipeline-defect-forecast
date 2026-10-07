@@ -30,3 +30,5 @@ discardable, high-value artifacts over verbose text.
 - PROGRESS.md is append-only audit history: never rewrite past entries; new entries follow this style.
 - Research track files (docs/research/track*.md) are frozen evidence: do not restyle them.
 - Raw data never committed; single committer; Russian section names match actual directories.
+
+## Always use /humanizer skill when writing prose or long text etc

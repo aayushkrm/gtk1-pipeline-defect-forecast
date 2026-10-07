@@ -10,7 +10,7 @@ Show no ≥80% meter. Apply per-section recalibration control. Show GUARDRAILS d
   Report SRTO as B1 0.277, LR 0.281, Δ +0.004 [−0.032,+0.039]. Overlay adds zero off-site; ship B1 only there.
   Keep headline at AP ~0.65±0.05 ON (~2.4× base), ~0.28 SRTO at 6% prevalence.
 - Report SRTO absolute AP as substantially lower (~0.28 at 6% prevalence). Confirm rank-order replicates.
-  Report SRTO-1717 as 0.181/0.031 (13 pos, liftCI lower>0; 2021 covers ~30/42km).
+  Report SRTO-1717 as 0.181/0.031 (13 pos, liftCI lower>0; 2021 covers ~30/42km; suggestive/insufficient — not a replication claim).
 - Report PK1 as B1 0.779/0.574/0.375 at ≥10/12/15% (562 pos, all lift-CIs lower>0; stable 8982-vs-8989 methodology; match cut-invariant 0.715/0.715/0.690). Use two-section triage demo set (ON + PK1).
 - Report count as MAE ~6.5 via log-linear vs 11.3 mean baseline (HGB quarantined).
 

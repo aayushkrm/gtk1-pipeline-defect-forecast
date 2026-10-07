@@ -64,7 +64,11 @@ def run():
         y = (new.groupby("cell").size().reindex(range(KMAX + 1), fill_value=0).values > 0).astype(int)
         past = (gp[gp["corr"]].groupby("cell").size().reindex(range(KMAX + 1), fill_value=0).values.astype(float))
         ppast = set(gp[gp["corr"]]["pipe"])
-        b3 = np.array([1.0 if set(gf[(gf["cell"] == k) & gf["corr"]]["pipe"]) & ppast
+        # B3 past-only (mirrors e02_matched.py:127-128): per-cell pipes from the
+        # PAST frame gp, never the future frame gf. First branch is 1 iff the
+        # past cell holds corr rows, so value == (past > 0); gf is not read.
+        gpipes = gp[gp["corr"]].groupby("cell")["pipe"].apply(set)
+        b3 = np.array([1.0 if (gpipes.get(k, set()) & ppast)
                        else (1.0 if past[k] > 0 else 0.0) for k in range(KMAX + 1)])
         b1 = past / max(past.max(), 1)
         b2 = np.full(KMAX + 1, float(y.mean()))

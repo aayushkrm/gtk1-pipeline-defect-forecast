@@ -20,9 +20,19 @@ OUT = Path(__file__).resolve().parent
 SEC = REPO.parent / "Данные для предварительного изучения" / "СРТО-Омск_(1717-1759)"
 REPAIRED = Path("/private/var/folders/gv/ymp49j297d1979m9c8hy8_000000gn/T/opencode/repair_spike/GTK1_2024_Anomalii_REPAIRED.xlsx")
 KMAX = 420
+# Frozen-copy pin of the repaired 2024 leg (bytes from committed results_e14.json).
+# Source xlsx is corrupt; the repaired copy is evidence-only, NOT handover-grade.
+REPAIRED_BYTES = 269882
 
 
 def run():
+    if not REPAIRED.exists():
+        raise FileNotFoundError(
+            "E14 repaired copy missing; re-salvage the corrupt 2024A source "
+            "(see experiments/resalvage_e14.md) — refusing to substitute "
+            "any other file. Committed results_e14.json stands as the run artifact.")
+    if REPAIRED.stat().st_size != REPAIRED_BYTES:
+        raise ValueError("E14 repaired copy size mismatch; refusing to run on an unexpected file.")
     df21, h21 = load_anomalies(sorted(SEC.glob("2021/Аномалии.xls"))[0])
     df24, h24 = load_anomalies(REPAIRED)
     r21, r24 = normalize(df21), normalize(df24)

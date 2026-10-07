@@ -45,13 +45,13 @@ Same three steps for every section.
 2. Linked defects across surveys. Same pipe plus nearby distance means the same defect seen again. The rest count as newly listed. This step uses past-survey data only.
 3. Ranked every 100 m segment by past defect density. Dense places rank high. Checked against the later survey, which the model never saw.
 
-More complex models never beat the simple density ranking by a clear margin, so the simple one ships. Failed attempts are on record in the repo.
+More complex models never beat the simple density ranking by a clear margin, so the simple one ships. One exception stays experimental and OFF by default: a logistic-regression overlay adds +0.032 on Omsk only (see `docs/OVERLAY_STATUS.md`). Failed attempts are on record in the repo. Live use follows `docs/PROSPECTIVE_RUNBOOK.md`.
 
 ## What came out
 
-Top-20 ranked segments that truly showed new defects: 20 of 20 on Omsk, 20 of 20 on Parabel–Kuzbass-1 (49 of top 50), 9 of 20 on SRTO-1608 (few cases there, so bands run wide). Whole-list scores, higher is better, chance level in brackets: 0.644 Omsk (chance 0.268), 0.779 PK1 (chance 0.401), 0.277 SRTO-1608 (chance 0.061), 0.181 SRTO-1717 (chance 0.031, 13 cases).
+Top-20 ranked segments that truly showed new defects: 20 of 20 on Omsk, 20 of 20 on Parabel–Kuzbass-1 (49 of top 50), 9 of 20 on SRTO-1608 (few cases there, so bands run wide). Whole-list scores, higher is better, chance level in brackets: 0.644 Omsk (chance 0.268), 0.779 PK1 (chance 0.401), 0.277 SRTO-1608 (chance 0.061), plus 0.181 SRTO-1717 (chance 0.031, 13 cases, weak/suggestive only — not a replication claim).
 
-In plain words, the ranking puts risky segments on top far better than chance, on four independent sections. It is not a physical rust forecast, and it carries no 80% guarantee. Every demo number ships with its warnings printed next to it.
+In plain words, the ranking puts risky segments on top far better than chance, on three independent sections plus one weak signal. It is not a physical rust forecast, and it carries no 80% guarantee. Every demo number ships with its warnings printed next to it.
 
 Demo pages with ranked lists, pipeline color maps, and check columns: `triage/triage_demo.html` (Omsk), `triage/triage_pk1.html` (Parabel–Kuzbass-1), `triage/triage_srto.html` (SRTO-1608).
 

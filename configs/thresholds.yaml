@@ -1,6 +1,7 @@
 # Per-section operating thresholds for prospective watchlists.
 # PLACEHOLDER values — recalibration requires the next survey per section.
 # Rule: never pool thresholds across sections (TRIAGE_SPEC.md, GUARDRAILS.md).
+# Recalibration: follow docs/PROSPECTIVE_RUNBOOK.md §3 only after next-survey labels exist (same pattern as experiments/e11_pk1.py).
 on:
   survey_basis: 2021
   flag_top_k: 20

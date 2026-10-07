@@ -53,9 +53,11 @@ def match_win(past, fut, dd, doff=0.5, dh=1, hungarian=False):
                     C[a, b] = d0 + 2 * do + 0.5 * dhA
             try:
                 ra, ca = linear_sum_assignment(C)
-                for a, b in zip(ra, ca):
-                    if C[a, b] < 1e8:
-                        fut_m[fut.index.get_loc(Fv.loc[b, "index"])] = True
-            except Exception:
-                pass
+            except Exception as e:
+                raise RuntimeError(
+                    f"match_win Hungarian failed: pipe={pipe!r} P={len(Pv)} F={len(Fv)} C={C.shape}: {e}"
+                ) from e
+            for a, b in zip(ra, ca):
+                if C[a, b] < 1e8:
+                    fut_m[fut.index.get_loc(Fv.loc[b, "index"])] = True
     return fut_m

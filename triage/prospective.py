@@ -57,19 +57,35 @@ def main():
     edge_dropped = None
     if a.drop_last:
         edge_dropped = {"cell": cfg["kmax"], "past_count": int(cnt[cfg["kmax"]])}
-        cnt = cnt.copy()
-        cnt[cfg["kmax"]] = -1.0
-        score = cnt / max(cnt[cnt >= 0].max(), 1)
-        order = np.argsort(-score, kind="stable")
-        order = order[order != cfg["kmax"]]
-    top = [(r, int(i), int(cnt[i]), float(score[i])) for r, i in enumerate(order[:20], 1)]
+        kept = np.ones(len(cnt), dtype=bool)
+        kept[cfg["kmax"]] = False
+        cnt_kept = cnt[kept]
+        denom = max(float(cnt_kept.max()) if len(cnt_kept) else 0.0, 1.0)
+        score_kept = cnt_kept / denom
+        cells = np.arange(len(cnt))[kept]
+        # Kept-only views for every downstream aggregate: no -1 sentinel anywhere.
+        # Deciles, ranking, and writes all use kept cells only.
+        order_pos = np.argsort(-score_kept, kind="stable")
+        order = cells[order_pos]
+        top = [(r, int(cells[p]), int(cnt_kept[p]), float(score_kept[p]))
+               for r, p in enumerate(order_pos[:20], 1)]
+        score_dec = [float(np.percentile(score_kept, q)) for q in (0, 25, 50, 75, 90, 99, 100)]
+        nonzero = int((cnt_kept > 0).sum())
+        full = [{"cell": int(cells[p]), "km": round(float(cells[p]) / 10, 1),
+                 "past_count": int(cnt_kept[p]), "score": float(score_kept[p])} for p in order_pos]
+    else:
+        top = [(r, int(i), int(cnt[i]), float(score[i])) for r, i in enumerate(order[:20], 1)]
+        score_dec = [float(np.percentile(score, q)) for q in (0, 25, 50, 75, 90, 99, 100)]
+        nonzero = int((cnt > 0).sum())
+        full = [{"cell": int(i), "km": round(float(i) / 10, 1), "past_count": int(cnt[i]), "score": float(score[i])}
+                for i in order]
     out = {"section": a.section, "survey": a.survey, "file": meta["name"],
            "model": "B1 past-count only (prospective, no future labels)",
            "recalibration": "placeholder — per-section thresholds uncalibrated until next survey",
            "edge_guard": edge_dropped,
            "top20": [{"rank": r, "cell": i, "past_count": p, "score": s} for r, i, p, s in top],
-           "score_deciles": [float(np.percentile(score, q)) for q in (0, 25, 50, 75, 90, 99, 100)],
-           "nonzero_cells": int((cnt > 0).sum()), "n_cells": cfg["kmax"] + 1}
+           "score_deciles": score_dec,
+           "nonzero_cells": nonzero, "n_cells": cfg["kmax"] + 1}
     if a.check:
         retro = json.loads((Path(__file__).resolve().parent / cfg["retro_json"]).read_text())
         rt = retro[cfg["retro_top"]]
@@ -82,8 +98,6 @@ def main():
             raise SystemExit("REGRESSION MISMATCH — harness disagrees with shipped page")
     tag = f"watchlist_{a.section}_{a.survey}" + ("_noedge" if a.drop_last else "")
     (Path(__file__).resolve().parent / f"{tag}.json").write_text(json.dumps(out, indent=2))
-    full = [{"cell": int(i), "km": round(float(i) / 10, 1), "past_count": int(cnt[i]), "score": float(score[i])}
-            for i in order]
     outdir = REPO / "outputs"
     outdir.mkdir(exist_ok=True)
     (outdir / f"{tag}.csv").write_text(

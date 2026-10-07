@@ -17,6 +17,34 @@ from sklearn.linear_model import LogisticRegression
 
 OUT = Path(__file__).resolve().parent
 REPO = Path(__file__).resolve().parents[1]
+# Guard band (additive; run() below is unchanged at guard=0): when fitting a
+# fold, drop GUARD_CELLS cells on each side of the held-out block from the
+# TRAIN rows, so the nlag neighbour feature cannot leak across the boundary.
+# Eval rows stay the full held-out third, so B1_AP per fold is unaffected.
+GUARD_CELLS = 2
+
+def folds_with_guard(ytr, Xtr, yte, Xte, guard=GUARD_CELLS, seed=3):
+    thirds = [np.arange(0, 443), np.arange(443, 887), np.arange(887, 1331)]
+    rng = np.random.default_rng(seed)
+    folds = []
+    for ho in thirds:
+        lo, hi = int(ho[0]), int(ho[-1])
+        banned = set(range(max(0, lo - guard), min(1331, hi + guard + 1))) - set(ho.tolist())
+        tr = np.array([i for i in range(1331) if i not in ho and i not in banned])
+        lr = LogisticRegression(C=1.0, max_iter=2000).fit(Xtr[tr], ytr[tr])
+        s = lr.predict_proba(Xte[ho])[:, 1]
+        b = Xte[ho][:, 0] / max(Xte[ho][:, 0].max(), 1)
+        d0 = float(average_precision_score(yte[ho], s) - average_precision_score(yte[ho], b)) if yte[ho].sum() else 0.0
+        bs = []
+        for _ in range(500):
+            i = rng.integers(0, len(ho), len(ho))
+            if yte[ho][i].sum() > 0:
+                bs.append(float(average_precision_score(yte[ho][i], s[i]) - average_precision_score(yte[ho][i], b[i])))
+        folds.append({"held": [lo, hi], "guard": guard, "n_pos": int(yte[ho].sum()),
+                      "LR_AP": float(average_precision_score(yte[ho], s)),
+                      "B1_AP": float(average_precision_score(yte[ho], b)),
+                      "delta": d0, "CI": [float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))]})
+    return folds
 
 def run():
     d16, _ = load_anom(2016); d21, _ = load_anom(2021); d25, _ = load_anom(2025)

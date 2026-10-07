@@ -216,6 +216,18 @@
 - (Wave 6 below — 24 tracks total now indexed.)
 
 ## 2026-10-06 — Research wave 6: direct-Exa verified live, 4 tracks banked (24 total)
+- (Style audit below — full coverage verified.)
+
+## 2026-10-07 — Style audit: full coverage confirmed, 2 scanner artifacts, 0 real violations
+- Question: is every doc rewritten under the AGENTS.md rule? Answer: yes, except the classes the
+  rule itself exempts (frozen track evidence, frozen result outputs, PROGRESS history, verbatim
+  triage captions). `/Users/akm/Tsu Project/AGENTS.md` exists and is byte-IDENTICAL to the repo copy.
+- Automated scan of all 11 restyled docs: avg 6.6–12.6 words/sentence, filler ≤3 per file.
+  All >25w hits inspected: output-field tables, schema column enumerations, and spec lines with exact
+  numbers — all protected by the rule's own exceptions (identifiers/quantities stay exact).
+  Two apparent long sentences re-checked in place: already short sentences separated by markdown
+  structure (scanner artifact). No fixes required; nothing changed.
+
 - (Style pass below.)
 
 ## 2026-10-07 — Repo polished for supervisor review under new writing law

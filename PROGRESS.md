@@ -243,6 +243,12 @@
 - (README rebuild below — full tables from re-derived distributions.)
 
 ## 2026-10-07 — READMEs rebuilt: 6-section inventory + defect mix, all numbers re-derived
+- (Plain-language pass below for non-technical readers.)
+
+## 2026-10-07 — READMEs simplified for supervisor (humanizer, jargon out)
+- Technical terms replaced with plain words (rust for corrosion, chance level for base, color maps
+  for heatmaps); scores read as "0.644 vs 0.268 chance". All numbers unchanged and verified.
+  Both languages. Tests green.
 - `experiments/char_dist.py` measured all 13 readable survey slices fresh (one loader-keyword bug
   found and fixed mid-run; YN slices passed first try). Every share in both READMEs divides out
   from those counts (spot-verified: ON GWAN 128/590/1506, PK1-25 GWAN>corr, SRTO inversion,

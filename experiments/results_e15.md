@@ -5,8 +5,11 @@ sheet, tolerant fallback. Read-only. Tally: 24 CLEAN, 5 RECOVERABLE, 1 DEAD, 2 P
 (both PARTIALs are audit-strictness artifacts, corrected below).
 
 ## Corrections to prior claims (auditor overstatements fixed)
-- SRTO-1717-2024A "corrupt" was WRONG: 1,220 + 3,814 rows strict-parse, CRCs pass. Only the
-  dimension tag is broken (cosmetic). Fully usable.
+- SRTO-1717-2024A "corrupt" was WRONG: 1,220 + 3,814 sheet rows strict-parse. Correction to the
+  correction (E14 re-salvage): its sharedStrings.xml CRC FAILS (tail ~175B truncated); only the sheet
+  streams are clean. Salvage re-derived E14 bit-identical (diff 0.0 all 8 metrics incl. seed-0
+  bootstrap); repaired CSV + script now durable (outputs/ + experiments/resalvage_e14.py). Only the
+  dimension tag issue was cosmetic; the CRC issue is real but worked around.
 - PK2-2025 anomalies: strict parsers fail, but byte-salvage recovers 2,162 rows (proven earlier).
   RECOVERABLE, not dead.
 - PK2-2025 CSV: single bad byte is an encoding flag (cp1251 / errors=replace reads it).

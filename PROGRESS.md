@@ -243,6 +243,17 @@
 - (olefix breakthrough below — DEAD verdict overturned.)
 
 ## 2026-10-07 — olefix breakthrough: PK1-2025 weld log RECOVERED (DEAD → RECOVERABLE)
+- (Queue cleared below — both items landed same turn.)
+
+## 2026-10-07 — Queue cleared: YN E15 PAIR-BLOCKED ( evidenced ), E14 RE-DERIVED bit-identical
+- YN validation: salvaged tables saved (2,621 / 21,015 / 4,400 rows in ignored outputs/, verified by
+  re-parse). Pair BLOCKED: 2023 depths 28–40% out-of-range (to 137,609); floors 0.1 vs 1.9; EXT/INT
+  codes inside depth column; offsets 27–65% empty (frozen ±0.5m term has no input); both sides end at
+  corruption edges. Prior 29,234 count corrected (overcounted closings). Clean 2023 re-export + 2020
+  tail would unlock the pair with no new method work.
+- E14 re-salvage: all 8 metrics bit-identical (diff 0.0 incl. bootstrap). /tmp-loss lesson closed:
+  repaired CSV in outputs/ + resalvage_e14.py committed. results_e15.md CRC claim corrected
+  (sharedStrings fails; sheets clean). R1–R4 void ruling stands (reproducibility restored, validity unchanged).
 - Root cause found: short FAT chain (last ~65KB missing), not corrupt content. Patched xlrd compdoc
   to accept truncated streams + tolerant cells (`experiments/salvage_pk1_weld.py`, reads source
   read-only). Result: 12,927×28 rows, 12,475 numeric distances, max 128.8km (tail ~12km missing),

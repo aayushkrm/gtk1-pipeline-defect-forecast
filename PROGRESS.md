@@ -240,6 +240,15 @@
 - (E12 independent recompute below — second strict-equality false alarm, tolerance verdict.)
 
 ## 2026-10-07 — E12 recompute: CONFIRMED within reporting precision
+- (olefix breakthrough below — DEAD verdict overturned.)
+
+## 2026-10-07 — olefix breakthrough: PK1-2025 weld log RECOVERED (DEAD → RECOVERABLE)
+- Root cause found: short FAT chain (last ~65KB missing), not corrupt content. Patched xlrd compdoc
+  to accept truncated streams + tolerant cells (`experiments/salvage_pk1_weld.py`, reads source
+  read-only). Result: 12,927×28 rows, 12,475 numeric distances, max 128.8km (tail ~12km missing),
+  12,475 pipes. CSV saved to ignored outputs/ (persists; /tmp lesson applied).
+- E15 DEAD verdict overturned: 32-file tally now 24 CLEAN / 6 RECOVERABLE / 0 DEAD / 2 administrative
+  PARTIALs. No file defeats all methods anymore. Absent-data list (never-written rows) stands separately.
 - (Round-13 stale-verdict cleanup below.)
 
 ## 2026-10-07 — Round 13 closure: stale verdicts fixed, split stated, queue narrowed

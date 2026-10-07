@@ -14,9 +14,11 @@ Six pipeline sections, surveyed 2 to 3 times each between 2015 and 2025. Each su
 anomaly table (defect position, size, depth, type) plus a weld and pipe log. Files live outside
 this repo in `../Данные для предварительного изучения/`, one folder per section.
 
-Not all data is usable. Five files were damaged and needed repair parsing. Two sections cannot
-form a valid past-to-future pair: Parabel–Kuzbass-2 changed table format and sensitivity between
-surveys, and Yurga–Novosibirsk files are damaged (recovery in progress). Full detail:
+Not all data is usable. Five files needed repair parsing. Two sections cannot
+form a valid past-to-future pair. Parabel–Kuzbass-2 changed table format and sensitivity between
+surveys. Yurga–Novosibirsk files open in Excel and Numbers (those apps repair silently), but they
+hold partial data: the 2020 anomalies cover 0–37 km of a 151 km section, and the 2023 journals are
+mostly garbled (4,400 clean rows to about 26 km). Recovery continues. Full detail:
 `docs/DATA.md`.
 
 ## What we did

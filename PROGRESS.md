@@ -222,6 +222,14 @@
 - (Humanizer pass below — both laws now enforced.)
 
 ## 2026-10-07 — Humanizer pass: ~100 tells removed, facts intact, tests green
+- (Supervisor-facing rewrite below.)
+
+## 2026-10-07 — SUPERVISOR_BRIEF removed; README rewritten EN+RU
+- Deleted docs/SUPERVISOR_BRIEF.md via git rm (no test or code dependency; history keeps the record).
+  Remaining references live only in frozen files (PROGRESS history, track evidence) — left intact.
+- README.md rewritten: status, built artifacts with evidence table, data layout, pipeline, reproduce,
+  progress vs pending, map, rules. README_RU.md mirrors it in Russian (decimal commas, same numbers,
+  same commands/paths). Cross-linked both ways. Verified number parity EN↔RU + tests green.
 - Three agents applied the humanizer skill over the 11 styled docs (dashes→periods/colons,
   bold decoration out except mandated warnings, shout-caps lowered, triads/openers/closers cut,
   corrective contrasts kept where they fix a real misreading). Exempt classes untouched again.

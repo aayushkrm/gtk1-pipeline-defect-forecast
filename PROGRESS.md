@@ -240,6 +240,17 @@
 - (E12 independent recompute below — second strict-equality false alarm, tolerance verdict.)
 
 ## 2026-10-07 — E12 recompute: CONFIRMED within reporting precision
+- (Round-13 stale-verdict cleanup below.)
+
+## 2026-10-07 — Round 13 closure: stale verdicts fixed, split stated, queue narrowed
+- results_recompute.json method_note SUPERSEDED (raw-exact finding); results_e12_recompute.json verdict
+  SUPERSEDED to tolerance-CONFIRMED. Files now agree with PROGRESS; history preserved in git.
+- NN wording split stated: odometer-only NN rates CONFIRMED exact (0.7263/0.5338, raw, pipe-agnostic).
+  The older "UNVERIFIED (needs matching rerun)" line meant pipe-AWARE greedy matching, which never ran
+  and is not needed (frozen pipeline uses greedy match_win; NN was always a diagnostic, never a claim input).
+- Remaining queue before objective closes: (a) YN E15 validation (salvage-parse + schema check),
+  (b) olefix attempt for PK1-2025 weld or formal DEAD acceptance, (c) E14 re-salvage or void acceptance.
+  Everything else on the ledger is derived, committed, and green.
 - Independent src-path rerun: match/prev/B1/base/n_pos identical to 4–5 decimals on both cuts
   (B1 0.57374 vs 0.5737; 0.37499 vs 0.375; n_pos 334/138 exact). My script's == verdict fired only
   on rounding (committed full-precision vs recomputed 4dp) — same error class as the NN denominator

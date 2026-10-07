@@ -1,41 +1,41 @@
 {
-  "cuts": {
-    "12": {
-      "match": 0.715,
-      "prev": 0.2384,
-      "n_pos": 334,
-      "B1": 0.5737,
-      "base": 0.2384,
-      "liftCI": [
-        0.2889,
-        0.3871
-      ]
-    },
-    "15": {
-      "match": 0.6903,
-      "prev": 0.0985,
-      "n_pos": 138,
-      "B1": 0.375,
-      "base": 0.0985,
-      "liftCI": [
-        0.2007,
-        0.3566
-      ]
-    }
+ "cuts": {
+  "12": {
+   "match": 0.715,
+   "prev": 0.2384,
+   "n_pos": 334,
+   "B1": 0.5737,
+   "base": 0.2384,
+   "liftCI": [
+    0.2889,
+    0.3871
+   ]
   },
-  "match_vs_committed": {
-    "12": {
-      "match": false,
-      "prev": false,
-      "B1": false,
-      "base": false
-    },
-    "15": {
-      "match": false,
-      "prev": false,
-      "B1": false,
-      "base": false
-    }
+  "15": {
+   "match": 0.6903,
+   "prev": 0.0985,
+   "n_pos": 138,
+   "B1": 0.375,
+   "base": 0.0985,
+   "liftCI": [
+    0.2007,
+    0.3566
+   ]
+  }
+ },
+ "match_vs_committed": {
+  "12": {
+   "match": false,
+   "prev": false,
+   "B1": false,
+   "base": false
   },
-  "verdict": "MISMATCH \u2014 investigate, do not overwrite"
+  "15": {
+   "match": false,
+   "prev": false,
+   "B1": false,
+   "base": false
+  }
+ },
+ "verdict": "SUPERSEDED 2026-10-07: CONFIRMED within reporting precision (match/prev/B1/base/n_pos identical to 4-5dp; cut15 CI lower 0.201 vs 0.208 = RNG-sequencing noise, both >0). Original == flags fired on rounding only. Tolerance rule adopted."
 }

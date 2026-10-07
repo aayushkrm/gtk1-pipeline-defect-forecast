@@ -33,5 +33,5 @@
    "pos": 13
   }
  },
- "method_note": "norm() pre-filters Depth>=10, so _raw_ sets equal _d10 sets; keys renamed _d10dup_. NN is pipe-agnostic odometer matching; original 72.6/53.4 used an undefined subset."
+ "method_note": "SUPERSEDED 2026-10-07: raw pipe-agnostic NN +-2m = 0.7263/0.5338 reproduce 72.6%/53.4% EXACTLY. d10-filtered equivalents (0.8099/0.6976, keys _d10_) show filtering inflates persistence. Original subset dispute resolved: raw frames."
 }

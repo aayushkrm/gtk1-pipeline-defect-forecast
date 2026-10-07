@@ -225,6 +225,16 @@
 - (Coverage clarification below.)
 
 ## 2026-10-07 — Coverage note: 6 studied, 4 validated (README clarified EN+RU)
+- (Direct audit below — numbers re-derived by hand, one wording tightened.)
+
+## 2026-10-07 — Direct audit of the 6-section table: all claims verified, 1 precision fix
+- Re-ran everything personally against raw files (no subagent): 6 folders, 39 files (32 data + 7
+  .DS_Store). PK2-2015: 23 cols, n=18,337, med 5.0, 5.8% ≥10. PK2-2020: n=1,026, med 11.0, 96.1% of
+  measured depths (76.2% of rows). PK2-2025A corrupt (ParseError). YN-2020A corrupt; YN-2023 journals
+  corrupt on full read (3-row probe passed — method lesson: always full-read); pipe log 14,160 rows.
+  ON-2016 and PK1-2022: 44 cols, readable.
+- Fix: README "6% vs 96%" mixed denominators (all-rows vs measured-only). Now states both precisely.
+  Conclusion stands (threshold regime break). No other changes.
 - Supervisor question answered: all six folders studied (schemas in DATA.md, scoping recon, salvage
   spikes). PK2 deferred (schema + threshold break, rounds 10–11); Yu-N blocked (zero readable anomaly
   surveys, re-export requested). README tables now read "4 of 6 studied sections" with reasons.

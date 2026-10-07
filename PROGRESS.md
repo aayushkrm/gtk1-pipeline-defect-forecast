@@ -216,6 +216,15 @@
 - (Wave 6 below — 24 tracks total now indexed.)
 
 ## 2026-10-06 — Research wave 6: direct-Exa verified live, 4 tracks banked (24 total)
+- (Style pass below.)
+
+## 2026-10-07 — Repo polished for supervisor review under new writing law
+- Saved user instruction as `AGENTS.md` (project law: STE-flavored prose, exceptions for
+  identifiers/numbers, format ladder, repo bindings for verbatim captions and frozen evidence).
+- Three rewrite agents restyled README + 10 docs (PROBLEM, VALIDATION, DATA, GUARDRAILS, TRIAGE_SPEC,
+  SUPERVISOR_BRIEF, RUNBOOK, OVERLAY, research INDEX + PROTOCOL). Track files untouched (frozen).
+- Verified: run_tests.sh green (frozen numbers + disclaimer strings intact); invariant grep passes;
+  diff is prose-only (no code/command/number changes). Committed below.
 - (Quad-provider client layer below.)
 
 ## 2026-10-06 — Quad-provider search layer built; 1 of 4 keys reachable (ball in user court)

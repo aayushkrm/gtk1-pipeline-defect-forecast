@@ -1,10 +1,7 @@
 # GUARDRAILS — mandatory language and reporting rules (reviewer round 3)
 
 ## Naming (code, metrics, filenames, slides)
-- Say `newly-reported ≥10%`, `report-forecast`. NEVER `new corrosion / initiation / growth`
-  as a physical claim. "New" = unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match;
-  includes true initiation + re-detected misaligned old + sensitivity gain (proven by
-  60%/39% vanished-frac and cut-driven prevalence 0.27→0.08).
+- Say `newly-reported ≥10%`. Say `report-forecast`. NEVER say `new corrosion / initiation / growth` as a physical claim. Define "New" as unmatched future ≥10% row under pipe+2m/0.5m/1h greedy match. Include true initiation + re-detected misaligned old + sensitivity gain. Prove this scope by 60%/39% vanished-frac and cut-driven prevalence 0.27→0.08.
 
 ## Disclaimer (every results page / slide / handover)
 > "New = unmatched future ≥10% row under pipe+2m/0.5m/1h match; includes re-detection.
@@ -12,9 +9,8 @@
 > match-rate, vanished-frac, cut-sensitivity column (≥10% primary, ≥12%/≥15% sensitivity).
 
 ## Thresholds
-- Per-section operating thresholds (ON vs SRTO never pooled). cut≥10% primary; ≥12%/≥15% sensitivity.
-- Prospective ranking excludes the boundary cell by default (E13: overrun rows accumulate there);
-  retrospective frozen pages unchanged.
+- Set operating thresholds per section (ON vs SRTO never pooled). Use cut≥10% primary. Use ≥12%/≥15% sensitivity.
+- Exclude the boundary cell from prospective ranking by default (E13: overrun rows accumulate there). Leave retrospective frozen pages unchanged.
 
 ## Replication tally rules (R1–R4; reviewer round 12 — a pair counts iff ALL hold)
 - R1 frozen pipeline/matcher/cut. R2 source-grade inputs (no repaired/salvage copy).
@@ -27,5 +23,4 @@
 - ≥80% reliability claim: not made; operating point still open (R@P0.7 retired as vacuous).
 
 ## Model quarantine
-- E03 HGB-count "win" quarantined: tuned log-Ridge (MAE 6.48) beats HGB-poisson (8.52);
-  HGB stays a comparator, never the headline, until residual/shuffle controls pass per experiment.
+- Quarantine E03 HGB-count "win". Tuned log-Ridge (MAE 6.48) beats HGB-poisson (8.52). Keep HGB as a comparator, never the headline. Promote it only after residual/shuffle controls pass per experiment.

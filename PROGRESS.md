@@ -231,6 +231,13 @@
 - (Yu-N salvage counts below.)
 
 ## 2026-10-07 — Yu-N salvage: 2023 journals recovered, pair validation queued (E15)
+- (User-verified endpoints below.)
+
+## 2026-10-07 — User independently confirmed Yu-N coverage in Numbers
+- Anomaly end: 37,215 m. Weld-log end: 151,492 m. 2023 journal end: 25,655 m; only 8 rows share
+  d=33.3 (no mass fill; earlier suspicion from the screenshot withdrawn).
+- All three match salvage exactly. README endpoints updated to exact values in both languages.
+  Pair verdict unchanged (E15 validation pending), now co-verified by two independent readers.
 - (Triple re-verification below — every repo number rechecked.)
 
 ## 2026-10-07 — Triple re-verification: 3 swarms, corrections applied, 1 loss logged

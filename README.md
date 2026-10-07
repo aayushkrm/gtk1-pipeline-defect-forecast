@@ -17,8 +17,9 @@ this repo in `../Данные для предварительного изуче
 Not all data is usable. Five files needed repair parsing. Two sections cannot
 form a valid past-to-future pair. Parabel–Kuzbass-2 changed table format and sensitivity between
 surveys. Yurga–Novosibirsk files open in Excel and Numbers (those apps repair silently), but they
-hold partial data: the 2020 anomalies cover 0–37 km of a 151 km section, and the 2023 journals are
-mostly garbled (4,400 clean rows to about 26 km). Recovery continues. Full detail:
+hold partial data: the 2020 anomalies cover 0–37,215 m of a 151,492 m section (both endpoints
+confirmed by the user in Numbers), and the 2023 journals are
+mostly garbled (4,400 clean rows to 25,655 m, user-confirmed). Recovery continues. Full detail:
 `docs/DATA.md`.
 
 ## What we did

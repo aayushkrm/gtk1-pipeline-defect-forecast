@@ -237,6 +237,17 @@
 - (Round-14 closure below — re-analysis objective COMPLETE.)
 
 ## 2026-10-07 — Round 14: re-analysis objective COMPLETE (GO, residuals named)
+- (Yu-N hard check below — 14/14.)
+
+## 2026-10-07 — Yu-N hard check: 14/14 CONFIRMED, zero corrections
+- `experiments/verify_yn_hard.py` re-derived every Yu-N number: 3 sheets, strict-parse failure,
+  2,621 salvaged rows to 37,215.645 m, monotonic, weld log 14,095 rows to 151,492.155 m, 100.0%
+  anomaly-to-weld join within 12 m, 11 sheets, pipe log 14,160×10, 4,400 salvaged rows to
+  25,655.079 m, out-of-range depths present, 21,015 feature rows. Endpoints match the user's
+  Numbers readings to the meter.
+- One variance noted honestly: depth garbage max reads 72,259 here vs 137,609 in E15 salvage —
+  different column alignment on garbled rows. Both prove out-of-range content; the claim
+  "garbage present" is parse-invariant, the exact max is not. Pair verdict unchanged (BLOCKED).
 - Ledger: every README/DATA/TRIAGE_SPEC number derived; two stale wordings synced (DATA olefix
   status, E15 tally 24/6/0). YN BLOCKED rests on two readers + re-parse. E14 void stands with
   bit-identical reproducibility. 4/4 tally, R1–R4, 0 DEAD files.

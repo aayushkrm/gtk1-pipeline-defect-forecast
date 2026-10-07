@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "claim": "2020A has 3 sheets",
+      "verdict": "CONFIRMED",
+      "detail": "3"
+    },
+    {
+      "claim": "2020A anomalies fail strict parse",
+      "verdict": "CONFIRMED",
+      "detail": ""
+    },
+    {
+      "claim": "2020 salvaged rows ~2621",
+      "verdict": "CONFIRMED",
+      "detail": "2621"
+    },
+    {
+      "claim": "2020 dist max ~37215",
+      "verdict": "CONFIRMED",
+      "detail": "37215.645"
+    },
+    {
+      "claim": "2020 dist monotonic non-decreasing",
+      "verdict": "CONFIRMED",
+      "detail": ""
+    },
+    {
+      "claim": "2020 weld rows ~14095",
+      "verdict": "CONFIRMED",
+      "detail": "14095"
+    },
+    {
+      "claim": "2020 weld max ~151492",
+      "verdict": "CONFIRMED",
+      "detail": "151492.155"
+    },
+    {
+      "claim": "2020 anomalies join welds (>=99% within 12m)",
+      "verdict": "CONFIRMED",
+      "detail": "1.0000"
+    },
+    {
+      "claim": "2023 has 11 sheets",
+      "verdict": "CONFIRMED",
+      "detail": "11"
+    },
+    {
+      "claim": "2023 pipe log 14160x10",
+      "verdict": "CONFIRMED",
+      "detail": "14160x10"
+    },
+    {
+      "claim": "2023 anom salvaged rows ~4400",
+      "verdict": "CONFIRMED",
+      "detail": "4400"
+    },
+    {
+      "claim": "2023 anom dist max ~25655",
+      "verdict": "CONFIRMED",
+      "detail": "25655.079"
+    },
+    {
+      "claim": "2023 anom depth has out-of-range values",
+      "verdict": "CONFIRMED",
+      "detail": "max=72259.0"
+    },
+    {
+      "claim": "2023 feat salvaged rows ~21015",
+      "verdict": "CONFIRMED",
+      "detail": "21015"
+    }
+  ]
+}

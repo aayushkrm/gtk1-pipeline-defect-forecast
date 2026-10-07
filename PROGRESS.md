@@ -246,6 +246,12 @@
 - (Queue cleared below — both items landed same turn.)
 
 ## 2026-10-07 — Queue cleared: YN E15 PAIR-BLOCKED ( evidenced ), E14 RE-DERIVED bit-identical
+- (Supervisor-readable rewrite below.)
+
+## 2026-10-07 — READMEs rewritten for supervisor (plain language, EN+RU)
+- Old README relied on jargon. Both versions now read: task, data, 3 steps, concrete outcomes
+  (top-20 hits, AP table), plain meaning plus non-meaning, reproduce, next steps. Humanizer applied.
+- Caught and fixed my own draft error: PK1 P@50 is 49/50, not 48 (JSON-verified before commit).
 - YN validation: salvaged tables saved (2,621 / 21,015 / 4,400 rows in ignored outputs/, verified by
   re-parse). Pair BLOCKED: 2023 depths 28–40% out-of-range (to 137,609); floors 0.1 vs 1.9; EXT/INT
   codes inside depth column; offsets 27–65% empty (frozen ±0.5m term has no input); both sides end at

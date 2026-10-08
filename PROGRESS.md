@@ -748,6 +748,13 @@
   (1717 b 38 vs 39, documented normalize behavior). Prototype track (Satonin) can render immediately.
 - Suite green; frozen pages untouched.
 
+## 2026-10-08 — Team eval spec written (Evgeny's unassigned testing ask, claimed)
+- docs/EVAL_SPEC.md (new): one scoring standard for paired workers. AP+lift-CI for binary task,
+  paired_delta_ci on identical labels for worker-vs-worker, MAE/Spearman for counts, no metric for
+  ABC display colors, null-result reporting rule, seed/version/hash logging rule. All cited functions
+  verified present in src/gtk1/metrics.py with stated defaults. Frozen R1–R4 referenced, not repeated.
+- Suite green; docs-only addition, no code outputs touched.
+
 ## 2026-10-08 — Repair candidates generalized + danger regime panel (executed)
 - repair_candidates.py now loops sections. SRTO-1608 2016->2021->2024: past=453, vanished1=172 (0.380),
   persistent=121 (0.267), reappeared=51 (0.297). Persistent 0.267 reproduces ON 0.259 on an independent

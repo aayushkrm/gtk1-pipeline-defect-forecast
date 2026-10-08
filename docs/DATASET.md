@@ -14,7 +14,8 @@ pipe+2m/0.5m/1h greedy) → `build` (`src/gtk1/features.py`, depth≥10% before 
 
 dist (m), depth (%), pipe (id), off (m, NaN allowed), ori (clock string), char (type),
 abbr, danger (Опасность string: (a)/(b)/(c) where assigned, else empty), kbd (numeric,
-NaN where absent), corr (rust flag), h (clock hour, -99 unknown), cell (0..kmax).
+NaN where absent), corr (rust flag), h (clock hour, -99 unknown). `cell` (0..kmax) is not
+a normalize column: cell ids are built downstream (`features.build`, `prospective.rank`).
 Required columns raise explicit errors; optional columns default empty/NaN.
 
 ## Splits and labels (verified counts)

@@ -20,7 +20,9 @@
   replication evidence, kept as break evidence only. Current tally: 3 clean (ON, SRTO-1608,
   PK1) + E10 weak/insufficient (SRTO-1717, suggestive only) + E14 void (repaired copy, ratio 4.78, match 0.134). No consumer may read
   results_e14* (handover pages assert only ON/PK1/SRTO-1608 frozen numbers).
-- ≥80% reliability claim: not made; operating point still open (R@P0.7 retired as vacuous).
+- ≥80% reliability claim: not made as a blanket (operating point still open; R@P0.7 retired
+  as vacuous). Scoped retrospective class claims per `docs/CHOSEN_CLASS_80.md` are permitted
+  with exact intervals and stated non-coverage; forward ≥80% stays gated on next-survey proof.
 
 ## Model quarantine
 - Quarantine E03 HGB-count "win". Tuned log-Ridge (MAE 6.48) beats HGB-poisson (8.52). Keep HGB as a comparator, never the headline. Promote it only after residual/shuffle controls pass per experiment.

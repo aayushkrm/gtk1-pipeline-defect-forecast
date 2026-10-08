@@ -17,7 +17,7 @@ confidence (exact Clopper–Pearson intervals, `scipy.stats.beta`).
 |---|---|---|---|
 | ON top-20 | 20/20 | [0.8316, 1.0000] | yes |
 | PK1 top-20 | 20/20 | [0.8316, 1.0000] | yes |
-| PK1 top-50 | 49/50 | [0.8935, 0.9995] | yes |
+| PK1 top-50 | 49/50 (49 = 0.98 × 50 from committed `p_at_k`) | [0.8935, 0.9995] | yes |
 | SRTO-1608 top-20 | 9/20 | [0.2306, 0.6847] | no — excluded |
 
 ## Scope and non-coverage
@@ -30,5 +30,6 @@ confidence (exact Clopper–Pearson intervals, `scipy.stats.beta`).
 ## Confirmation rule
 
 Retrospective class claim stands as evidenced. Forward ≥80% requires the next survey per
-section evaluated through `experiments/evaluate_pair.py` with top-K hits re-tested at 95%.
+section evaluated through `experiments/evaluate_pair.py` with top-K hits re-tested by exact
+Clopper–Pearson intervals at 95% (same method as above, not the bootstrap P@K CI).
 Until then no operating document may cite 80% prospectively.

@@ -4,8 +4,8 @@
 set -eo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 bash "$ROOT/run_tests.sh"
-python3 "$ROOT/triage/prospective.py" --section on --survey 2021 --check | tail -n 1
-python3 "$ROOT/triage/prospective.py" --section pk1 --survey 2022 --check | tail -n 1
+python3 "$ROOT/triage/prospective.py" --section on --survey 2021 --check
+python3 "$ROOT/triage/prospective.py" --section pk1 --survey 2022 --check
 echo "--- shipped numbers ---"
 python3 -c "
 import json

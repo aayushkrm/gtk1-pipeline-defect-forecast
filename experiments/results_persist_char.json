@@ -18,8 +18,9 @@
       "n_past": 2583,
       "n_fut": 3751,
       "match_rate_past": 0.8861788617886179,
+      "match_rate_past_def": "reverse-greedy: past rows with a future match / all past rows",
       "match_rate_fut": 0.6115702479338843,
-      "n_classes_total": 6,
+      "n_classes_union": 3,
       "classes": [
         {
           "char": "Коррозия",
@@ -68,8 +69,9 @@
       "n_past": 786,
       "n_fut": 1263,
       "match_rate_past": 0.8854961832061069,
+      "match_rate_past_def": "reverse-greedy: past rows with a future match / all past rows",
       "match_rate_fut": 0.5510688836104513,
-      "n_classes_total": 6,
+      "n_classes_union": 3,
       "classes": [
         {
           "char": "Коррозия",
@@ -111,7 +113,7 @@
     }
   },
   "repro": {
-    "git": "1563542",
+    "git": "d35a3b0",
     "runtime_s": 16.6
   }
 }

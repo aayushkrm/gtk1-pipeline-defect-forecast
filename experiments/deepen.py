@@ -131,6 +131,7 @@ def one_pair(fp_past, fp_fut):
            "n_pairs": int(len(pairs)),
            "match_rate_fut": clean(float(np.mean(fut_m)) if len(fut_m) else None),
            "match_rate_past": clean(float(len(pairs) / len(past)) if len(past) else None),
+           "match_rate_past_def": "forward pairs / past rows (differs from reverse-greedy def in persist_by_char)",
            "parity_vs_match_win": "IDENTICAL",
            "overall": agg(dd_arr), "by_char": []}
     if len(pairs):

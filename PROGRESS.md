@@ -942,3 +942,11 @@
   Rerun reproduces exactly; JSON strict-clean; two new files.
 - demo.sh (new): tests + both gates + shipped numbers + pointers in one command; DEMO OK verified.
 - Suite green.
+
+## 2026-10-08 — Post-audit review fixes applied (verdict was PASS-WITH-FIXES)
+- GUARDRAILS ban scoped to blanket claims by reviewer sanction (tally-fix precedent); scoped
+  retrospective class claims permitted with intervals, forward stays gated. Disclaimer/R1-R4 untouched.
+- Shared metric name disambiguated: match_rate_past_def fields in both JSONs (reverse-greedy vs
+  forward-pairs); values unchanged, reruns reproduce. n_classes_total replaced by union count.
+- CHOSEN_CLASS_80: top-50 provenance explicit, forward rule names Clopper-Pearson. DATASET: cell
+  built downstream noted. demo.sh prints gate lines. Suite green, DEMO OK.

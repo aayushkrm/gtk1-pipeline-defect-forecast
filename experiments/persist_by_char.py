@@ -107,8 +107,9 @@ def one_pair(tag, fp_past, fp_fut):
         "n_past": int(len(past)),
         "n_fut": int(len(fut)),
         "match_rate_past": clean(rate(int(past["matched"].sum()), len(past))),
+        "match_rate_past_def": "reverse-greedy: past rows with a future match / all past rows",
         "match_rate_fut": clean(rate(int(fut["matched"].sum()), len(fut))),
-        "n_classes_total": int(past["char"].nunique() + fut["char"].nunique()),
+        "n_classes_union": int(pd.unique(pd.concat([past["char"], fut["char"]])).size),
         "classes": rows,
     }
 

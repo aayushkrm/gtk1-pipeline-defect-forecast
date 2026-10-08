@@ -958,3 +958,11 @@
   on small future-ab counts. PROBLEM.md secondary hypothesis answered: KBD flag alone does not
   lift; ab-history does, thinly. Rerun reproduces exactly; JSON strict-clean; two new files.
 - Suite green.
+
+## 2026-10-09 — Critical-flag anatomy read from committed danger panel (no new compute)
+- (a) flags are never rust-dominated at scale: PK1-2022 155/205 ring-weld, PK1-2025 40/45
+  ring-weld, ON-2025 6/8 ring-weld; ON-2021 8/9 mechanical, PK2-2020 8/10 mechanical,
+  SRTO-1717 4/4 mechanical. Corrosion holds (a) only in tiny samples (SRTO-1608-2016: 3/3).
+- New class sighting: crack on spiral weld flagged (a) twice (PK1-2022). Spelling variants
+  Гофр/Гофра noted for the merge track. Reading sharpens the two-map product: red = weld and
+  mechanical program flags, outside corr-density ranking by construction.

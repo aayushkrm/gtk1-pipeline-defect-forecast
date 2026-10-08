@@ -918,3 +918,8 @@
   Clopper–Pearson 95% lowers: ON 20/20 → 0.8316, PK1 20/20 → 0.8316, PK1 49/50 → 0.8935;
   SRTO 9/20 → 0.2306 correctly excluded (class boundary). GUARDRAILS blanket ban intact;
   forward 80% gated on next-survey confirmation via evaluate_pair.py.
+
+## 2026-10-08 — Dataset card written (charter task 4 explicit gap closed)
+- docs/DATASET.md (new): build chain, row schema, splits with verified counts (1331/357/0.2682,
+  1401/562/0.4011, 1041/63/0.0605), label definition, contaminations with pointers, rebuild
+  commands, class-balance note. Every number traces to a committed JSON. Suite green.

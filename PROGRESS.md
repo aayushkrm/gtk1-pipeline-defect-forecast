@@ -782,3 +782,12 @@
 - Independent rerun reproduces all numbers exactly (deterministic seeds). Pair coordination note:
   B1/persistence is Ayush's lane; Aleksei takes a different family (CatBoost/RF variant) with
   shared EVAL_SPEC scoring and tried/untried log. Suite green.
+
+## 2026-10-08 — Operating-point proposal: grid saturates, needs wider K (delegated, verified)
+- Subagent-built experiments/operating_point.py + results_operating.json (P@K grids K=5..200,
+  n_boot=500 seed 7, UNCONFIRMED tags throughout, thresholds.yaml untouched).
+- All sections return flag=200 with band edge null: K=200 precision still far above 2x base
+  (ON 0.800, SRTO 0.220, PK1 0.905). The grid saturates rather than resolves; wider K plus a
+  capacity-based rule (crew review size) must precede real calibration inputs. Degenerate [1,1]
+  small-K intervals recorded as caveats, not hidden. Rerun reproduces reported numbers exactly.
+- Suite green; two new files only.

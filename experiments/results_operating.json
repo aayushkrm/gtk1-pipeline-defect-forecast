@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "cut": 10,
+    "k_grid": [
+      5,
+      10,
+      20,
+      30,
+      50,
+      100,
+      200
+    ],
+    "n_boot": 500,
+    "seed": 7,
+    "model": "B1 past-count only (retrospective, frozen R1)",
+    "method_note": "precision@K CI is a resample-then-rerank retrospective display statistic (src.gtk1.metrics.precision_at_k), not a prospective precision claim",
+    "status": "UNCONFIRMED — confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md §3",
+    "git": "1a22f14",
+    "runtime_s": 39.4
+  },
+  "sections": {
+    "on": {
+      "section": "on",
+      "pair": "2021->2025",
+      "kmax": 1330,
+      "n_cells": 1331,
+      "files": [
+        "Аномалии.xlsx",
+        "Аномалии_.xlsx"
+      ],
+      "match_rate": 0.6115702479338843,
+      "base": 0.2682193839218633,
+      "n_pos": 357,
+      "grid": [
+        {
+          "K": 5,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 10,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 20,
+          "est": 1.0,
+          "lo": 0.95,
+          "hi": 1.0
+        },
+        {
+          "K": 30,
+          "est": 0.9666666666666667,
+          "lo": 0.9,
+          "hi": 1.0
+        },
+        {
+          "K": 50,
+          "est": 0.96,
+          "lo": 0.88,
+          "hi": 1.0
+        },
+        {
+          "K": 100,
+          "est": 0.92,
+          "lo": 0.87,
+          "hi": 0.9752499999999997
+        },
+        {
+          "K": 200,
+          "est": 0.8,
+          "lo": 0.745,
+          "hi": 0.8676249999999999
+        }
+      ],
+      "flag_top_k": 200,
+      "flag_rule": "largest K with CI-lower >= 2*base (2*base=0.5364)",
+      "flag_fallback": false,
+      "band_edge_k": null,
+      "band_rule": "smallest K with estimate <= base; never reached, null",
+      "status": "UNCONFIRMED — confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md §3",
+      "caveats": [
+        "degenerate CI: zero-width interval at K=5,10 (resample-then-rerank artifact on a perfect top-K; not a prospective precision claim)"
+      ]
+    },
+    "srto": {
+      "section": "srto",
+      "pair": "2021->2024",
+      "kmax": 1040,
+      "n_cells": 1041,
+      "files": [
+        "Аномалии.xls",
+        "Аномалии1.xls"
+      ],
+      "match_rate": 0.5510688836104513,
+      "base": 0.06051873198847262,
+      "n_pos": 63,
+      "grid": [
+        {
+          "K": 5,
+          "est": 0.4,
+          "lo": 0.0,
+          "hi": 0.8
+        },
+        {
+          "K": 10,
+          "est": 0.4,
+          "lo": 0.1,
+          "hi": 0.7
+        },
+        {
+          "K": 20,
+          "est": 0.45,
+          "lo": 0.25,
+          "hi": 0.65
+        },
+        {
+          "K": 30,
+          "est": 0.4,
+          "lo": 0.23333333333333334,
+          "hi": 0.6
+        },
+        {
+          "K": 50,
+          "est": 0.42,
+          "lo": 0.26,
+          "hi": 0.56
+        },
+        {
+          "K": 100,
+          "est": 0.28,
+          "lo": 0.2,
+          "hi": 0.39
+        },
+        {
+          "K": 200,
+          "est": 0.22,
+          "lo": 0.155,
+          "hi": 0.2776249999999999
+        }
+      ],
+      "flag_top_k": 200,
+      "flag_rule": "largest K with CI-lower >= 2*base (2*base=0.1210)",
+      "flag_fallback": false,
+      "band_edge_k": null,
+      "band_rule": "smallest K with estimate <= base; never reached, null",
+      "status": "UNCONFIRMED — confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md §3",
+      "caveats": []
+    },
+    "pk1": {
+      "section": "pk1",
+      "pair": "2022->2025",
+      "kmax": 1400,
+      "n_cells": 1401,
+      "files": [
+        "Аномалии.xls",
+        "Аномалии.xls"
+      ],
+      "match_rate": 0.7147624874847035,
+      "base": 0.4011420413990007,
+      "n_pos": 562,
+      "grid": [
+        {
+          "K": 5,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 10,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 20,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 30,
+          "est": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
+        },
+        {
+          "K": 50,
+          "est": 0.98,
+          "lo": 0.94,
+          "hi": 1.0
+        },
+        {
+          "K": 100,
+          "est": 0.97,
+          "lo": 0.94,
+          "hi": 1.0
+        },
+        {
+          "K": 200,
+          "est": 0.905,
+          "lo": 0.865,
+          "hi": 0.945
+        }
+      ],
+      "flag_top_k": 200,
+      "flag_rule": "largest K with CI-lower >= 2*base (2*base=0.8023)",
+      "flag_fallback": false,
+      "band_edge_k": null,
+      "band_rule": "smallest K with estimate <= base; never reached, null",
+      "status": "UNCONFIRMED — confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md §3",
+      "caveats": [
+        "degenerate CI: zero-width interval at K=5,10,20,30 (resample-then-rerank artifact on a perfect top-K; not a prospective precision claim)"
+      ]
+    }
+  }
+}

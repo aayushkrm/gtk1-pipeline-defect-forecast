@@ -883,3 +883,14 @@
 - Deferred with reasons (known limitations, no silent debt): match_win duplicate-index (frozen R1
   parity forbids touching the matcher); xlrd-retry narrowing (salvage paths depend on broad catch);
   matplotlib==3.8 loose pin (absent locally, nothing imports it).
+
+## 2026-10-08 — Four-track push: dry run, economics, wave 7, ingest tool-token fix
+- Synthetic Tuesday dry run (/tmp only, never committed): clean + bad-byte CSVs both load with keys
+  found (tolerant tier proven end to end); in-range pipe join 0.333 as constructed; prefixed tool lines
+  exposed anchored-regex miss, fixed with search fallback storing the token (junk still unresolved).
+- experiments/economics.py (new): parametric dig-plan framework on Vlad's A=repair rule. Canonical
+  red-only run: 43 digs; with-orange variant: 369. Units labeled ILLUSTRATIVE until partner costs.
+- Wave 7 (delegated): docs/research/track25_pod_demo.md (14 sources, 12 full reads, negatives kept:
+  hit/miss GLM usable at 3-4 runs, 10->7% cut moves threshold through fixed signal regression, no
+  ready-made MFL conversion factor exists) + INDEX wave-7 section. Frozen tracks untouched.
+- Suite green.

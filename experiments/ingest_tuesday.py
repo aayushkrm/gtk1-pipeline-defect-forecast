@@ -276,6 +276,10 @@ _TOOL_RE = re.compile(
     r"^\s*(?P<fam>[A-Za-zА-Яа-яЁё]+[0-9]*[A-Za-zА-Яа-яЁё]*)"
     r"[\s\-_./]+(?P<dn>\d{3,4})[\s\-_./xх]+(?P<ns>\d{2,5})\s*$"
 )
+_TOOL_SEARCH_RE = re.compile(
+    r"(?P<fam>[A-Za-zА-Яа-яЁё]+[0-9]*[A-Za-zА-Яа-яЁё]*)"
+    r"[\s\-_./]+(?P<dn>\d{3,4})[\s\-_./xх]+(?P<ns>\d{2,5})"
+)
 
 
 def normalize_tool_info(lines, section):
@@ -289,8 +293,13 @@ def normalize_tool_info(lines, section):
     for raw in lines:
         tool = "" if raw is None else str(raw).strip()
         m = _TOOL_RE.match(tool) if tool else None
+        if m is None and tool:
+            # Section-prefixed or tabular lines ("Омск 2021: ДМТ2Б-1200-2560"):
+            # scan for the tool token anywhere, store the token itself.
+            m = _TOOL_SEARCH_RE.search(tool)
         if m:
-            rows.append({"section": str(section), "tool": tool,
+            tok = m.group(0).strip()
+            rows.append({"section": str(section), "tool": tok,
                          "role": m.group("fam").lower(),
                          "dn_mm": int(m.group("dn")),
                          "n_sensors": int(m.group("ns"))})

@@ -1,0 +1,41 @@
+{
+  "rule": "A=repair, B/C=monitor (Vlad); red cells dug",
+  "unit_costs_rub": {
+    "dig_cost": 1000000.0,
+    "miss_cost": 10000000.0,
+    "status": "ILLUSTRATIVE — partner to confirm"
+  },
+  "per_section": {
+    "on_2025": {
+      "dig_cells": 5,
+      "red_cells": 5,
+      "orange_cells": 25,
+      "monitored_not_dug": 25
+    },
+    "pk1_2025": {
+      "dig_cells": 34,
+      "red_cells": 34,
+      "orange_cells": 266,
+      "monitored_not_dug": 266
+    },
+    "srto_2024": {
+      "dig_cells": 0,
+      "red_cells": 0,
+      "orange_cells": 9,
+      "monitored_not_dug": 9
+    },
+    "srto1717_2021": {
+      "dig_cells": 4,
+      "red_cells": 4,
+      "orange_cells": 26,
+      "monitored_not_dug": 26
+    }
+  },
+  "total_digs": 43,
+  "expected_dig_cost_rub": 43000000.0,
+  "orange_left_unrepaired": 326,
+  "miss_exposure_rub": 3260000000.0,
+  "repro": {
+    "git": "46cd684"
+  }
+}

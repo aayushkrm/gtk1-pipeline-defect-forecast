@@ -20,8 +20,8 @@ Files live outside this repo in `../Данные для предваритель
 | Parabel–Kuzbass-1 572–714 | 2019, 2022, 2025 (defects + welds each) | — / 10,739 / 21,763 (2019: 2,859 good rows, rest missing) | Good pair 2022→2025 |
 | Parabel–Kuzbass-2 0–110 | 2015 (defect table + pipe journal), 2020, 2025 (defects + pipe CSV) | 18,337 / 1,026 / 2,162 to 70.6 of ~113 km (2025 opens in LibreOffice only) | No good pair (format and sensitivity changed, see below) |
 | SRTO–Omsk 1608–1717 | 2016, 2021, 2024 (defects + welds each) | 577 / 3,168 / 2,344 | Good pairs 2016→2021, 2021→2024 |
-| SRTO–Omsk 1717–1759 | 2016 (8-sheet station file), 2021, 2024 (defects + welds each) | — / 1,451 / 1,220 (2016 mixed file, 2024 repaired copy) | Good pair 2016→2021 |
-| Yurga–Novosibirsk 0–154 | 2020 (defects + welds), 2023 (11-sheet report) | 2,621 recovered / 4,400 recovered (both cut short) | No good pair yet (recovery check pending) |
+| SRTO–Omsk 1717–1759 | 2016 (8-sheet station file), 2021, 2024 (defects + welds each) | — / 1,451 / 1,220 (2016 mixed file, 2024 repaired copy) | Weak pair 2016→2021 (13 cases, suggestive only) |
+| Yurga–Novosibirsk 0–154 | 2020 (defects + welds), 2023 (11-sheet report) | 2,621 recovered / 4,400 recovered (both cut short) | No good pair (checked: pair blocked, evidenced) |
 
 ## What defects were found
 

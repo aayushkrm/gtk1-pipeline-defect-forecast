@@ -41,11 +41,15 @@ def main():
         worst = cells["worst"].to_numpy()
         out = {
             "section": tag, "survey": year, "file": meta["name"],
-            "meaning": "worst present repair class per 100m cell: 2=A(repair), 1=B(monitor), 0=C/none",
+            "meaning": "worst present repair class per 100m cell: 2=A(repair), 1=B(monitor), "
+                         "0=C/none; n_c counts explicit (c) rows so yellow (C) separates from "
+                         "white (clean: n_a=n_b=n_c=0)",
             "cells_with_a": int((worst == 2).sum()),
             "cells_with_b": int((worst == 1).sum()),
+            "cells_with_c_only": int(((worst == 0) & (cells["n_c"].to_numpy() > 0)).sum()),
             "n_a_rows": int(cells["n_a"].sum()),
             "n_b_rows": int(cells["n_b"].sum()),
+            "n_c_rows": int(cells["n_c"].sum()),
             "worst": worst.tolist(),
         }
         try:

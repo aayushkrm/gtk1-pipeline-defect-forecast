@@ -24,4 +24,5 @@ Ship every number with match-rate, vanished-frac, and cut-sensitivity triple (â‰
 2. Provide re-export of 5 damaged files from source (CRC-truncated .xls/.xlsx).
 3. Provide pipe commission years / ages (only Y-N has 1980).
 4. Provide per-survey registration thresholds + contractor/methodology notes. Use them for contractor-effect modeling.
-5. Decode empty Character (SRTO-1717-2021, 37%) and 2025 weld-log tail (27km truncation).
+5. Decode the 37% empty-Character rows (SRTO-1717-2021; empties sit on empty-character rows
+   per round-16 correction, decode still needed) and 2025 weld-log tail (27km truncation).

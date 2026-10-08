@@ -46,7 +46,8 @@ def cell_abc(g, kmax, width_m=WIDTH_M):
     """Per-cell worst repair class from the danger passthrough (sanctioned ABC track).
     Additive diagnostic: reads g["danger"] values (a)/(b)/(c), returns per-cell worst level
     (2=a most severe, 0=c or empty/absent) plus per-class row counts. Never alters build().
-    Cells clip to [0, kmax] by construction."""
+    n_c counts rows explicitly labeled (c); clean cells read n_a=n_b=n_c=0 with worst=0,
+    so yellow (C) separates from white (clean). Cells clip to [0, kmax] by construction."""
     ck = (g["dist"] // width_m).astype(int).clip(0, kmax)
     idx = pd.Index(range(kmax + 1))
     if len(g) == 0 or "danger" not in g.columns:
@@ -55,11 +56,15 @@ def cell_abc(g, kmax, width_m=WIDTH_M):
            .map(ABCRANK).fillna(0).astype(int))
     gl = pd.Series(lvl.to_numpy(), index=ck.to_numpy())
     worst = gl.groupby(level=0).max().reindex(idx, fill_value=0).astype(int)
-    is_a = (lvl == 2).to_numpy()
-    is_b = (lvl == 1).to_numpy()
-    n_a = pd.Series(is_a.astype(int), index=ck.to_numpy()).groupby(level=0).sum()
-    n_b = pd.Series(is_b.astype(int), index=ck.to_numpy()).groupby(level=0).sum()
+    arr = lvl.to_numpy()
+    keys = ck.to_numpy()
     out = pd.DataFrame({"worst": worst})
-    out["n_a"] = n_a.reindex(idx, fill_value=0).astype(int)
-    out["n_b"] = n_b.reindex(idx, fill_value=0).astype(int)
+    for code, col in ((2, "n_a"), (1, "n_b")):
+        col_s = pd.Series((arr == code).astype(int), index=keys).groupby(level=0).sum()
+        out[col] = col_s.reindex(idx, fill_value=0).astype(int)
+    # n_c counts explicitly-labeled-(c) rows only (empty/absent danger also maps to
+    # level 0, so it cannot come from the level map): clean cells read n_a=n_b=n_c=0.
+    lab_c = (g["danger"].astype(str) == "(c)").to_numpy().astype(int)
+    out["n_c"] = (pd.Series(lab_c, index=keys).groupby(level=0).sum()
+                  .reindex(idx, fill_value=0).astype(int))
     return out

@@ -851,3 +851,12 @@
 - Merge track (Natalia): src/gtk1/io.py loaders (tolerant-xlrd + fat-salvage tiers), Evgeny NULL rules,
   schema notes in docs/DATA.md; Tuesday stub experiments/ingest_tuesday.py accepts her union output.
 - Memos are chat-side drafts, not repo files; artifacts above are the committed handover.
+
+## 2026-10-08 — Audit overclaims closed: four colors separate, proofs committed, memos filed
+- cell_abc gains n_c (explicit-(c) rows only): yellow vs white now separate in all four snapshots
+  (yellow-only cells 990/1026/693/179; white = all-zero). Committed recalibration proofs:
+  results_eval_on_2021_2025 + results_eval_pk1_2022_2025 (strict-clean, bit-identical to triage).
+- README EN+RU: E10 row reads weak/suggestive, YN row reads checked-blocked. TRIAGE_SPEC request 5
+  reflects the round-16 empty-row correction. docs/TEAM_HANDOVER.md commits all five track memos.
+- Suite green. Audit fraction moves to 2/7 MET with (d) display-data and (g) handover evidence upgraded
+  to committed; (b) thresholds, (c) live validation, (e) log-grounded schedule stay partner-blocked.

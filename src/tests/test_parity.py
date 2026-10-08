@@ -221,6 +221,14 @@ def test_cell_abc():
     assert int(c.loc[2, "worst"]) == 0
     c2 = F.cell_abc(df.drop(columns=["danger"]), 10)
     assert int(c2["worst"].sum()) == 0 and int(c2["n_a"].sum()) == 0
+    # n_c counts explicit (c) rows only: clean cells read all-zero.
+    df3 = pd.DataFrame({
+        "dist": [50.0, 50.0, 150.0],
+        "danger": ["(c)", "", "(c)"],
+    })
+    c3 = F.cell_abc(df3, 10)
+    assert int(c3.loc[0, "worst"]) == 0 and int(c3.loc[0, "n_c"]) == 1
+    assert int(c3.loc[1, "worst"]) == 0 and int(c3.loc[1, "n_c"]) == 1
 
 
 def test_build_filter_first_threshold_semantics():

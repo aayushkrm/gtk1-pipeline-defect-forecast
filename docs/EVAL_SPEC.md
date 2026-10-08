@@ -25,9 +25,7 @@ Gates R1–R4 themselves stay defined in `docs/GUARDRAILS.md` (referenced, not r
   too once a freeze file exists (requirements.txt is pinned but not yet recorded per-run).
 - Empty-bootstrap intervals return NaN with warning; NaN never enters a committed JSON (null instead).
 
-## Worker protocol (paired tracks)
+## Scope note (paired tracks belong to the supervisor, not this file)
 
-- Agree the method split in writing before running (CatBoost vs Random Forest or equivalent).
-- Share tried-versus-untried lists; no duplicate runs across the pair.
-- Both workers score through this file's metrics on identical labels. Disagreements go to the 1:1,
-  not into competing metric definitions.
+- This file defines scoring metrics and reporting rules only. Method splits, tried-versus-untried
+  logs, and pairing decisions are supervisor business conducted in chat, not repo content.

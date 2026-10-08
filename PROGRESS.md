@@ -903,3 +903,11 @@
   recalibration engine with proofs, Tuesday-ingest stub proven, eval spec, green suite, clean tree.
 - Resume triggers (no repo work until one fires): Tuesday package ingestion, partner answers, next
   surveys for threshold confirmation and live validation.
+
+## 2026-10-08 — Scope correction: team coordination withdrawn (directive)
+- docs/TEAM_HANDOVER.md deleted (recoverable in history); prior entries claiming drafted/recorded
+  memos stand as history but are superseded on scope: memos and pairing live in chat under the
+  supervisor, never again as repo deliverables. docs/EVAL_SPEC.md trimmed to scoring metrics plus
+  reporting rules; its worker-protocol section removed for the same reason.
+- Goal tracking from here: objective artifacts only (ranker, repairs, display data, thresholds,
+  watchlists, proofs, ingest readiness). No team-track content enters the repo.

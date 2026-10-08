@@ -728,3 +728,15 @@
 - Hands to Fyodor's track as first repair schedule with uncertainty flags; per-cell ABC labels unblock the
   sanctioned per-class head once Leonid's formula work defines the pre/post-2022 mapping.
 
+## 2026-10-08 — Repair candidates generalized + danger regime panel (executed)
+- repair_candidates.py now loops sections. SRTO-1608 2016->2021->2024: past=453, vanished1=172 (0.380),
+  persistent=121 (0.267), reappeared=51 (0.297). Persistent 0.267 reproduces ON 0.259 on an independent
+  section; danger split persistent 3x(a)+118x(c), reappeared all (c). results_repair.json holds both.
+- experiments/danger_panel.py (new) + results_danger.json: ABC shares per section-year at all depths.
+  ON ab-share 0.21%->2.29%->0.67%; SRTO-1608 0.69%->5.78%->0.55%; PK1 6.38%->2.14% (2022->2025).
+  All three full-data sections spike around 2021/2022 then collapse, while row counts keep rising:
+  the ab swing is rule-driven, not sensitivity-driven. Direct evidence for Vlad's ~2022 requirement
+  lowering; handed to Leonid's formula task. SRTO-1717-2021 danger carries 37.1% non-abc values on the
+  same rows as empty character; SRTO-1717-2024 stays XML-broken at parse level (salvage path only).
+- Suite green; ON --check IDENTICAL (frozen outputs untouched by additive work).
+

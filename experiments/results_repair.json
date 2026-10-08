@@ -1,29 +1,66 @@
 {
-  "pair": "ON 2016->2021->2025",
   "cut": 10,
-  "files": [
-    "Аномалии.xlsx",
-    "Аномалии.xlsx",
-    "Аномалии_.xlsx"
-  ],
-  "n_past_d10_corr": 1568,
-  "vanished_1_n": 569,
-  "vanished_1_share": 0.36288265306122447,
-  "persistent_n": 406,
-  "persistent_share_of_past": 0.25892857142857145,
-  "reappeared_n": 163,
-  "reappeared_share_of_vanished": 0.28646748681898065,
-  "persistent_danger": {
-    "(a)": 1,
-    "(b)": 2,
-    "(c)": 403
-  },
-  "reappeared_danger": {
-    "(a)": 0,
-    "(b)": 0,
-    "(c)": 163
+  "sections": {
+    "ON 2016->2021->2025": {
+      "years": [
+        "2016",
+        "2021",
+        "2025"
+      ],
+      "files": [
+        "Аномалии.xlsx",
+        "Аномалии.xlsx",
+        "Аномалии_.xlsx"
+      ],
+      "n_past_d10_corr": 1568,
+      "vanished_1_n": 569,
+      "vanished_1_share": 0.36288265306122447,
+      "persistent_n": 406,
+      "persistent_share_of_past": 0.25892857142857145,
+      "reappeared_n": 163,
+      "reappeared_share_of_vanished": 0.28646748681898065,
+      "persistent_danger": {
+        "(a)": 1,
+        "(b)": 2,
+        "(c)": 403
+      },
+      "reappeared_danger": {
+        "(a)": 0,
+        "(b)": 0,
+        "(c)": 163
+      }
+    },
+    "SRTO-1608 2016->2021->2024": {
+      "years": [
+        "2016",
+        "2021",
+        "2024"
+      ],
+      "files": [
+        "Аномалии.xls",
+        "Аномалии.xls",
+        "Аномалии1.xls"
+      ],
+      "n_past_d10_corr": 453,
+      "vanished_1_n": 172,
+      "vanished_1_share": 0.37969094922737306,
+      "persistent_n": 121,
+      "persistent_share_of_past": 0.2671081677704194,
+      "reappeared_n": 51,
+      "reappeared_share_of_vanished": 0.29651162790697677,
+      "persistent_danger": {
+        "(a)": 3,
+        "(b)": 0,
+        "(c)": 118
+      },
+      "reappeared_danger": {
+        "(a)": 0,
+        "(b)": 0,
+        "(c)": 51
+      }
+    }
   },
   "repro": {
-    "git": "4736ef1"
+    "git": "4807379"
   }
 }

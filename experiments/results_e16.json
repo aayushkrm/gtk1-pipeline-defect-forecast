@@ -1,0 +1,84 @@
+{
+  "cut": 10,
+  "label": "unmatched future danger in {(a),(b)}",
+  "pairs": {
+    "ON 2021->2025": {
+      "n_pos": 4,
+      "n": 1331,
+      "B1ab": {
+        "AP": 0.05413420854917157,
+        "base": 0.003005259203606311,
+        "lift_CI": [
+          0.0,
+          0.20457675932882544
+        ]
+      },
+      "B1corr_on_ablabels": {
+        "AP": 0.024524642922055785,
+        "base": 0.003005259203606311,
+        "lift_CI": [
+          0.0,
+          0.10482809984437047
+        ]
+      },
+      "delta_ab_minus_corr": [
+        0.029609565627115787,
+        -0.09749263193388238,
+        0.16796804123716658
+      ]
+    },
+    "SRTO-1608 2021->2024": {
+      "n_pos": 0,
+      "n": 1041,
+      "B1ab": {
+        "AP": 0.0,
+        "base": 0.0,
+        "lift_CI": [
+          null,
+          null
+        ]
+      },
+      "B1corr_on_ablabels": {
+        "AP": 0.0,
+        "base": 0.0,
+        "lift_CI": [
+          null,
+          null
+        ]
+      },
+      "delta_ab_minus_corr": [
+        0.0,
+        null,
+        null
+      ]
+    },
+    "PK1 2022->2025": {
+      "n_pos": 0,
+      "n": 1401,
+      "B1ab": {
+        "AP": 0.0,
+        "base": 0.0,
+        "lift_CI": [
+          null,
+          null
+        ]
+      },
+      "B1corr_on_ablabels": {
+        "AP": 0.0,
+        "base": 0.0,
+        "lift_CI": [
+          null,
+          null
+        ]
+      },
+      "delta_ab_minus_corr": [
+        0.0,
+        null,
+        null
+      ]
+    }
+  },
+  "repro": {
+    "git": "1ba0fc4"
+  }
+}

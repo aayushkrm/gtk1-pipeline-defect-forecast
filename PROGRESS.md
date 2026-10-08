@@ -728,6 +728,15 @@
 - Hands to Fyodor's track as first repair schedule with uncertainty flags; per-cell ABC labels unblock the
   sanctioned per-class head once Leonid's formula work defines the pre/post-2022 mapping.
 
+## 2026-10-08 — E16 per-class head: ab-new is a near-empty set (executed, honest negative)
+- experiments/e16_ab.py (new) + results_e16.json: past ab-count ranking future UNMATCHED ab rows.
+  ON 21->25 n_pos=4 (B1ab 0.054 vs base 0.003, delta CI crosses zero); SRTO-1608 and PK1 n_pos=0.
+  R4 fails everywhere: no replication claim. NaN sanitized to null in JSON (strict-clean file).
+- Reading: future (a)/(b) rows almost always rematch past rows — the program flags known persistent
+  defects under monitoring, exactly Vlad's BC semantics. Product consequence: heatmap colors come from
+  PRESENT labels (cell_abc, shipped last turn), forecasting stays binary newly-reported. The per-class
+  forecast track is closed by evidence, not by opinion; per-class display track stays open on present data.
+
 ## 2026-10-08 — Repair candidates generalized + danger regime panel (executed)
 - repair_candidates.py now loops sections. SRTO-1608 2016->2021->2024: past=453, vanished1=172 (0.380),
   persistent=121 (0.267), reappeared=51 (0.297). Persistent 0.267 reproduces ON 0.259 on an independent

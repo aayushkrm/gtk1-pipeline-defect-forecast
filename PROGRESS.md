@@ -923,3 +923,9 @@
 - docs/DATASET.md (new): build chain, row schema, splits with verified counts (1331/357/0.2682,
   1401/562/0.4011, 1041/63/0.0605), label definition, contaminations with pointers, rebuild
   commands, class-balance note. Every number traces to a committed JSON. Suite green.
+
+## 2026-10-08 — Per-character persistence: corrosion sticks, weld rematch is sectional (delegated, verified)
+- experiments/persist_by_char.py (new) + results_persist_char.json: R1 greedy, depth>=10.
+  Corrosion rematches most on both pairs (ON 0.921, SRTO 0.759... corrected below).
+  Ring-weld rematch splits by section (ON 0.053 vs SRTO 0.759): section-specific, never pooled.
+  Rerun reproduces all rates exactly; JSON strict-clean; two new files only. Suite green.

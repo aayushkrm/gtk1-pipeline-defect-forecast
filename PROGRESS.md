@@ -929,3 +929,7 @@
   Corrosion rematches most on both pairs (ON 0.921, SRTO 0.759... corrected below).
   Ring-weld rematch splits by section (ON 0.053 vs SRTO 0.759): section-specific, never pooled.
   Rerun reproduces all rates exactly; JSON strict-clean; two new files only. Suite green.
+
+## 2026-10-08 — Correction to previous entry (rates)
+- Corrosion rematch: ON 0.921, SRTO-1608 0.928. Ring-weld rematch: ON 0.053, SRTO-1608 0.759.
+  The prior entry mixed the SRTO pair; JSON values were always correct.

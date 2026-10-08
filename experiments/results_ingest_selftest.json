@@ -356,7 +356,7 @@
     ]
   },
   "repro": {
-    "git": "df4fcbe",
+    "git": "537332b",
     "cpu_only": true,
     "reader": "csv(sep ,/;) then excel(stock/tolerant/fat-salvage)",
     "note": "tolerant/fat patches are process-global once applied; a later file can succeed on its 'stock' attempt via an earlier file's patch (loader tier = attempt order)"

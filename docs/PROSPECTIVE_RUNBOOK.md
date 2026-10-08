@@ -32,7 +32,7 @@ B1 model uses per-100 m cell count of past-survey corrosion rows with Depth ≥ 
   - Depth: contains `глубина`
   - Character: contains `характер` (mandatory; loader fails without it)
   - Optional: weld offset (`левого…`), orientation (`ориентация…`), character abbr (`характер` + `аббр`).
-  - Corrosion flag = Character contains `оррози`; ranking uses corr-only rows with Depth ≥ 10% (`triage/prospective.py:37-38`).
+  - Corrosion flag = Character contains `оррози`; ranking uses corr-only rows with Depth ≥ 10% (`rank()` in `triage/prospective.py`).
 
 ## 2. Commands (run from repo root `gtk1-forecast/`)
 

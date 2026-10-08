@@ -774,3 +774,11 @@
   ON 2021->2025 and PK1 2022->2025 reproduce shipped triage numbers bit-identically (AP/base/match
   1e-12 exact); docs/PROSPECTIVE_RUNBOOK.md §3 now carries runnable commands instead of a pointer.
 - Suite green; no frozen artifacts touched (verification runs wrote to /tmp only).
+
+## 2026-10-08 — E17 paired comparison: HGB/RF tie B1, nothing beats it (delegated, verified)
+- Subagent-built experiments/e17_paircompare.py (train ON 16->21, 7 FEATS, CPU-only sklearn):
+  ON test HGB +0.0084 [-0.0172,+0.0331], RF -0.0199 [-0.0515,+0.0129]; SRTO test HGB -0.0087,
+  RF -0.0003, all CIs cross zero. results_e17.json aggregates-only, zero NaN tokens.
+- Independent rerun reproduces all numbers exactly (deterministic seeds). Pair coordination note:
+  B1/persistence is Ayush's lane; Aleksei takes a different family (CatBoost/RF variant) with
+  shared EVAL_SPEC scoring and tried/untried log. Suite green.

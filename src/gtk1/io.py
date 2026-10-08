@@ -118,7 +118,9 @@ def _find(df, *keys):
 
 
 def normalize(df, width_m=100, kmax=None):
-    """Row filter prep: dist/pipe/depth/off/orient/char + corr flag + hour + cell. No depth cut here."""
+    """Row filter prep: dist/pipe/depth/off/orient/char + corr flag + hour + cell. No depth cut here.
+    Optional passthrough (empty/NaN when column absent): danger (Опасность string, holds
+    (a)/(b)/(c) repair classes where present), kbd (КБД numeric). Required columns unchanged."""
     cd = _find(df, "расстояние")
     cc = _find(df, "глубина")
     cp = _find(df, "номер", "трубы")
@@ -136,6 +138,8 @@ def normalize(df, width_m=100, kmax=None):
     ch = ch_cands[0]
     ca = [c for c in df.columns if "характер" in c.lower() and "аббр" in c.lower()]
     ca = ca[0] if ca else None
+    cdanger = _find(df, "опас") or _find(df, "danger")
+    ckbd = _find(df, "кбд") or _find(df, "kbd")
     o = pd.DataFrame({
         "dist": pd.to_numeric(df[cd], errors="coerce"),
         "depth": pd.to_numeric(df[cc], errors="coerce"),
@@ -144,6 +148,8 @@ def normalize(df, width_m=100, kmax=None):
         "ori": df[cr].astype(str) if cr else "",
         "char": df[ch].astype(str),
         "abbr": df[ca].astype(str) if ca else "",
+        "danger": df[cdanger].astype(str).str.strip() if cdanger else "",
+        "kbd": pd.to_numeric(df[ckbd], errors="coerce") if ckbd else float("nan"),
     }).dropna(subset=["dist"]).copy()
     if len(o):
         arr = o["dist"].to_numpy(dtype=float)

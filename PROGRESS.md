@@ -696,3 +696,22 @@
 - Watchlist regen: pk1_2025_noedge top20 identical, deciles[0] -0.0088 -> 0.0. Both --check gates IDENTICAL.
   Committed salvage/validate/audit/pins scripts (no secrets, no absolute paths).
 
+## 2026-10-08 — Meeting decisions recorded + ABC labels found in delivered files
+- Vlad rulings: defect types out (no data); ABC classes in scope (A=repair, B/C=monitor, clean=white heatmap);
+  ABC formula drifted ~2022, IP-locked, reverse-engineering assigned to Leonid; repairs sealed (reconstruct
+  from disappearances, Fyodor); Siberia-only scope with Task A (known sections) + Task B (interpolation);
+  Tuesday 13th brings pipe characteristics + per-section tool lists as separate files; more sections on
+  request (up to 20); RedOS flash corruption confirmed as recurring hazard (report unreadable files at once).
+  Team: protocol Aleksei, prototype Satonin, formula Leonid, repairs Fyodor, simple baseline + time
+  extrapolation Ayush+Aleksei (different methods), data merge Natalia, spatial interpolation Victoria+Dmitry.
+  Testing/QA metrics and economic effect unassigned for now; weekly 1:1s with Evgeny.
+- ABC discovery (direct header read, ON-2021 anomalies, 45 cols): no literal A/B/C header exists anywhere
+  checked. The last column Опасность carries (a)=9, (b)=93, (c)=4353 of 4455 rows, 100% filled, KBD 2942/4455.
+  ABC lives in anomaly tails, not weld logs (weld layouts carry no Danger/KBD — Natalia's weld-table claim
+  corrected). Classes are extremely imbalanced (0.2% A): A-prediction is a rare-event track.
+- Code: io.normalize now passes danger (string) + kbd (numeric) through, empty/NaN when absent; required
+  columns unchanged; new test_danger_kbd_passthrough green. Both --check gates IDENTICAL after the change.
+- Next in objective order: per-cell ABC labels on top of passthrough; repair-candidate module from reverse
+  matching (past rows missing in two later surveys); consume Tuesday data drop for tool covariates; per-class
+  head gated on Leonid's formula work (pre/post-2022 regime break).
+

@@ -191,6 +191,23 @@ def test_io_guards():
                or "finite" in str(x.message).lower() for x in w)
 
 
+def test_danger_kbd_passthrough():
+    # Опасность=(a/b/c) repair classes + КБД must survive normalize; absent columns default empty/NaN.
+    df = _raw_df([{"dist": 100.0, "depth": 12.0, "pipe": "1"}])
+    df["Опасность"] = ["(b)"]
+    df["КБД"] = [0.89]
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        g = IO.normalize(df)
+    assert str(g["danger"].iloc[0]) == "(b)", f"danger passthrough broken: {g['danger'].iloc[0]}"
+    assert abs(float(g["kbd"].iloc[0]) - 0.89) < 1e-12, "kbd passthrough broken"
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        g2 = IO.normalize(_raw_df([{"dist": 100.0, "depth": 12.0, "pipe": "1"}]))
+    assert str(g2["danger"].iloc[0]) == "" and pd.isna(g2["kbd"].iloc[0]), \
+        "absent danger/kbd must default to empty/NaN"
+
+
 def test_build_filter_first_threshold_semantics():
     # R1 frozen semantics: the cut applies BEFORE matching, so a shallow past
     # row (5%) can never match a deep future (12%) at the same location.
@@ -255,6 +272,8 @@ def main():
     print("edge zero-positives OK")
     test_io_guards()
     print("edge io-guards OK")
+    test_danger_kbd_passthrough()
+    print("edge danger-kbd OK")
     test_build_filter_first_threshold_semantics()
     print("edge filter-first-threshold OK")
     test_prospective_drop_last_semantics()

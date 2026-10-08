@@ -208,6 +208,21 @@ def test_danger_kbd_passthrough():
         "absent danger/kbd must default to empty/NaN"
 
 
+def test_cell_abc():
+    # worst class per cell: a(2) beats b(1) beats c/empty(0); absent danger column -> all zero.
+    df = pd.DataFrame({
+        "dist": [50.0, 50.0, 150.0, 250.0],
+        "danger": ["(a)", "(c)", "(b)", ""],
+    })
+    c = F.cell_abc(df, 10)
+    assert len(c) == 11
+    assert int(c.loc[0, "worst"]) == 2 and int(c.loc[0, "n_a"]) == 1 and int(c.loc[0, "n_b"]) == 0
+    assert int(c.loc[1, "worst"]) == 1 and int(c.loc[1, "n_b"]) == 1
+    assert int(c.loc[2, "worst"]) == 0
+    c2 = F.cell_abc(df.drop(columns=["danger"]), 10)
+    assert int(c2["worst"].sum()) == 0 and int(c2["n_a"].sum()) == 0
+
+
 def test_build_filter_first_threshold_semantics():
     # R1 frozen semantics: the cut applies BEFORE matching, so a shallow past
     # row (5%) can never match a deep future (12%) at the same location.
@@ -274,6 +289,8 @@ def main():
     print("edge io-guards OK")
     test_danger_kbd_passthrough()
     print("edge danger-kbd OK")
+    test_cell_abc()
+    print("edge cell-abc OK")
     test_build_filter_first_threshold_semantics()
     print("edge filter-first-threshold OK")
     test_prospective_drop_last_semantics()

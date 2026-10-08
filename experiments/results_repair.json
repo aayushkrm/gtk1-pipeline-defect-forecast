@@ -1,0 +1,29 @@
+{
+  "pair": "ON 2016->2021->2025",
+  "cut": 10,
+  "files": [
+    "Аномалии.xlsx",
+    "Аномалии.xlsx",
+    "Аномалии_.xlsx"
+  ],
+  "n_past_d10_corr": 1568,
+  "vanished_1_n": 569,
+  "vanished_1_share": 0.36288265306122447,
+  "persistent_n": 406,
+  "persistent_share_of_past": 0.25892857142857145,
+  "reappeared_n": 163,
+  "reappeared_share_of_vanished": 0.28646748681898065,
+  "persistent_danger": {
+    "(a)": 1,
+    "(b)": 2,
+    "(c)": 403
+  },
+  "reappeared_danger": {
+    "(a)": 0,
+    "(b)": 0,
+    "(c)": 163
+  },
+  "repro": {
+    "git": "4736ef1"
+  }
+}

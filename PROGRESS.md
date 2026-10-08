@@ -715,3 +715,16 @@
   matching (past rows missing in two later surveys); consume Tuesday data drop for tool covariates; per-class
   head gated on Leonid's formula work (pre/post-2022 regime break).
 
+## 2026-10-08 — Per-cell ABC labels + repair-candidate reconstruction (sanctioned tracks, executed)
+- features.cell_abc(): per-cell worst repair class (2/1/0) + n_a/n_b counts from danger passthrough.
+  Additive only; build() outputs byte-identical (parity + both --check gates re-verified IDENTICAL after).
+  One self-caught bug on the way (ABCRANK keys carried parens the regex strips); test pins the mapping.
+- experiments/repair_candidates.py (new) + results_repair.json: ON 2016->2021->2025, d>=10 corr, R1 greedy.
+  past=1568 (matches committed 2016 corr count); vanished_1=569 (0.363); persistent=406 (0.259 of past)
+  as repair candidates per the sanctioned gone-for-years rule; reappeared=163 (0.286 of vanished) correctly
+  excluded as misalignment control. Danger split: persistent holds 1x(a)+2x(b), reappeared all (c).
+  Note: row-level 0.363 differs from E02 segment-era 0.596 by definition (corr-only, reverse-greedy); both
+  recorded, no conflict claimed.
+- Hands to Fyodor's track as first repair schedule with uncertainty flags; per-cell ABC labels unblock the
+  sanctioned per-class head once Leonid's formula work defines the pre/post-2022 mapping.
+

@@ -57,15 +57,25 @@ def main():
         if col is None:
             rows[f"{section} {year}"] = {"status": "no-danger-column", "n": int(len(df))}
             continue
-        v = df[col].astype(str)
-        n = len(v)
-        counts = {k: int((v == k).sum()) for k in ("(a)", "(b)", "(c)")}
-        other = n - sum(counts.values()) - int(v.isna().sum())
+        raw = df[col]
+        n = len(raw)
+        # NOTE (round-16 review M1): empty/other computed on the RAW column. astype(str)
+        # turns NaN into "nan", which would zero empty_share and inflate other. Never reorder.
+        is_empty = raw.isna() | (raw.astype(str).str.strip() == "")
+        counts = {k: int((raw.astype(str) == k).sum()) for k in ("(a)", "(b)", "(c)")}
+        other = n - sum(counts.values()) - int(is_empty.sum())
+        char_col = next((c for c in df.columns if "характер" in str(c).lower()), None)
+        a_chars = {}
+        if char_col is not None and counts["(a)"]:
+            a_chars = {str(k): int(v) for k, v in
+                       df.loc[raw.astype(str) == "(a)", char_col].astype(str)
+                       .value_counts().items()}
         rows[f"{section} {year}"] = {
             "status": "ok", "n": n,
             "counts": counts,
-            "empty_share": float(v.isna().mean()),
+            "empty_share": float(is_empty.mean()),
             "other_values_share": float(other / max(n, 1)),
+            "a_by_character": a_chars,
             "a_share": counts["(a)"] / max(n, 1),
             "ab_share": (counts["(a)"] + counts["(b)"]) / max(n, 1),
         }

@@ -7,6 +7,8 @@ paired_delta_ci vs B1 via src.gtk1.metrics (docs/EVAL_SPEC.md).
 Models (CPU only, sklearn==1.6.1, no new deps):
   HGB = HistGradientBoostingClassifier(early_stopping=False, random_state=0)
   RF  = RandomForestClassifier(n_estimators=200, random_state=0, n_jobs=-1)
+  NOTE: n_jobs=-1 thread scheduling can break bit-reproducibility across machines;
+  reruns on THIS machine reproduce exactly, cross-machine equality is not claimed.
 Read-only raw data. Writes experiments/results_e17.json (aggregates only).
 """
 import json

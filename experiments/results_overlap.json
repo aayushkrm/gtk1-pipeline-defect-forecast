@@ -99,7 +99,8 @@
           695,
           1110
         ],
-        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth."
+        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth.",
+        "scope": "LOCAL-ONLY supplement: derived from gitignored outputs/ CSVs, reproducible only where those local files exist. Committed top-20 stats above are the portable ground truth; medians below are not."
       }
     },
     {
@@ -505,7 +506,8 @@
           1136,
           1155
         ],
-        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth."
+        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth.",
+        "scope": "LOCAL-ONLY supplement: derived from gitignored outputs/ CSVs, reproducible only where those local files exist. Committed top-20 stats above are the portable ground truth; medians below are not."
       }
     }
   ],
@@ -610,7 +612,8 @@
           622,
           1087
         ],
-        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth."
+        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth.",
+        "scope": "LOCAL-ONLY supplement: derived from gitignored outputs/ CSVs, reproducible only where those local files exist. Committed top-20 stats above are the portable ground truth; medians below are not."
       }
     },
     {
@@ -1017,7 +1020,8 @@
           1134,
           1381
         ],
-        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth."
+        "source": "UNCOMMITTED local outputs/ CSV (same run that wrote the committed watchlist JSON); supplement only, not ground truth.",
+        "scope": "LOCAL-ONLY supplement: derived from gitignored outputs/ CSVs, reproducible only where those local files exist. Committed top-20 stats above are the portable ground truth; medians below are not."
       }
     }
   ],
@@ -1090,6 +1094,6 @@
     }
   ],
   "verdict": "two maps needed: B1 top ranks miss ABC red cells.",
-  "git": "dc1f21b",
+  "git": "bc5e503",
   "method": "Committed artifacts only. Cell index equals worst-list index. Fraction in top-K uses stored ranking only; K above stored max is null. Cross-survey pairs are reference only."
 }

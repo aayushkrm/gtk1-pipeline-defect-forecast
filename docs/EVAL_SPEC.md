@@ -11,7 +11,8 @@ Gates R1–R4 themselves stay defined in `docs/GUARDRAILS.md` (referenced, not r
 - Paired-model comparison (two workers, one task): `paired_delta_ci` on identical labels and seed.
   Report Δ with CI; CIs crossing zero mean tie, not loss. Never compare APs from different label builds.
 - Per-cell counts (P2): MAE vs mean baseline + Spearman. Quarantine stands for HGB until residual and
-  shuffle controls pass (GUARDRAILS model quarantine).
+  shuffle controls pass (GUARDRAILS model quarantine). No P2 functions in metrics.py yet — add them
+  before citing this line as code-backed.
 - ABC display colors: no metric. Colors are present labels (`triage/abc_*.json`), not predictions.
 - Recall@P retired as vacuous (round 4). Accuracy never headlined (defect-free majority).
 
@@ -20,7 +21,8 @@ Gates R1–R4 themselves stay defined in `docs/GUARDRAILS.md` (referenced, not r
 - Every AP ships with cut, survey pair, match-rate, vanished share, and prevalence. Bare numbers rejected.
 - Sensitivity cuts ≥12%/≥15% accompany every ≥10% primary. No pooling across sections.
 - Null and negative results committed with the same fields (see E16: n_pos 4/0/0 closed a track).
-- Seeds fixed and logged; package versions logged in every result JSON; git hash in `repro`.
+- Seeds fixed and logged; git hash in `repro` of every result JSON. Package versions belong here
+  too once a freeze file exists (requirements.txt is pinned but not yet recorded per-run).
 - Empty-bootstrap intervals return NaN with warning; NaN never enters a committed JSON (null instead).
 
 ## Worker protocol (paired tracks)

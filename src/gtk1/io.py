@@ -148,7 +148,7 @@ def normalize(df, width_m=100, kmax=None):
         "ori": df[cr].astype(str) if cr else "",
         "char": df[ch].astype(str),
         "abbr": df[ca].astype(str) if ca else "",
-        "danger": df[cdanger].astype(str).str.strip() if cdanger else "",
+        "danger": df[cdanger].astype(str).str.strip().where(df[cdanger].notna(), "") if cdanger else "",
         "kbd": pd.to_numeric(df[ckbd], errors="coerce") if ckbd else float("nan"),
     }).dropna(subset=["dist"]).copy()
     if len(o):

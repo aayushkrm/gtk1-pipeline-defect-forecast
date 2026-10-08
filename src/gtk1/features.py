@@ -46,7 +46,7 @@ def cell_abc(g, kmax, width_m=WIDTH_M):
     """Per-cell worst repair class from the danger passthrough (sanctioned ABC track).
     Additive diagnostic: reads g["danger"] values (a)/(b)/(c), returns per-cell worst level
     (2=a most severe, 0=c or empty/absent) plus per-class row counts. Never alters build().
-    Cells clip to [0, kmax]; rows outside g frame are caller responsibility."""
+    Cells clip to [0, kmax] by construction."""
     ck = (g["dist"] // width_m).astype(int).clip(0, kmax)
     idx = pd.Index(range(kmax + 1))
     if len(g) == 0 or "danger" not in g.columns:

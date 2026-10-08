@@ -195,6 +195,9 @@ def analyze_pair(watch_rel, abc_rel):
         )
     full = full_ranking_supplement(watch_rel, red, orange)
     if full is not None:
+        full["scope"] = ("LOCAL-ONLY supplement: derived from gitignored outputs/ CSVs, "
+                         "reproducible only where those local files exist. Committed top-20 "
+                         "stats above are the portable ground truth; medians below are not.")
         rec["full_ranking_supplement"] = full
         if full["median_b1_rank_red_full"] is not None:
             rec["median_b1_rank_red"] = full["median_b1_rank_red_full"]

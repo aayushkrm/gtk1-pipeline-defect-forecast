@@ -807,3 +807,17 @@
   triage/repair_cells_srto.json (62 cells hold 121), each with reappeared-control overlay
   (163/51) plus provenance. Totals assert clean against results_repair.json; JSON strict-clean.
 - Fyodor's track now has where-repairs maps, not just counts. Suite green; three new files only.
+
+## 2026-10-08 — Round-16 review fixes applied (verdict was PASS WITH FIXES)
+- M1 fixed: danger_panel empty/other now computed pre-str-conversion. SRTO-1717-2021 empty 0.3701
+  (=537/1451, matches independent raw check), other 0.0007 (the 3.34e-307 garbage); PK1-2025 empty
+  0.0057, other 0.0. Correction to prior entry: the 37.1% were empties on empty-character rows, not
+  non-abc values. Counts unchanged; regime evidence stands.
+- M2 fixed: overlap supplement now carries LOCAL-ONLY scope; committed top-20 stats remain the portable
+  ground truth. Verdict unchanged (two maps).
+- Weld-subcount claims now evidence-backed: results_danger.json a_by_character (ON-2025 6 GWAN + 2 corr).
+- Minors fixed: io NaN-danger now "" instead of "nan"; features docstring contradiction removed; EVAL_SPEC
+  P2/versions lines match reality (quarantine rule kept); e17 n_jobs cross-machine caveat noted.
+- Qualifier to prior entry: row counts rise on ON/PK1; SRTO-1608 falls 3168->2344. Rule-driven ab swing
+  claim unaffected (shares, not counts).
+- Suite green; both --check gates IDENTICAL.

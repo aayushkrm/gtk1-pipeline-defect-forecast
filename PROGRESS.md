@@ -838,3 +838,16 @@
 - Self-test: ON-2021 weld proxy joins 1.0 of anomaly pipes; PK1-2025 truncated proxy joins 0.846,
   salvage tier required. Tuesday risk scoped: damaged drops mean ~15% unresolvable pipes; route
   through salvage from the start. Rerun reproduces all figures exactly. Suite green; two new files.
+
+## 2026-10-08 — Team handover memos drafted (Fyodor, Leonid, Victoria+Dmitry, Natalia)
+- Repair track (Fyodor): results_repair.json (ON persistent 406/1568, SRTO 121/453, reappeared
+  controls 163/51) + triage/repair_cells_{on,srto}.json (76/62 cells with maps). Rule used:
+  gone across two later surveys = candidate; reappeared = misalignment, excluded.
+- Formula track (Leonid): results_danger.json ab-shares spike-then-collapse on all full sections
+  (ON 0.21->2.29->0.67%, SRTO 0.69->5.78->0.55%, PK1 6.38->2.14%) while row counts rise: rule-driven,
+  supports ~2022 lowering. E16: future ab rows rematch past rows (4/0/0 new) = monitoring semantics.
+- Interpolation track (Victoria+Dmitry): results_coords.json town-proxy geometry with recorded UNFIT
+  verdict (ON bend 0.86 proves proxy failure); odometer chainage stays the join key; coarse overlay only.
+- Merge track (Natalia): src/gtk1/io.py loaders (tolerant-xlrd + fat-salvage tiers), Evgeny NULL rules,
+  schema notes in docs/DATA.md; Tuesday stub experiments/ingest_tuesday.py accepts her union output.
+- Memos are chat-side drafts, not repo files; artifacts above are the committed handover.

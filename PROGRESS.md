@@ -767,3 +767,10 @@
   same rows as empty character; SRTO-1717-2024 stays XML-broken at parse level (salvage path only).
 - Suite green; ON --check IDENTICAL (frozen outputs untouched by additive work).
 
+
+## 2026-10-08 — Recalibration engine shipped (runbook gap closed, verified)
+- experiments/evaluate_pair.py (new): generic matched-new evaluation for any completed pair
+  (section/year args, frozen R1 machinery, AP/base/lift-CI/P@K + git provenance JSON).
+  ON 2021->2025 and PK1 2022->2025 reproduce shipped triage numbers bit-identically (AP/base/match
+  1e-12 exact); docs/PROSPECTIVE_RUNBOOK.md §3 now carries runnable commands instead of a pointer.
+- Suite green; no frozen artifacts touched (verification runs wrote to /tmp only).

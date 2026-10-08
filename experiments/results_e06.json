@@ -4,9 +4,9 @@
       "MAE": 11.290933392737806,
       "RMSE": 18.408130461764692,
       "spear": [
-        NaN,
-        NaN,
-        NaN
+        null,
+        null,
+        null
       ]
     },
     "C1_tuned_poisson": {

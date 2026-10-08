@@ -34982,5 +34982,8 @@
     ],
     "approximation": "town-proxy straight line, NOT surveyed; pipes bend"
   },
-  "fitness_verdict": "FITNESS VERDICT for 100m interpolation use: UNFIT as surveyed geometry — town-proxy straight-line error is km-scale (town centers stand in for unknown pipe endpoints; real pipes bend off the line; ON corridor bend < 1 proves the proxy does not even span that section). Use odometer chainage only for along-pipe joins; use these coords solely as coarse map overlay, never as 100 m cell truth."
+  "fitness_verdict": "FITNESS VERDICT for 100m interpolation use: UNFIT as surveyed geometry — town-proxy straight-line error is km-scale (town centers stand in for unknown pipe endpoints; real pipes bend off the line; ON corridor bend < 1 proves the proxy does not even span that section). Use odometer chainage only for along-pipe joins; use these coords solely as coarse map overlay, never as 100 m cell truth.",
+  "repro": {
+    "git": "2ae3b13"
+  }
 }

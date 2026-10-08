@@ -868,3 +868,18 @@
   utf-8/replace final tier with warning, precision-ordered pipe rules (номер+трубы, n+трубы,
   bare fallbacks). Verified live: pipes CSV loads with warning + key found (was: mojibake, no key);
   YN-2023 salvage key found (was: None). README parity rechecked clean. Suite green.
+
+## 2026-10-08 — Triple peer review closed (all PASS-WITH-FIXES, fixed or recorded)
+- Code fixes: cell_abc n_c on empty path (+test pin); case-insensitive danger matching; build NaN-dist
+  precondition documented; recall_at_p empty guard + count_mae/rank_corr added (EVAL_SPEC P2 now
+  code-backed); NaN-pipe rows dropped (no-op on current 100%-pipe data); prospective raises
+  FileNotFoundError with patterns; run_tests pipefail on. Gates IDENTICAL, suite green.
+- Methods fixes: e03/e06 mean_train Spearman NaN->null (token-only, undefined-by-construction);
+  coords JSON carries repro hash after deterministic rerun (34/34 sanity held).
+- Docs fixes: runbook line refs replaced by symbol refs; DATA ON25-T span committed (27,216.7 m,
+  3,471 rows, tolerant-xlrd read of the weld sheet); README/TEAM_HANDOVER/EVAL_SPEC verified accurate.
+- Review verdicts recorded; wording softened where owed ("consistent with" the ~2022 break;
+  0.267-vs-0.259 as raw-rate note, not replication).
+- Deferred with reasons (known limitations, no silent debt): match_win duplicate-index (frozen R1
+  parity forbids touching the matcher); xlrd-retry narrowing (salvage paths depend on broad catch);
+  matplotlib==3.8 loose pin (absent locally, nothing imports it).

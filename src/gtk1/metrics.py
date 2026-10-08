@@ -89,9 +89,34 @@ def precision_at_k(y, score, k, n_boot=2000, seed=7):
 
 def recall_at_p(y, s, p0=0.85):
     """Max recall at precision>=p0 on raw step curve with grouped ties; 0.0 if unattained."""
+    y = np.asarray(y)
+    if len(y) == 0:
+        return 0.0
     prec, rec, _ = precision_recall_curve(y, s)
     best = 0.0
     for p, r in zip(prec, rec):
         if p >= p0 and r > best:
             best = float(r)
     return best
+
+
+def count_mae(y_true, y_pred):
+    """Mean absolute error for per-cell counts (P2 use per EVAL_SPEC)."""
+    y_true = np.asarray(y_true, dtype=float)
+    y_pred = np.asarray(y_pred, dtype=float)
+    if len(y_true) == 0:
+        return 0.0
+    return float(np.mean(np.abs(y_true - y_pred)))
+
+
+def rank_corr(y_true, y_pred):
+    """Spearman rank correlation for per-cell counts (P2 use per EVAL_SPEC).
+    Returns NaN when undefined (e.g. constant input); JSON layers map NaN to null."""
+    from scipy.stats import spearmanr
+    y_true = np.asarray(y_true, dtype=float)
+    y_pred = np.asarray(y_pred, dtype=float)
+    if len(y_true) == 0:
+        return float("nan")
+    with np.errstate(all="ignore"):
+        rho, _ = spearmanr(y_true, y_pred)
+    return float(rho) if rho == rho else float("nan")

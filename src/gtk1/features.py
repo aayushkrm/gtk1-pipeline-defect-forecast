@@ -16,6 +16,8 @@ WIDTH_M = 100
 
 
 def build(gp_all, gf_all, cut, kmax, width_m=WIDTH_M):
+    # Precondition: finite dist (normalize() drops non-finite rows first). NaN dist here
+    # raises IntCastingNaNError by construction; never bypass normalize().
     gp = gp_all[gp_all["depth"] >= cut].copy()
     gf = gf_all[gf_all["depth"] >= cut].copy()
     m = match_win(gp, gf, 2)
@@ -51,8 +53,9 @@ def cell_abc(g, kmax, width_m=WIDTH_M):
     ck = (g["dist"] // width_m).astype(int).clip(0, kmax)
     idx = pd.Index(range(kmax + 1))
     if len(g) == 0 or "danger" not in g.columns:
-        return pd.DataFrame({"worst": 0, "n_a": 0, "n_b": 0}, index=idx)
-    lvl = (g["danger"].astype(str).str.extract(r"\(([abc])\)", expand=False)
+        return pd.DataFrame({"worst": 0, "n_a": 0, "n_b": 0, "n_c": 0}, index=idx)
+    dang = g["danger"].astype(str).str.lower()
+    lvl = (dang.str.extract(r"\(([abc])\)", expand=False)
            .map(ABCRANK).fillna(0).astype(int))
     gl = pd.Series(lvl.to_numpy(), index=ck.to_numpy())
     worst = gl.groupby(level=0).max().reindex(idx, fill_value=0).astype(int)
@@ -64,7 +67,7 @@ def cell_abc(g, kmax, width_m=WIDTH_M):
         out[col] = col_s.reindex(idx, fill_value=0).astype(int)
     # n_c counts explicitly-labeled-(c) rows only (empty/absent danger also maps to
     # level 0, so it cannot come from the level map): clean cells read n_a=n_b=n_c=0.
-    lab_c = (g["danger"].astype(str) == "(c)").to_numpy().astype(int)
+    lab_c = (dang == "(c)").to_numpy().astype(int)
     out["n_c"] = (pd.Series(lab_c, index=keys).groupby(level=0).sum()
                   .reindex(idx, fill_value=0).astype(int))
     return out

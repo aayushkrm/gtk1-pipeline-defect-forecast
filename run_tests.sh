@@ -1,6 +1,6 @@
 #!/bin/bash
 # Offline checks — no raw data needed (pytest intentionally not required).
-set -e
+set -eo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 python3 "$ROOT/src/tests/test_parity.py"
 python3 -c "

@@ -29,7 +29,9 @@ def load_section(section, year):
     else:
         cands = sorted(p for p in d.glob("*.xls*") if Path(p).name.startswith("Аномалии"))
         fp = Path(cands[0]) if cands else None
-    assert fp, f"no anomaly file in {d}"
+    if fp is None:
+        want = cfg["files"] if cfg["files"] else "Аномалии*.xls*"
+        raise FileNotFoundError(f"no anomaly file in {d} (looked for {want})")
     df, meta = load_anomalies(fp)
     return normalize(df), meta
 

@@ -151,6 +151,11 @@ def normalize(df, width_m=100, kmax=None):
         "danger": df[cdanger].astype(str).str.strip().where(df[cdanger].notna(), "") if cdanger else "",
         "kbd": pd.to_numeric(df[ckbd], errors="coerce") if ckbd else float("nan"),
     }).dropna(subset=["dist"]).copy()
+    nan_pipe = o["pipe"].str.lower() == "nan"
+    if bool(nan_pipe.any()):
+        logger.warning("normalize: %d NaN-pipe rows dropped (would form a fake pipe group)",
+                       int(nan_pipe.sum()))
+        o = o.loc[~nan_pipe].copy()
     if len(o):
         arr = o["dist"].to_numpy(dtype=float)
         bad_fin = ~np.isfinite(arr)

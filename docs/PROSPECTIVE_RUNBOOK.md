@@ -26,7 +26,7 @@ B1 model uses per-100 m cell count of past-survey corrosion rows with Depth ≥ 
   | `pk1` | `Парабель-Кузбасс-1 (572-714)` | `.../Парабель-Кузбасс-1 (572-714)/2026/` | first `Аномалии*.xls*` glob match |
 
   (Source of truth: `SECTIONS` dict in `triage/prospective.py:14-20`.)
-- Expect this schema: 44/45-col anomaly sheet, R4 header. Use header row index 3. The loader default is `src/gtk1/io.py:55`. Match required columns by substring, case-insensitive:
+- Expect this schema: 44/45-col anomaly sheet, R4 header. Use header row index 3. The loader default is `load_anomalies(header=3)` in `src/gtk1/io.py`. Match required columns by substring, case-insensitive:
   - Distance: contains `расстояние`
   - Pipe No: contains `номер` + `трубы`
   - Depth: contains `глубина`
@@ -112,12 +112,12 @@ Columns: `cell,km,past_count,score`. One row per cell, rank order (`km = cell / 
 
 ## 6. Troubleshooting
 
-- BIFF / corrupt `.xls` read errors (`Unsupported format`, assert or struct errors from xlrd): The loader (`src/gtk1/io.py:55-64`) tries the stock engine first. It then re-reads with vendored tolerant-xlrd patches (`_apply_tolerant_xlrd`: ragged-cell asserts, XF-index fallback, shared-string-index guard). No action needed if the second attempt succeeds. This is the expected path for CRC-truncated files (e.g. PK1-2025A, 99.4% recovered). `put_cell` console chatter is xlrd debug noise, harmless (E11). If both attempts fail, the file is unrecoverable in this harness (cf. PK1-2019A: rows 2864+ absent). Request a re-export from source (docs/TRIAGE_SPEC.md § Partner data requests).
+- BIFF / corrupt `.xls` read errors (`Unsupported format`, assert or struct errors from xlrd): The loader (`load_anomalies` in `src/gtk1/io.py`, stock engine first, then tolerant-xlrd retry with `_apply_tolerant_xlrd`: ragged-cell asserts, XF-index fallback, shared-string-index guard). No action needed if the second attempt succeeds. This is the expected path for CRC-truncated files (e.g. PK1-2025A, 99.4% recovered). `put_cell` console chatter is xlrd debug noise, harmless (E11). If both attempts fail, the file is unrecoverable in this harness (cf. PK1-2019A: rows 2864+ absent). Request a re-export from source (docs/TRIAGE_SPEC.md § Partner data requests).
 - Wrong / empty columns after load (Distance/Pipe/Depth not found): Intact files use the R4 header (`header=3`, the harness default). Damaged or new-format files use R2/R1 header rows (docs/DATA.md). Diagnose with plain pandas before touching the harness:
   ```bash
   python3 -c "import pandas as pd; [print(i, list(pd.read_excel('FILENAME', sheet_name='Аномалии', header=h, engine='openpyxl', nrows=0).columns)[:6]) for h in (1,2,3)]"
   ```
   Re-export with the intact R4 layout. The harness accepts only R4.
-- Comma decimals (2015-era 23-col schema: `3,3`-style depths, comma markers): `normalize` (`src/gtk1/io.py:83-85`) parses with `pd.to_numeric(errors="coerce")`. It does not convert commas. Mass-NaN depth/distance means comma decimals. Pre-convert commas to dots in a copy of the file before running. (PK2-2015 schema is out of December scope regardless.)
+- Comma decimals (2015-era 23-col schema: `3,3`-style depths, comma markers): `normalize` in `src/gtk1/io.py` parses with `pd.to_numeric(errors="coerce")`. It does not convert commas. Mass-NaN depth/distance means comma decimals. Pre-convert commas to dots in a copy of the file before running. (PK2-2015 schema is out of December scope regardless.)
 - All-zero / tiny `nonzero_cells`: Check you pointed at the anomaly sheet named `Аномалии`. Check that Depth values are percent. A unit or column variant silently drops every row at the ≥ 10% filter.
 - PK1-2025-style top-1 outlier (top cell ≫ #2, last cell id 1400): You forgot `--drop-last`. Re-run with the flag.

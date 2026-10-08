@@ -221,6 +221,7 @@ def test_cell_abc():
     assert int(c.loc[2, "worst"]) == 0
     c2 = F.cell_abc(df.drop(columns=["danger"]), 10)
     assert int(c2["worst"].sum()) == 0 and int(c2["n_a"].sum()) == 0
+    assert "n_c" in c2.columns and int(c2["n_c"].sum()) == 0, "no-column path must carry n_c zeros"
     # n_c counts explicit (c) rows only: clean cells read all-zero.
     df3 = pd.DataFrame({
         "dist": [50.0, 50.0, 150.0],
@@ -229,6 +230,13 @@ def test_cell_abc():
     c3 = F.cell_abc(df3, 10)
     assert int(c3.loc[0, "worst"]) == 0 and int(c3.loc[0, "n_c"]) == 1
     assert int(c3.loc[1, "worst"]) == 0 and int(c3.loc[1, "n_c"]) == 1
+
+
+def test_recall_empty():
+    assert MET.recall_at_p([], []) == 0.0, "empty input must give 0.0, not raise"
+    assert MET.count_mae([], []) == 0.0
+    import math
+    assert math.isnan(MET.rank_corr([1, 1, 1], [2, 2, 2])), "constant input rank corr is undefined"
 
 
 def test_build_filter_first_threshold_semantics():
@@ -299,6 +307,8 @@ def main():
     print("edge danger-kbd OK")
     test_cell_abc()
     print("edge cell-abc OK")
+    test_recall_empty()
+    print("edge recall-empty OK")
     test_build_filter_first_threshold_semantics()
     print("edge filter-first-threshold OK")
     test_prospective_drop_last_semantics()

@@ -239,7 +239,15 @@ def build():
 
 
 def main():
+    import subprocess as _sp
+
     result = build()
+    try:
+        result["repro"] = {"git": _sp.check_output(
+            ["git", "-C", str(Path(__file__).resolve().parents[1]),
+             "rev-parse", "--short", "HEAD"]).decode().strip()}
+    except Exception:
+        result["repro"] = {"git": "unknown"}
     OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {OUT}")
     for name, c in result["corridors"].items():

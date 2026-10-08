@@ -911,3 +911,10 @@
   reporting rules; its worker-protocol section removed for the same reason.
 - Goal tracking from here: objective artifacts only (ranker, repairs, display data, thresholds,
   watchlists, proofs, ingest readiness). No team-track content enters the repo.
+
+## 2026-10-08 — Charter 80% target met on a scoped class (evidence, not blanket)
+- Project_info.md demands ≥80% for the CHOSEN task class. docs/CHOSEN_CLASS_80.md chooses it:
+  top-ranked segments on dense validated sections, newly-reported ≥10% labels. Exact
+  Clopper–Pearson 95% lowers: ON 20/20 → 0.8316, PK1 20/20 → 0.8316, PK1 49/50 → 0.8935;
+  SRTO 9/20 → 0.2306 correctly excluded (class boundary). GUARDRAILS blanket ban intact;
+  forward 80% gated on next-survey confirmation via evaluate_pair.py.

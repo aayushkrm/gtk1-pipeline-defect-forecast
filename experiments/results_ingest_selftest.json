@@ -1,0 +1,364 @@
+{
+  "pairs": {
+    "on2021": {
+      "new_file": "Поперечные сварные швы.xls",
+      "ref_file": "Аномалии.xlsx",
+      "load_error": null,
+      "new_meta": {
+        "file": "Поперечные сварные швы.xls",
+        "bytes": 5153280,
+        "loader": "excel/xlrd/stock",
+        "sheets": [
+          "Общая информация",
+          "Применяемые стандарты",
+          "Поперечные сварные швы"
+        ],
+        "sheet": "Поперечные сварные швы",
+        "header": 3,
+        "pipe_hit": true,
+        "shape": [
+          11879,
+          21
+        ]
+      },
+      "ref_meta": {
+        "file": "Аномалии.xlsx",
+        "bytes": 1222296,
+        "loader": "excel/openpyxl/stock",
+        "sheets": [
+          "Общая информация",
+          "Применяемые стандарты",
+          "Аномалии",
+          "Лист1"
+        ],
+        "sheet": "Аномалии",
+        "header": 3,
+        "pipe_hit": true,
+        "shape": [
+          4455,
+          45
+        ]
+      },
+      "new_pipe_col": "Номер трубы",
+      "new_pipe_rule": "номер+трубы",
+      "ref_pipe_col": "Номер трубы",
+      "ref_pipe_rule": "номер+трубы",
+      "n_new": 11879,
+      "n_ref": 1796,
+      "n_both": 1796,
+      "new_in_ref": 0.15119117770856133,
+      "ref_in_new": 1.0
+    },
+    "pk1_2025": {
+      "new_file": "Поперечные сварные швы.xls",
+      "ref_file": "Аномалии.xls",
+      "load_error": null,
+      "new_meta": {
+        "file": "Поперечные сварные швы.xls",
+        "bytes": 8189952,
+        "loader": "excel/xlrd/fat-salvage",
+        "sheets": [
+          "Общая информация",
+          "Поперечные сварные швы"
+        ],
+        "sheet": "Поперечные сварные швы",
+        "header": 3,
+        "pipe_hit": true,
+        "shape": [
+          12927,
+          28
+        ]
+      },
+      "ref_meta": {
+        "file": "Аномалии.xls",
+        "bytes": 21744640,
+        "loader": "excel/xlrd/stock",
+        "sheets": [
+          "Общая информация",
+          "Аномалии"
+        ],
+        "sheet": "Аномалии",
+        "header": 3,
+        "pipe_hit": true,
+        "shape": [
+          21763,
+          44
+        ]
+      },
+      "new_pipe_col": "Номер трубы",
+      "new_pipe_rule": "номер+трубы",
+      "ref_pipe_col": "Номер трубы",
+      "ref_pipe_rule": "номер+трубы",
+      "n_new": 12474,
+      "n_ref": 7379,
+      "n_both": 6245,
+      "new_in_ref": 0.5006413339746673,
+      "ref_in_new": 0.8463206396530695
+    }
+  },
+  "inventories": {
+    "on2021_new": {
+      "n_rows": 11879,
+      "n_cols": 21,
+      "columns": {
+        "Номер трубы": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Расстояние, м": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Длина трубы, м": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Тип": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Толщина, мм": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Входящий ПШ, ч:мин": {
+          "n_non_empty": 11867,
+          "non_empty_share": 0.9989898139574038
+        },
+        "Выходящий ПШ, ч:мин": {
+          "n_non_empty": 11867,
+          "non_empty_share": 0.9989898139574038
+        },
+        "Аномалий": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "SMYS, МПа": {
+          "n_non_empty": 11878,
+          "non_empty_share": 0.9999158178297837
+        },
+        "SMTS, МПа": {
+          "n_non_empty": 11878,
+          "non_empty_share": 0.9999158178297837
+        },
+        "Категория участка": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Конструкционный фактор": {
+          "n_non_empty": 11878,
+          "non_empty_share": 0.9999158178297837
+        },
+        "Коэффициент надёжности по материалу": {
+          "n_non_empty": 11878,
+          "non_empty_share": 0.9999158178297837
+        },
+        "Тип изоляции": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Площадь, %": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Тип сварного шва": {
+          "n_non_empty": 11879,
+          "non_empty_share": 1.0
+        },
+        "Комментарий": {
+          "n_non_empty": 1,
+          "non_empty_share": 8.418217021634818e-05
+        },
+        "Широта": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Долгота": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Высота": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Марка стали": {
+          "n_non_empty": 11878,
+          "non_empty_share": 0.9999158178297837
+        }
+      }
+    },
+    "pk1_2025_new": {
+      "n_rows": 12927,
+      "n_cols": 28,
+      "columns": {
+        "Номер трубы": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Расстояние, м": {
+          "n_non_empty": 12475,
+          "non_empty_share": 0.9650344240736443
+        },
+        "Длина трубы, м": {
+          "n_non_empty": 12475,
+          "non_empty_share": 0.9650344240736443
+        },
+        "Тип": {
+          "n_non_empty": 12475,
+          "non_empty_share": 0.9650344240736443
+        },
+        "Толщина, мм": {
+          "n_non_empty": 12475,
+          "non_empty_share": 0.9650344240736443
+        },
+        "Входящий ПШ, ч:мин": {
+          "n_non_empty": 12382,
+          "non_empty_share": 0.9578401794693278
+        },
+        "Выходящий ПШ, ч:мин": {
+          "n_non_empty": 12383,
+          "non_empty_share": 0.9579175369381914
+        },
+        "Аномалий": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Предел текучести Sy, МПа": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Предел прочности Su, МПа": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Категория участка": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Конструкционный фактор": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Коэффициент надёжности по материалу k1": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Тип изоляции": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Площадь, %": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Тип сварного шва": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Комментарий": {
+          "n_non_empty": 2,
+          "non_empty_share": 0.00015471493772723757
+        },
+        "Широта, °": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Долгота, °": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Высота, м": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Марка стали": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Температурный перепад, °C": {
+          "n_non_empty": 0,
+          "non_empty_share": 0.0
+        },
+        "Коэффициент надёжности по назначению трубопровода kn": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Коэффициент надёжности по рабочему давлению n": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Коэффициент условий работы трубопровода m": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Ударная вязкость KCV, Дж/см2": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Разрешенное давление Рmаор, МПа": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        },
+        "Проектное давление Pd, МПа": {
+          "n_non_empty": 12474,
+          "non_empty_share": 0.9649570666047806
+        }
+      }
+    }
+  },
+  "tool_normalizer_selftest": {
+    "n_lines": 6,
+    "n_matched": 3,
+    "n_unresolved": 3,
+    "rows": [
+      {
+        "section": "SELFTEST",
+        "tool": "ДМТ2Б-1200-2560",
+        "role": "дмт2б",
+        "dn_mm": 1200,
+        "n_sensors": 2560
+      },
+      {
+        "section": "SELFTEST",
+        "tool": "ДКК-1400-512",
+        "role": "дкк",
+        "dn_mm": 1400,
+        "n_sensors": 512
+      },
+      {
+        "section": "SELFTEST",
+        "tool": "дмт-1200-1024",
+        "role": "дмт",
+        "dn_mm": 1200,
+        "n_sensors": 1024
+      },
+      {
+        "section": "SELFTEST",
+        "tool": "калибр 1200",
+        "role": "unresolved",
+        "dn_mm": null,
+        "n_sensors": null
+      },
+      {
+        "section": "SELFTEST",
+        "tool": "",
+        "role": "unresolved",
+        "dn_mm": null,
+        "n_sensors": null
+      },
+      {
+        "section": "SELFTEST",
+        "tool": "???",
+        "role": "unresolved",
+        "dn_mm": null,
+        "n_sensors": null
+      }
+    ]
+  },
+  "repro": {
+    "git": "df4fcbe",
+    "cpu_only": true,
+    "reader": "csv(sep ,/;) then excel(stock/tolerant/fat-salvage)",
+    "note": "tolerant/fat patches are process-global once applied; a later file can succeed on its 'stock' attempt via an earlier file's patch (loader tier = attempt order)"
+  }
+}

@@ -830,3 +830,11 @@
   Independent rerun reproduces all figures. Verdict recorded in-artifact: coarse overlay only, never
   100m truth; odometer chainage stays the join key. Hands Victoria/Dmitry a method plus its limits.
 - Suite green; two new files only.
+
+## 2026-10-08 — Tuesday-ingest stub ready, self-tested on proxy files (delegated, verified)
+- experiments/ingest_tuesday.py (new): schema-tolerant reader (CSV encodings, Excel sheet/header
+  auto-pick, stock->tolerant->fat-salvage tiers), pipe-key join via src _find, coverage report,
+  tool-line normalizer with unresolved bucket. results_ingest_selftest.json aggregates-only.
+- Self-test: ON-2021 weld proxy joins 1.0 of anomaly pipes; PK1-2025 truncated proxy joins 0.846,
+  salvage tier required. Tuesday risk scoped: damaged drops mean ~15% unresolvable pipes; route
+  through salvage from the start. Rerun reproduces all figures exactly. Suite green; two new files.

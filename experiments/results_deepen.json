@@ -1,0 +1,150 @@
+{
+  "params": {
+    "depth_min": 10,
+    "dd": 2.0,
+    "doff": 0.5,
+    "dh": 1,
+    "greedy": true,
+    "small_n": 20,
+    "char_source": "past",
+    "d_depth": "future_depth - past_depth (pp)",
+    "match": "same pipe + |dd|<=2m + |doff|<=0.5m + circular |dh|<=1h"
+  },
+  "pairs": {
+    "ON_2021_2025": {
+      "files": [
+        "Аномалии.xlsx",
+        "Аномалии_.xlsx"
+      ],
+      "cut": 10,
+      "n_past": 2583,
+      "n_fut": 3751,
+      "n_pairs": 2294,
+      "match_rate_fut": 0.6115702479338843,
+      "match_rate_past": 0.8881145954316686,
+      "parity_vs_match_win": "IDENTICAL",
+      "overall": {
+        "n_pairs": 2294,
+        "median": 0.0,
+        "q1": -1.0,
+        "q3": 0.0,
+        "iqr": 1.0,
+        "mean": -0.34786399302528337,
+        "share_deepened": 0.2122929380993897,
+        "share_unchanged": 0.5287707061900611,
+        "share_shallower": 0.25893635571054924
+      },
+      "by_char": [
+        {
+          "n_pairs": 2250,
+          "median": 0.0,
+          "q1": -1.0,
+          "q3": 0.0,
+          "iqr": 1.0,
+          "mean": -0.3586666666666667,
+          "share_deepened": 0.208,
+          "share_unchanged": 0.5315555555555556,
+          "share_shallower": 0.2604444444444444,
+          "char": "Коррозия",
+          "small_n": false
+        },
+        {
+          "n_pairs": 41,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 3.0,
+          "iqr": 3.0,
+          "mean": 1.1219512195121952,
+          "share_deepened": 0.4634146341463415,
+          "share_unchanged": 0.4146341463414634,
+          "share_shallower": 0.12195121951219512,
+          "char": "Механическое повреждение",
+          "small_n": false
+        },
+        {
+          "n_pairs": 3,
+          "median": -7.0,
+          "q1": -17.0,
+          "q3": -5.0,
+          "iqr": 12.0,
+          "mean": -12.333333333333334,
+          "share_deepened": 0.0,
+          "share_unchanged": 0.0,
+          "share_shallower": 1.0,
+          "char": "Аномалия кольцевого шва",
+          "small_n": true
+        }
+      ]
+    },
+    "SRTO1608_2021_2024": {
+      "files": [
+        "Аномалии.xls",
+        "Аномалии1.xls"
+      ],
+      "cut": 10,
+      "n_past": 786,
+      "n_fut": 1263,
+      "n_pairs": 696,
+      "match_rate_fut": 0.5510688836104513,
+      "match_rate_past": 0.8854961832061069,
+      "parity_vs_match_win": "IDENTICAL",
+      "overall": {
+        "n_pairs": 696,
+        "median": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0,
+        "mean": -0.6494252873563219,
+        "share_deepened": 0.1206896551724138,
+        "share_unchanged": 0.6681034482758621,
+        "share_shallower": 0.21120689655172414
+      },
+      "by_char": [
+        {
+          "n_pairs": 557,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "iqr": 0.0,
+          "mean": -0.14721723518850988,
+          "share_deepened": 0.0843806104129264,
+          "share_unchanged": 0.8186714542190305,
+          "share_shallower": 0.09694793536804308,
+          "char": "Коррозия",
+          "small_n": false
+        },
+        {
+          "n_pairs": 123,
+          "median": -3.0,
+          "q1": -6.0,
+          "q3": 0.5,
+          "iqr": 6.5,
+          "mean": -2.983739837398374,
+          "share_deepened": 0.25203252032520324,
+          "share_unchanged": 0.04065040650406504,
+          "share_shallower": 0.7073170731707317,
+          "char": "Аномалия кольцевого шва",
+          "small_n": false
+        },
+        {
+          "n_pairs": 16,
+          "median": 0.0,
+          "q1": -1.0,
+          "q3": 1.0,
+          "iqr": 2.0,
+          "mean": -0.1875,
+          "share_deepened": 0.375,
+          "share_unchanged": 0.25,
+          "share_shallower": 0.375,
+          "char": "Механическое повреждение",
+          "small_n": true
+        }
+      ]
+    }
+  },
+  "interpretation": "shallower readings bound measurement noise; deepening mixes growth + tool differences. Claim neither as pure growth.",
+  "repro": {
+    "git": "eda7ea1",
+    "runtime_s": 17.6
+  }
+}

@@ -933,3 +933,12 @@
 ## 2026-10-08 — Correction to previous entry (rates)
 - Corrosion rematch: ON 0.921, SRTO-1608 0.928. Ring-weld rematch: ON 0.053, SRTO-1608 0.759.
   The prior entry mixed the SRTO pair; JSON values were always correct.
+
+## 2026-10-08 — Deepening null result + one-command demo (delegated + direct, verified)
+- experiments/deepen.py (new, delegated) + results_deepen.json: matched-pair depth change,
+  ON 2294 pairs / SRTO 696 pairs, overall median 0.0 both. ON deepened 0.21 / unchanged 0.53 /
+  shallower 0.26; SRTO weld median -3.0 (shallower 0.71). No systematic deepening detectable at
+  4-5y cadence across tool changes: backs the report-forecast framing over growth physics.
+  Rerun reproduces exactly; JSON strict-clean; two new files.
+- demo.sh (new): tests + both gates + shipped numbers + pointers in one command; DEMO OK verified.
+- Suite green.

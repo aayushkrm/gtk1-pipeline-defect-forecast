@@ -737,6 +737,17 @@
   PRESENT labels (cell_abc, shipped last turn), forecasting stays binary newly-reported. The per-class
   forecast track is closed by evidence, not by opinion; per-class display track stays open on present data.
 
+## 2026-10-08 — ABC heatmap data live: critical flags live on weld rows (executed)
+- experiments/abc_snapshot.py (new): per-cell worst present class for latest surveys, all characters.
+  Key correction mid-build: corr-only population captured 2/8 ON and 0/45 PK1 (a)-rows; critical flags
+  concentrate on ring-weld anomalies (ON-2025 6/8, PK1-2025 40/45 GWAN). Snapshot therefore covers the
+  full table; B1 pages stay corr-only frozen. Two-layer product defined: B1 corr ranking + all-character
+  present-class display layer.
+- triage/abc_on_2025, abc_pk1_2025, abc_srto_2024, abc_srto1717_2021.json: red/orange cells read
+  5/25, 34/266, 0/9, 4/26. Row counts cross-check clean against danger_panel except one NaN-dist drop
+  (1717 b 38 vs 39, documented normalize behavior). Prototype track (Satonin) can render immediately.
+- Suite green; frozen pages untouched.
+
 ## 2026-10-08 — Repair candidates generalized + danger regime panel (executed)
 - repair_candidates.py now loops sections. SRTO-1608 2016->2021->2024: past=453, vanished1=172 (0.380),
   persistent=121 (0.267), reappeared=51 (0.297). Persistent 0.267 reproduces ON 0.259 on an independent

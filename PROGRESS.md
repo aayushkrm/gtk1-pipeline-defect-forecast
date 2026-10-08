@@ -821,3 +821,12 @@
 - Qualifier to prior entry: row counts rise on ON/PK1; SRTO-1608 falls 3168->2344. Rule-driven ab swing
   claim unaffected (shares, not counts).
 - Suite green; both --check gates IDENTICAL.
+
+## 2026-10-08 — Coordinate reconstruction: town-proxy UNFIT, proof committed (delegated, verified)
+- experiments/coords_reconstruct.py (new, stdlib-only, no raw data) + results_coords.json: 6,910
+  per-100m centroids from Wikipedia-verified town endpoints, 34/34 sanity checks, strict-clean JSON.
+- Headline result is negative: ON corridor bend 0.8616 < 1 (straight town line longer than odometer),
+  proving town proxies cannot span that section. Other corridors 1.07-1.56, plausible but unverified.
+  Independent rerun reproduces all figures. Verdict recorded in-artifact: coarse overlay only, never
+  100m truth; odometer chainage stays the join key. Hands Victoria/Dmitry a method plus its limits.
+- Suite green; two new files only.

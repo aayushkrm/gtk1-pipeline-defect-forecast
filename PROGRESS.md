@@ -860,3 +860,11 @@
   reflects the round-16 empty-row correction. docs/TEAM_HANDOVER.md commits all five track memos.
 - Suite green. Audit fraction moves to 2/7 MET with (d) display-data and (g) handover evidence upgraded
   to committed; (b) thresholds, (c) live validation, (e) log-grounded schedule stay partner-blocked.
+
+## 2026-10-08 — Ingest hardening: bad-byte tier + Latin-N rule (delegated findings, fixed)
+- Delegated CSV probe found two real bugs: single bad byte forced cp1251 fallback into header
+  mojibake (pipe key lost); Latin-N 'N\nтрубы' missed by Cyrillic-only rules. Fixed in
+  experiments/ingest_tuesday.py: mojibake detector before cp1251 acceptance, tolerant
+  utf-8/replace final tier with warning, precision-ordered pipe rules (номер+трубы, n+трубы,
+  bare fallbacks). Verified live: pipes CSV loads with warning + key found (was: mojibake, no key);
+  YN-2023 salvage key found (was: None). README parity rechecked clean. Suite green.

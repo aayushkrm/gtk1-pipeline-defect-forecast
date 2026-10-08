@@ -35,6 +35,11 @@ EXCEL_SUFFIX = (".xls", ".xlsx")
 
 
 # --- (1) generic table reader ------------------------------------------------
+def _looks_mojibake(cols):
+    """True when headers show double-decoding artifacts (cp1251 read of UTF-8 bytes)."""
+    return any("Рќ" in str(c) or "Ð" in str(c) or "Ã" in str(c) for c in cols)
+
+
 def _read_csv(path):
     last = None
     for enc in ("utf-8-sig", "cp1251"):
@@ -42,13 +47,36 @@ def _read_csv(path):
             try:
                 df = pd.read_csv(path, sep=sep, encoding=enc, engine="python")
                 if len(df.columns) > 1 or sep == ";":
+                    if enc == "cp1251":
+                        df.columns = [str(c).strip() for c in df.columns]
+                        if _looks_mojibake(df.columns):
+                            last = ValueError("cp1251 decode looks like mojibake; retrying tolerant utf-8")
+                            break  # out of sep loop -> tolerant fallback below
                     return df, {"loader": f"csv/{enc}/sep={sep!r}"}
                 last = (df, {"loader": f"csv/{enc}/sep={sep!r}"})
             except Exception as e:  # try next encoding/sep
                 last = e
+        else:
+            continue
+        break
     if isinstance(last, tuple):
         return last
-    raise ValueError(f"csv unreadable: {path.name}: {last}")
+    # Final tier: single bad bytes (RedOS flash corruption) must not sink the file.
+    import io as _io
+    import warnings
+    raw = Path(path).read_bytes()
+    for sep in (",", ";"):
+        try:
+            text = raw.decode("utf-8-sig", errors="replace")
+            df = pd.read_csv(_io.StringIO(text), sep=sep, engine="python")
+            if len(df.columns) > 1 or sep == ";":
+                warnings.warn(f"csv tolerated bad bytes via utf-8/replace: {path.name}",
+                              UserWarning, stacklevel=2)
+                return df, {"loader": f"csv/utf-8-sig-replace/sep={sep!r}",
+                            "warning": "tolerated-bad-bytes"}
+        except Exception as e:
+            last = e
+    raise ValueError(f"csv unreadable: {Path(path).name}: {last}")
 
 
 def _apply_fat_salvage():
@@ -193,10 +221,15 @@ def read_generic_table(path):
 
 # --- (2) pipe-key discovery ---------------------------------------------------
 def discover_pipe_key(df):
-    """Find pipe-id column via substring rules. Returns (col, rule)."""
+    """Find pipe-id column via substring rules. Returns (col, rule).
+    Rule order is precision-first: Cyrillic номер+трубы, Latin-N variant
+    (salvage sheets use 'N\\nтрубы'), then bare fallbacks."""
     col = _find(df, "номер", "трубы")
     if col is not None:
         return col, "номер+трубы"
+    col = _find(df, "n", "трубы")
+    if col is not None:
+        return col, "n+трубы(latin-N)"
     for key in ("труба", "pipe"):
         col = _find(df, key)
         if col is not None:

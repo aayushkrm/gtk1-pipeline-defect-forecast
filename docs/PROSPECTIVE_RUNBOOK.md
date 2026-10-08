@@ -69,7 +69,16 @@ Each run produces artefacts: committable summary `triage/watchlist_<section>_<su
 
 Current content is placeholder, uncalibrated (`survey_basis` 2021 ON / 2022 PK1, `flag_top_k: 20`, `review_band_score: 0.10`). Recalibrate only after the next survey's labels exist. That means a completed past→future pair evaluated with the frozen pipeline (Depth ≥ 10%, pipe+2 m/0.5 m/1 h greedy match, 100 m matched-new, same pattern as `experiments/e11_pk1.py`):
 
-1. Build matched-new labels for the completed pair. Compute B1 AP vs base AP + 2000-bootstrap lift CI. Compute P@K with base comparator.
+1. Build matched-new labels for the completed pair. Run the recalibration engine (frozen R1
+   machinery: Depth ≥ 10%, pipe+2 m/0.5 m/1 h greedy match, 100 m matched-new cells, B1 AP vs base
+   + 2000-bootstrap lift CI, P@K with base comparator):
+   ```bash
+   python3 experiments/evaluate_pair.py --section on --past 2021 --future 2025
+   python3 experiments/evaluate_pair.py --section pk1 --past 2022 --future 2025
+   ```
+   Replace years with the completed pair. Output lands in
+   `experiments/results_eval_<section>_<past>_<future>.json` (committable aggregates + git hash).
+   Proven exact: ON 2021→2025 and PK1 2022→2025 reproduce shipped triage numbers bit-identically.
 2. Set `flag_top_k` per section. It controls how many top cells to flag for field review. Set `review_band_score` per section. It controls score down to which cells stay in the review band. Use that section's own test numbers (e.g. keep P@K≈1.0 region flagged, band down to where precision falls to base rate).
 3. Update `survey_basis` to the new past-survey year. Set `status: calibrated`. Keep a one-line provenance note (experiment result file + git hash).
 4. **Rule: never pool thresholds across sections.** AP spread is 0.18 to 0.78 across sections (ON 0.644, PK1 0.779, SRTO-1608 0.277, SRTO-1717 0.181). One section's operating point does not transfer (reviewer round 8, docs/GUARDRAILS.md). Edit ON and PK1 entries independently.

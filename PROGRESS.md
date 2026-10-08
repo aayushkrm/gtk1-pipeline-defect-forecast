@@ -800,3 +800,10 @@
   ON and 582.5/1401 PK1; top-200 catches 2/5 and 6/34. B1 corr-density systematically misses
   weld-flagged critical cells: two maps required, one map refuted. Mechanism on record (red=WAN rows
   outside corr population). Suite green.
+
+## 2026-10-08 — Repair-cell maps handed over (delegated, verified)
+- experiments/repair_cells.py (new, mirrors repair_candidates match lines verbatim) emits
+  triage/repair_cells_on.json (76 cells hold 406 persistent candidates) and
+  triage/repair_cells_srto.json (62 cells hold 121), each with reappeared-control overlay
+  (163/51) plus provenance. Totals assert clean against results_repair.json; JSON strict-clean.
+- Fyodor's track now has where-repairs maps, not just counts. Suite green; three new files only.

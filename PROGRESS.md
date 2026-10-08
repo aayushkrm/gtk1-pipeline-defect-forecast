@@ -950,3 +950,11 @@
   forward-pairs); values unchanged, reruns reproduce. n_classes_total replaced by union count.
 - CHOSEN_CLASS_80: top-50 provenance explicit, forward rule names Clopper-Pearson. DATASET: cell
   built downstream noted. demo.sh prints gate lines. Suite green, DEMO OK.
+
+## 2026-10-09 — KBD<0.9 flag test: no consistent lift (delegated, verified)
+- experiments/kbd_flag.py (new) + results_kbd.json: KBD coverage 0.66 ON / 0.47 SRTO; flagged
+  cells 331/211. Future ab-rate flagged vs unflagged: ON 0.0061 vs 0.0078 (below unity),
+  SRTO 0.0077 vs 0.0038 on 13 ab rows (noise). Past-ab cells beat it both pairs (3.21x/8.95x)
+  on small future-ab counts. PROBLEM.md secondary hypothesis answered: KBD flag alone does not
+  lift; ab-history does, thinly. Rerun reproduces exactly; JSON strict-clean; two new files.
+- Suite green.

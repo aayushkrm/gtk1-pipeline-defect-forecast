@@ -894,3 +894,12 @@
   hit/miss GLM usable at 3-4 runs, 10->7% cut moves threshold through fixed signal regression, no
   ready-made MFL conversion factor exists) + INDEX wave-7 section. Frozen tracks untouched.
 - Suite green.
+
+## 2026-10-08 — TEAM_HANDOVER.md removed (out of scope by directive)
+- Team memos and task distribution belong to the supervisor, not to this track. Deleted the file;
+  full text stays recoverable in git history (commit a7b9658). No code, data, or evidence touched.
+- Independent objective work with current data is exhausted and verified: validated ranker, repair
+  reconstruction, four-color display data, threshold proposals with rules, live watchlist generation,
+  recalibration engine with proofs, Tuesday-ingest stub proven, eval spec, green suite, clean tree.
+- Resume triggers (no repo work until one fires): Tuesday package ingestion, partner answers, next
+  surveys for threshold confirmation and live validation.

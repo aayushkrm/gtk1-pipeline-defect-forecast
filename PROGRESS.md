@@ -791,3 +791,12 @@
   capacity-based rule (crew review size) must precede real calibration inputs. Degenerate [1,1]
   small-K intervals recorded as caveats, not hidden. Rerun reproduces reported numbers exactly.
 - Suite green; two new files only.
+
+## 2026-10-08 — Wide grid + overlap verdict: band edge unreachable, two maps required (delegated+verified)
+- K-grid to 500 (delegated): flags resolve (ON/PK1 300, SRTO 200) but band edge stays null on all
+  sections (min est still above base at K500). Retrospective curves cannot calibrate a band edge;
+  capacity rule + next-survey confirmation remain the only path. Grid work stops here by evidence.
+- Overlap (delegated, then strengthened with full local rankings): red-cell median B1 rank 647/1331
+  ON and 582.5/1401 PK1; top-200 catches 2/5 and 6/34. B1 corr-density systematically misses
+  weld-flagged critical cells: two maps required, one map refuted. Mechanism on record (red=WAN rows
+  outside corr population). Suite green.

@@ -25,7 +25,7 @@ from prospective import SECTIONS as PROS_SECTIONS
 from prospective import DATA
 
 CUT = 10
-K_GRID = [5, 10, 20, 30, 50, 100, 200]
+K_GRID = [5, 10, 20, 30, 50, 100, 200, 300, 400, 500]
 N_BOOT = 500
 SEED = 7
 STATUS = "UNCONFIRMED \u2014 confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md \u00a73"

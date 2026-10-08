@@ -8,15 +8,18 @@
       30,
       50,
       100,
-      200
+      200,
+      300,
+      400,
+      500
     ],
     "n_boot": 500,
     "seed": 7,
     "model": "B1 past-count only (retrospective, frozen R1)",
     "method_note": "precision@K CI is a resample-then-rerank retrospective display statistic (src.gtk1.metrics.precision_at_k), not a prospective precision claim",
     "status": "UNCONFIRMED — confirm on next survey via docs/PROSPECTIVE_RUNBOOK.md §3",
-    "git": "1a22f14",
-    "runtime_s": 39.4
+    "git": "dc1f21b",
+    "runtime_s": 46.8
   },
   "sections": {
     "on": {
@@ -73,9 +76,27 @@
           "est": 0.8,
           "lo": 0.745,
           "hi": 0.8676249999999999
+        },
+        {
+          "K": 300,
+          "est": 0.7133333333333334,
+          "lo": 0.63,
+          "hi": 0.7484166666666666
+        },
+        {
+          "K": 400,
+          "est": 0.6,
+          "lo": 0.5325,
+          "hi": 0.6488124999999999
+        },
+        {
+          "K": 500,
+          "est": 0.512,
+          "lo": 0.452,
+          "hi": 0.546
         }
       ],
-      "flag_top_k": 200,
+      "flag_top_k": 300,
       "flag_rule": "largest K with CI-lower >= 2*base (2*base=0.5364)",
       "flag_fallback": false,
       "band_edge_k": null,
@@ -139,6 +160,24 @@
           "est": 0.22,
           "lo": 0.155,
           "hi": 0.2776249999999999
+        },
+        {
+          "K": 300,
+          "est": 0.15333333333333332,
+          "lo": 0.11,
+          "hi": 0.19666666666666666
+        },
+        {
+          "K": 400,
+          "est": 0.1225,
+          "lo": 0.0875,
+          "hi": 0.1525
+        },
+        {
+          "K": 500,
+          "est": 0.106,
+          "lo": 0.072,
+          "hi": 0.12704999999999997
         }
       ],
       "flag_top_k": 200,
@@ -203,9 +242,27 @@
           "est": 0.905,
           "lo": 0.865,
           "hi": 0.945
+        },
+        {
+          "K": 300,
+          "est": 0.8566666666666667,
+          "lo": 0.8166666666666667,
+          "hi": 0.9033333333333333
+        },
+        {
+          "K": 400,
+          "est": 0.805,
+          "lo": 0.7675,
+          "hi": 0.8525
+        },
+        {
+          "K": 500,
+          "est": 0.772,
+          "lo": 0.72,
+          "hi": 0.806
         }
       ],
-      "flag_top_k": 200,
+      "flag_top_k": 300,
       "flag_rule": "largest K with CI-lower >= 2*base (2*base=0.8023)",
       "flag_fallback": false,
       "band_edge_k": null,

@@ -966,3 +966,10 @@
 - New class sighting: crack on spiral weld flagged (a) twice (PK1-2022). Spelling variants
   Гофр/Гофра noted for the merge track. Reading sharpens the two-map product: red = weld and
   mechanical program flags, outside corr-density ranking by construction.
+
+## 2026-10-13 — Tuesday package delayed to Monday 19.10 (Vlad, project chat)
+- Cause: colleague overload, part of staff away. Confirmed in flight: tool types, pipe
+  characteristics, additional sections. Instruction stands: work current data until then.
+- Prepared docs/MONDAY_ACCEPTANCE.md: inventory-vs-request, per-file openability in both apps,
+  ingest join thresholds (0.9 clean / ~0.85 salvage), tool-lines-per-section rule, steels check,
+  six still-owed answers, new-section audit gate, no-pooling and provenance rules.

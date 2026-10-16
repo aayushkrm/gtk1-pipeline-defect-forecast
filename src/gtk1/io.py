@@ -89,7 +89,11 @@ def load_anomalies(path, sheet="Аномалии", header=3):
         raise FileNotFoundError(f"load_anomalies: file not found: {p}")
     if not p.is_file():
         raise FileNotFoundError(f"load_anomalies: not a file: {p}")
-    eng = "openpyxl" if p.suffix == ".xlsx" else "xlrd"
+    with open(p, "rb") as fh:
+        magic = fh.read(2)
+    # Engine by content, not extension: partners occasionally ship xlsx content
+    # under an .xls name (e.g. UKPG2-2016 Аномалии.xls in the October 2026 drop).
+    eng = "openpyxl" if (p.suffix == ".xlsx" or magic == b"PK") else "xlrd"
     try:
         df = pd.read_excel(p, sheet_name=sheet, header=header, engine=eng)
     except (FileNotFoundError, OSError) as e:

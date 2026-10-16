@@ -1,0 +1,510 @@
+{
+ "generated": "2026-10-16 03:35:28Z",
+ "entries": [
+  {
+   "section": "ON",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 2465,
+     "max_cols": 6401,
+     "cells_nonempty": 54165
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 11883,
+     "max_cols": 28,
+     "cells_nonempty": 261390
+    }
+   },
+   "old_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 1,
+     "min": 0.0,
+     "max": 27216.744,
+     "n_numeric": 2461
+    }
+   },
+   "new_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 1,
+     "min": 0.0,
+     "max": 132342.044,
+     "n_numeric": 11881
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 207229
+   }
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_error": "ParseError: not well-formed (invalid token): line 1, column 4676682"
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "old_error": "ParseError: not well-formed (invalid token): line 2, column 6829350"
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 14,
+     "max_cols": 4,
+     "cells_nonempty": 32
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 10741,
+     "max_cols": 44,
+     "cells_nonempty": 354035
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 14,
+     "max_cols": 4,
+     "cells_nonempty": 32
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 10741,
+     "max_cols": 44,
+     "cells_nonempty": 354036
+    }
+   },
+   "old_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 60.655,
+     "max": 140772.959,
+     "n_numeric": 10739
+    }
+   },
+   "new_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 60.655,
+     "max": 140772.959,
+     "n_numeric": 10739
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 1
+   }
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 14,
+     "max_cols": 4,
+     "cells_nonempty": 32
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 14095,
+     "max_cols": 22,
+     "cells_nonempty": 211162
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 14,
+     "max_cols": 4,
+     "cells_nonempty": 32
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 14095,
+     "max_cols": 22,
+     "cells_nonempty": 211162
+    }
+   },
+   "old_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 1,
+     "min": 14.3,
+     "max": 140852.334,
+     "n_numeric": 14093
+    }
+   },
+   "new_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 1,
+     "min": 14.3,
+     "max": 140852.334,
+     "n_numeric": 14093
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 1
+   }
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Аномалии": {
+     "rows_nonempty": 21642,
+     "max_cols": 44,
+     "cells_nonempty": 682123
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Аномалии": {
+     "rows_nonempty": 21765,
+     "max_cols": 44,
+     "cells_nonempty": 686110
+    }
+   },
+   "old_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 60.655,
+     "max": 140830.086,
+     "n_numeric": 21638
+    }
+   },
+   "new_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 60.655,
+     "max": 140830.086,
+     "n_numeric": 21763
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 3991
+   }
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_error": "AssertionError: "
+  },
+  {
+   "section": "PK2",
+   "year": "2015",
+   "kind": "pipejournal",
+   "name": "Трубный журнал 2015.xls",
+   "old_per_sheet": {
+    "Трубный журнал": {
+     "rows_nonempty": 14244,
+     "max_cols": 18,
+     "cells_nonempty": 128308
+    },
+    "для гришина": {
+     "rows_nonempty": 4984,
+     "max_cols": 9,
+     "cells_nonempty": 44856
+    }
+   },
+   "new_per_sheet": {
+    "Трубный журнал": {
+     "rows_nonempty": 14244,
+     "max_cols": 18,
+     "cells_nonempty": 128308
+    },
+    "для гришина": {
+     "rows_nonempty": 4984,
+     "max_cols": 9,
+     "cells_nonempty": 44856
+    }
+   },
+   "old_spans": {},
+   "new_spans": {},
+   "cell_diff": {
+    "diff_cells": 1
+   }
+  },
+  {
+   "section": "PK2",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "аномалии.xlsx",
+   "old_error": "ParseError: mismatched tag: line 1, column 613293"
+  },
+  {
+   "section": "PK2",
+   "year": "2025",
+   "kind": "tubeelem",
+   "name": "трубные_элементы.csv",
+   "old_per_sheet": {},
+   "new_per_sheet": {},
+   "old_spans": {},
+   "new_spans": {},
+   "cell_diff": {
+    "diff_cells": 0
+   },
+   "csv": {
+    "old": {
+     "encoding": "cp1251",
+     "lines": 12422
+    },
+    "new": {
+     "encoding": "utf-8",
+     "lines": 12422
+    }
+   }
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 3170,
+     "max_cols": 44,
+     "cells_nonempty": 110802
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 33
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 3170,
+     "max_cols": 44,
+     "cells_nonempty": 110802
+    }
+   },
+   "old_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 18.43,
+     "max": 104337.99,
+     "n_numeric": 3168
+    }
+   },
+   "new_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 18.43,
+     "max": 104337.99,
+     "n_numeric": 3168
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 2
+   }
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2024",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 31
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 6297,
+     "max_cols": 23,
+     "cells_nonempty": 100724
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 13,
+     "max_cols": 4,
+     "cells_nonempty": 31
+    },
+    "Поперечные сварные швы": {
+     "rows_nonempty": 9419,
+     "max_cols": 23,
+     "cells_nonempty": 150607
+    }
+   },
+   "old_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 2,
+     "min": 0.0,
+     "max": 70541.24,
+     "n_numeric": 6295
+    }
+   },
+   "new_spans": {
+    "Поперечные сварные швы": {
+     "header_row": 3,
+     "col": 2,
+     "min": 0.0,
+     "max": 104347.055,
+     "n_numeric": 9417
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 49884
+   }
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 15,
+     "max_cols": 4,
+     "cells_nonempty": 41
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 917,
+     "max_cols": 44,
+     "cells_nonempty": 30132
+    }
+   },
+   "new_per_sheet": {
+    "Общая информация": {
+     "rows_nonempty": 15,
+     "max_cols": 4,
+     "cells_nonempty": 41
+    },
+    "Применяемые стандарты": {
+     "rows_nonempty": 7,
+     "max_cols": 2,
+     "cells_nonempty": 13
+    },
+    "Аномалии": {
+     "rows_nonempty": 1474,
+     "max_cols": 44,
+     "cells_nonempty": 49212
+    }
+   },
+   "old_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 19.6,
+     "max": 29998.909,
+     "n_numeric": 913
+    }
+   },
+   "new_spans": {
+    "Аномалии": {
+     "header_row": 3,
+     "col": 0,
+     "min": 19.6,
+     "max": 42015.31,
+     "n_numeric": 1472
+    }
+   },
+   "cell_diff": {
+    "diff_cells": 19081
+   }
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2024",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_error": "ParseError: not well-formed (invalid token): line 1, column 121994"
+  },
+  {
+   "section": "YN",
+   "year": "2020",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_error": "ParseError: not well-formed (invalid token): line 1, column 4428121"
+  },
+  {
+   "section": "YN",
+   "year": "2023",
+   "kind": "anomaly",
+   "name": "otchet_скорр.xlsx",
+   "old_error": "ParseError: not well-formed (invalid token): line 2, column 8307534",
+   "new_error": "ParseError: not well-formed (invalid token): line 2, column 20675181"
+  }
+ ]
+}

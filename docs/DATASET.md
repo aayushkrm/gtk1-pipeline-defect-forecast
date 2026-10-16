@@ -31,6 +31,11 @@ Label Y=1 iff a cell holds ≥1 UNMATCHED future corr row ≥10% (matched-new bi
 Counts from `results_e11.json` (PK1), `results_e17.json` (ON/SRTO test positives),
 `triage/*.json` (prevalence). E10 (13 positives) and E14 (void) never enter training.
 
+October 2026 drop note: the partner re-exports supersede the PK1 2022/2025 source files.
+On the new tree (`../Датасет ВТД`, `GTK1_DATA` override) the same frozen pipeline yields
+565 test positives, prevalence 0.4033, AP 0.7839 for PK1 2022→2025. ON and SRTO-1608 rows
+reproduce exactly. Shipped pages stay as built on the frozen room. See `docs/DROP_2026_10.md`.
+
 ## Known contaminations (labeled, not hidden)
 
 - Vanished share 0.36–0.60 by definition: unmatched past rows mix repairs, misalignment,

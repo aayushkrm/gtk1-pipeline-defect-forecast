@@ -1,0 +1,617 @@
+{
+ "generated": "2026-10-16 03:28:50Z",
+ "counts": {
+  "NEW-FILE": 24,
+  "IDENTICAL": 16,
+  "REVISED": 15,
+  "DUPLICATE-OF-ANOTHER-NEW-FOLDER": 6,
+  "READABLE-ONESIDE": 1
+ },
+ "entries": [
+  {
+   "section": "NB",
+   "year": "2020",
+   "kind": "anomaly",
+   "name": "Таблица дефектов.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 352134
+  },
+  {
+   "section": "NB",
+   "year": "2020",
+   "kind": "linearobj",
+   "name": "Таблица линейных объектов.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 62988
+  },
+  {
+   "section": "NB",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "NEW-FILE",
+   "new_size": 3932672
+  },
+  {
+   "section": "NB",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 6800384
+  },
+  {
+   "section": "NVP",
+   "year": "2016",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "NEW-FILE",
+   "new_size": 3619840
+  },
+  {
+   "section": "NVP",
+   "year": "2016",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 6075392
+  },
+  {
+   "section": "NVP",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "NEW-FILE",
+   "new_size": 3790848
+  },
+  {
+   "section": "NVP",
+   "year": "2021",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 6223872
+  },
+  {
+   "section": "OGRS3",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 30620
+  },
+  {
+   "section": "OGRS3",
+   "year": "2025",
+   "kind": "pipejournal",
+   "name": "Трубный журнал.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 53991
+  },
+  {
+   "section": "ON",
+   "year": "2016",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "IDENTICAL",
+   "size": 523729
+  },
+  {
+   "section": "ON",
+   "year": "2016",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 4838400
+  },
+  {
+   "section": "ON",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "IDENTICAL",
+   "size": 1222296
+  },
+  {
+   "section": "ON",
+   "year": "2021",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 5153280
+  },
+  {
+   "section": "ON",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии_.xlsx",
+   "status": "IDENTICAL",
+   "size": 1444827
+  },
+  {
+   "section": "ON",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_size": 6817792,
+   "new_size": 6817792,
+   "old_cells": 22243547,
+   "new_cells": 332852,
+   "status": "REVISED",
+   "old_sheets": 2,
+   "new_sheets": 2
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_size": 1387569,
+   "new_size": 1663960,
+   "changed_members": [
+    "[Content_Types].xml",
+    "_rels/.rels",
+    "docProps/app.xml",
+    "docProps/core.xml",
+    "xl/_rels/workbook.xml.rels",
+    "xl/sharedStrings.xml",
+    "xl/styles.xml",
+    "xl/theme/theme1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/worksheets/sheet3.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/sharedStrings.xml",
+    "xl/styles.xml",
+    "xl/theme/theme1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/theme/theme.xml"
+   ]
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель-Кузбасс-1 (572-714)/2019/Аномалии.xlsx"
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "old_size": 1578698,
+   "new_size": 1578698,
+   "changed_members": [
+    "xl/worksheets/sheet3.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/worksheets/sheet3.xml"
+   ]
+  },
+  {
+   "section": "PK1",
+   "year": "2019",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель - Кузбасс 1 572-714 км/2019/Поперечные сварные швы.xlsx"
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_size": 6195200,
+   "new_size": 6195200,
+   "old_cells": 472786,
+   "new_cells": 472786,
+   "status": "REVISED",
+   "old_sheets": 3,
+   "new_sheets": 3
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель - Кузбасс 1 572-714 км/2022/Аномалии.xls"
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_size": 3715072,
+   "new_size": 3715072,
+   "old_cells": 310228,
+   "new_cells": 310228,
+   "status": "REVISED",
+   "old_sheets": 3,
+   "new_sheets": 3
+  },
+  {
+   "section": "PK1",
+   "year": "2022",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель-Кузбасс-1 (572-714)/2022/Поперечные сварные швы.xls"
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_size": 21744640,
+   "new_size": 21744640,
+   "old_cells": 957820,
+   "new_cells": 957820,
+   "status": "REVISED",
+   "old_sheets": 2,
+   "new_sheets": 2
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель - Кузбасс 1 572-714 км/2025/Аномалии.xls"
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_size": 8189952,
+   "new_size": 8189952,
+   "old_error": "AssertionError: ",
+   "status": "READABLE-ONESIDE"
+  },
+  {
+   "section": "PK1",
+   "year": "2025",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "DUPLICATE-OF-ANOTHER-NEW-FOLDER",
+   "same_as": "Парабель - Кузбасс 1 572-714 км/2025/Поперечные сварные швы.xls"
+  },
+  {
+   "section": "PK1-110-242",
+   "year": "2018",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 552621
+  },
+  {
+   "section": "PK1-110-242",
+   "year": "2018",
+   "kind": "weld",
+   "name": "Поперечные сварных швы.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 1838756
+  },
+  {
+   "section": "PK2",
+   "year": "2015",
+   "kind": "anomaly",
+   "name": "Таблица дефектов 2015.xlsx",
+   "status": "IDENTICAL",
+   "size": 2833901
+  },
+  {
+   "section": "PK2",
+   "year": "2015",
+   "kind": "pipejournal",
+   "name": "Трубный журнал 2015.xls",
+   "old_size": 2701824,
+   "new_size": 2701824,
+   "old_cells": 301248,
+   "new_cells": 301248,
+   "status": "REVISED",
+   "old_sheets": 2,
+   "new_sheets": 2
+  },
+  {
+   "section": "PK2",
+   "year": "2020",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "IDENTICAL",
+   "size": 295801
+  },
+  {
+   "section": "PK2",
+   "year": "2020",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 2967040
+  },
+  {
+   "section": "PK2",
+   "year": "2025",
+   "kind": "anomaly",
+   "name": "аномалии.xlsx",
+   "old_size": 1162273,
+   "new_size": 1162273,
+   "changed_members": [
+    "xl/sharedStrings.xml",
+    "xl/worksheets/sheet1.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/sharedStrings.xml",
+    "xl/worksheets/sheet1.xml"
+   ]
+  },
+  {
+   "section": "PK2",
+   "year": "2025",
+   "kind": "tubeelem",
+   "name": "трубные_элементы.csv",
+   "old_size": 2721545,
+   "new_size": 2721545,
+   "old_lines": 12422,
+   "new_lines": 12422,
+   "status": "REVISED",
+   "note": "encoding cp1251 -> utf-8"
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2016",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "IDENTICAL",
+   "size": 473088
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2016",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 3847168
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_size": 2277376,
+   "new_size": 2277376,
+   "old_cells": 139658,
+   "new_cells": 139658,
+   "status": "REVISED",
+   "old_sheets": 3,
+   "new_sheets": 3
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2021",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 2215424
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2024",
+   "kind": "anomaly",
+   "name": "Аномалии1.xls",
+   "status": "IDENTICAL",
+   "size": 2422272
+  },
+  {
+   "section": "SRTO1608",
+   "year": "2024",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "old_size": 4315136,
+   "new_size": 4315136,
+   "old_cells": 144949,
+   "new_cells": 216755,
+   "status": "REVISED",
+   "old_sheets": 2,
+   "new_sheets": 2
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2016",
+   "kind": "other",
+   "name": "СРТО - ОМСК - Узел редуцирования газа - КП.xls",
+   "status": "IDENTICAL",
+   "size": 2674176
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "old_size": 820224,
+   "new_size": 820224,
+   "old_cells": 64118,
+   "new_cells": 65042,
+   "status": "REVISED",
+   "old_sheets": 3,
+   "new_sheets": 3
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2021",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "IDENTICAL",
+   "size": 893952
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2024",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_size": 271654,
+   "new_size": 271654,
+   "changed_members": [
+    "xl/sharedStrings.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/sharedStrings.xml"
+   ]
+  },
+  {
+   "section": "SRTO1717",
+   "year": "2024",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "status": "IDENTICAL",
+   "size": 331914
+  },
+  {
+   "section": "SXV",
+   "year": "2016",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 40840
+  },
+  {
+   "section": "SXV",
+   "year": "2016",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 3425280
+  },
+  {
+   "section": "SXV",
+   "year": "2020",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 195664
+  },
+  {
+   "section": "SXV",
+   "year": "2020",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 913691
+  },
+  {
+   "section": "SXV",
+   "year": "2021",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 225728
+  },
+  {
+   "section": "SXV",
+   "year": "2021",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 3589120
+  },
+  {
+   "section": "SXV",
+   "year": "2022",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "status": "NEW-FILE",
+   "new_size": 257619
+  },
+  {
+   "section": "SXV",
+   "year": "2022",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 3766784
+  },
+  {
+   "section": "UKPG2",
+   "year": "2016",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "NEW-FILE",
+   "new_size": 286922
+  },
+  {
+   "section": "UKPG2",
+   "year": "2016",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 6121472
+  },
+  {
+   "section": "UKPG2",
+   "year": "2023",
+   "kind": "anomaly",
+   "name": "Аномалии.xls",
+   "status": "NEW-FILE",
+   "new_size": 2538496
+  },
+  {
+   "section": "UKPG2",
+   "year": "2023",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xls",
+   "status": "NEW-FILE",
+   "new_size": 7069696
+  },
+  {
+   "section": "YN",
+   "year": "2020",
+   "kind": "anomaly",
+   "name": "Аномалии.xlsx",
+   "old_size": 4134828,
+   "new_size": 4134828,
+   "changed_members": [
+    "xl/worksheets/sheet3.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/worksheets/sheet3.xml"
+   ]
+  },
+  {
+   "section": "YN",
+   "year": "2020",
+   "kind": "weld",
+   "name": "Поперечные сварные швы.xlsx",
+   "status": "IDENTICAL",
+   "size": 1627113
+  },
+  {
+   "section": "YN",
+   "year": "2023",
+   "kind": "anomaly",
+   "name": "otchet_скорр.xlsx",
+   "old_size": 8527088,
+   "new_size": 8527088,
+   "changed_members": [
+    "xl/worksheets/sheet4.xml"
+   ],
+   "status": "REVISED",
+   "parse_members": [
+    "xl/worksheets/sheet4.xml"
+   ]
+  }
+ ],
+ "repro": "d4f6df3"
+}

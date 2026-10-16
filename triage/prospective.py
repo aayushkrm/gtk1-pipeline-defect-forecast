@@ -4,7 +4,7 @@ Usage: prospective.py --section on|pk1 --survey YEAR [--check]
 Outputs: ranked watchlist JSON summary (committable aggregates) + full CSV to outputs/ (ignored).
 Per-section recalibration lives in configs/thresholds.yaml (placeholder until next survey).
 """
-import argparse, json, sys
+import argparse, json, os, sys
 from pathlib import Path
 import numpy as np
 REPO = Path(__file__).resolve().parents[1]
@@ -18,7 +18,10 @@ SECTIONS = {
     "pk1": {"dir": "Парабель-Кузбасс-1 (572-714)", "kmax": 1400,
             "files": None, "retro_json": "triage_pk1.json", "retro_top": "top20"},
 }
-DATA = REPO.parent / "Данные для предварительного изучения"
+# Raw VTD source tree. Default: the frozen room used by all shipped artifacts.
+# GTK1_DATA overrides it, e.g. the October 2026 partner drop tree "Датасет ВТД"
+# (docs/DROP_2026_10.md). Behavior with the default is unchanged.
+DATA = Path(os.environ.get("GTK1_DATA", REPO.parent / "Данные для предварительного изучения"))
 
 
 def load_section(section, year):

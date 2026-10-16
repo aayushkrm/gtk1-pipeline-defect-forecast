@@ -973,3 +973,26 @@
 - Prepared docs/MONDAY_ACCEPTANCE.md: inventory-vs-request, per-file openability in both apps,
   ingest join thresholds (0.9 clean / ~0.85 salvage), tool-lines-per-section rule, steels check,
   six still-owed answers, new-section audit gate, no-pooling and provenance rules.
+
+## 2026-10-16 — October drop arrived early (partial): fixes verified, frozen recheck, new sections audited
+- RAR "Датасет ВТД.rar" arrived ahead of Monday, additional sections only: 62 files, 14 folders,
+  215.2 MB. Extraction needs `unar` (7-Zip refuses the m3:22 entries; bsdtar writes 33 zero files).
+  One xlsx content under an .xls name (UKPG2-2016); io.py now picks the engine by magic bytes.
+  PK1 ships in two folder spellings, byte-identical.
+- Fixes verified: ON-2025 weld tail 27.2 to 132.3 km; SRTO-1608-2024 weld 70.5 to 104.3 km;
+  PK1-2019 anomaly/weld, PK1-2025 weld, PK2-2025 anomaly, SRTO-1717-2024 anomaly, YN-2020/2023
+  parse now; SRTO-1717-2021 chars 100% filled (1,472 rows); PK2-2025 csv re-encoded utf-8;
+  PK1-2025 anomaly 21,642 to 21,765 rows. Residual: YN-2023 one sheet still broken XML.
+- Frozen recheck on both trees (e18_drop_reeval): ON 0.6436/0.2682 identical; SRTO-1608
+  0.2767/0.0605 identical; PK1 0.7795 to 0.7839 AP (+0.0045), base 0.4011 to 0.4033, pos 562 to
+  565. Shipped pages stay built on the old room; delta recorded (docs/DROP_2026_10.md, DATASET.md).
+  Scoped 80% class unaffected.
+- First observations, audit stage, no claims: PK2 2020 to 2025 0.547/0.201, first usable pair
+  (depth from "% от t" only); YN 2020 to 2023 not aligned (odometer drift, match 0.05);
+  NVP 2016 to 2021 0.881/0.180, match 0.80, candidate; NB numbering mismatch (match 0);
+  UKPG2 14 positives; SXV files carry no corrosion rows.
+- File gate: LibreOffice headless 62/62 no refusals; repo stack 62/62 after the magic-byte fix.
+- New files: experiments/compare_drop.py, drop_revisions_detail.py, e18_drop_reeval.py,
+  check_openable.py + results_drop_compare.json, results_drop_revisions.json,
+  results_e18_drop_reeval.json, results_openable_drop2026_10.json. GTK1_DATA override added to
+  triage/prospective.py (default unchanged). Suite green.

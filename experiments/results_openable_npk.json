@@ -1,0 +1,270 @@
+{
+ "generated": "2026-10-24 20:41:46Z",
+ "root": "/Users/akm/Tsu Project/Датасет НПК",
+ "counts": {
+  "files": 37,
+  "reader_fail": 0,
+  "libreoffice_fail": null
+ },
+ "entries": [
+  {
+   "file": "Датасет НПК/2016/Основная труба (406-572 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2016/Основная труба (406-572 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2016/Отвод основной трубы (0 - 94 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2016/Отвод основной трубы (0 - 94 км)/Выявленные особенности.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2016/Отвод основной трубы (0 - 94 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2017/Основная труба (111,2-242 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2017/Основная труба (111,2-242 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2017/Основная труба (242-404 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2017/Основная труба (242-404 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2018/Отвод (0-14 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2018/Отвод (0-14 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Основная труба (0-110 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Основная труба (0-110 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (0-36км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (0-36км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (0-71 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (0-71 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (14-22 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2019/Отвод (14-22 км)/Поперечные сварные швы.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Основная труба (0-110 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Основная труба (0-110 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Основная труба (242-404 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Основная труба (242-404 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Отвод (0-10 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2020/Отвод (0-10 км)/Поперечные сварные швы.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Основная труба (572-714 км)/Аномалии.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Основная труба (572-714 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (0 - 3,8 км)/Аномалии_стар.xlsx",
+   "ext": ".xlsx",
+   "magic": "zip",
+   "reader_ok": true,
+   "reader": "openpyxl sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (0 - 3,8 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (0-21,7 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (0-21,7 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (3,8 - 5,4)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2022/Отвод (3,8 - 5,4)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=3"
+  },
+  {
+   "file": "Датасет НПК/2024/Отвод (0 - 91 км)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=2"
+  },
+  {
+   "file": "Датасет НПК/2024/Отвод (0 - 91 км)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=2"
+  },
+  {
+   "file": "Датасет НПК/2025/Основная труба (572-714)/Аномалии.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=2"
+  },
+  {
+   "file": "Датасет НПК/2025/Основная труба (572-714)/Поперечные сварные швы.xls",
+   "ext": ".xls",
+   "magic": "ole",
+   "reader_ok": true,
+   "reader": "xlrd sheets=2"
+  }
+ ]
+}

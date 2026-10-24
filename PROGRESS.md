@@ -1040,3 +1040,93 @@
   docs/MONDAY_ACCEPTANCE.md now treats steps 1-7 as a new dataset, not a delta. Old frozen
   numbers keep their history labels. No code change, nothing re-frozen.
 - The archive is still not in the workspace. The audit waits for the file.
+
+## 2026-10-25 — NPK archive acquired, opened, and ingested
+- `Датасет НПК.rar` downloaded from message `12704` (document id `5386680895254080196`,
+  73,762,132 bytes) with Telethon on the existing Web A DC2 session. The Chrome download
+  path failed at 0 bytes; the MTProto path completed and the sha256 is
+  `330ce420e9e75fff720705ebb7c4bf8773824ca691f7ce0ed281490299032933`.
+- `unar` extracted 37 files in 18 section folders (2016, 2017, 2018, 2019, 2020, 2022,
+  2024, 2025). Openability gate: 37/37 files open, 0 reader fails
+  (`experiments/results_openable_npk.json`). Structure inventory in
+  `experiments/results_inventory_npk.json`.
+- Tidy ingest `experiments/ingest_npk.py` produced 53,883 rows in
+  `outputs/npk/anomalies.csv` (git-ignored) and `experiments/results_npk_audit.json`.
+- Audit facts: depth max 85.0%, no >100% rows, no mm contamination; depth missing on
+  15,161 rows (28.1%), mostly weld anomalies; orientation missing on 49,652 rows (92.2%);
+  `Номер трубы` spans at most about 12 m per pipe; 8,724 rows share a distance with
+  another row in the same file. Top characters: Коррозия 27,540 (51.1%), Аномалия
+  кольцевого шва 18,583, Вмятина 2,403. Danger: (c) 51,732, (b) 1,672, (a) 431.
+- 2021 and 2023 are absent for every section. The 2016 branch file-creation stamp
+  `30.01.2023` is a decoy; the tool table starts on 15.06.2016.
+
+## 2026-10-25 — NPK pairs: one clean pair, three void, one suggestive
+- Five candidate pairs, frozen R1 machinery (depth ≥10%, pipe+2 m/0.5 m/1 h greedy
+  match, 100 m cells, B1). Results in `experiments/results_npk_pairs.json`.
+- Clean: `main572_2022_2025` (572–714 km). 567 positives, prevalence 0.4024, AP 0.7838,
+  base 0.4024, lift CI +0.3528…+0.4099, match 0.719, density ratio 1.009. R3 and R4
+  pass. P@20 20/20 (exact CI [0.8316, 1.0000]); P@50 49/50 ([0.8935, 0.9995]).
+- Suggestive only: `branch720_2016_2024` (720 mm branch). AP 0.7021, base 0.5011, lift CI
+  +0.1704…+0.2354, P@20 18/20, P@50 47/50. R4 passes; R3 fails (density ratio 4.610,
+  match 0.169). The top-20 exact CI lower is 0.6830, below 0.80.
+- Void: `main242_2017_2020` (PK2; pipe retention 8.9%, match 0.000, ratio 3.908, lift CI
+  −0.0016…+0.0077); `main110_2019_2020` (pipe retention 3.4%, match 0.000, ratio 2.498,
+  lift CI −0.0025…+0.0198); `branch720_2022_2024` (extent 0–21.7 vs 0–91 km, match
+  0.000, ratio 5.359).
+- Join gate: past-pipe retention is 96.2% for 2022→2025, 85.2% for 2016→2024, 8.9% for
+  2017→2020, 3.4% for 2019→2020, and 48.6% for 2022→2024. The frozen matcher requires
+  the same pipe number; the 2017/2019 pairs fail that condition.
+- Sensitivity (`experiments/results_npk_sensitivity.json`): clean pair AP 0.7838 / 0.5805
+  / 0.3605 at cut ≥10 / ≥12 / ≥15%; P@20 20/20 / 17/20 / 13/20. Corrosion-only cut ≥10
+  gives AP 0.7852, P@20 20/20, P@50 49/50. Boundary-cell exclusion leaves AP 0.7838.
+
+## 2026-10-25 — Charter assessment and docs for the new object
+- New `docs/DATASET_NPK.md`: archive identity, year grid, 18-section table, column map,
+  data-quality facts, join gate, pair inventory, exclusions, rebuild commands.
+- New `docs/CHARTER_ASSESSMENT_NPK.md`: the 80% target is met only in the scoped
+  retrospective PK1 sense (572–714 km, 2022→2025, cut ≥10%, top-20 20/20, top-50 49/50).
+  It is not met forward, on the branch, on PK2, or at cut ≥12/≥15 for top-20.
+- The new archive reproduces the old PK1 result: 567 vs 562 positives, prevalence 0.4024
+  vs 0.4011, AP 0.7838 vs 0.7795, top-20 20/20, top-50 49/50. This is a source re-export
+  of the same section and pair, not an independent sample. The archive adds no second
+  clean section; PK2 stays deferred.
+- README gets a scope-update note; `docs/PROSPECTIVE_RUNBOOK.md` points to the new card
+  and pair evaluator. Old frozen docs and research files stay unchanged. No raw data is
+  committed.
+
+## 2026-10-25 — Correction: NPK pair numbers after NaN-pipe drop
+- `experiments/npk_pairs.py` now drops rows with a missing `Номер трубы` in `frame()`, to
+  mirror the frozen `normalize()` pipe handling. The pair and sensitivity numbers in the
+  entries above were computed before this fix. They are superseded by this entry. This
+  entry does not rewrite the earlier audit history.
+- Clean pair `main572_2022_2025` corrected: 558 positives, prevalence 0.3960, AP 0.7778,
+  base 0.3960, lift CI +0.3517…+0.4109, match 0.7253, density ratio 1.001, P@20 20/20
+  (exact CI [0.8316, 1.0000]), P@50 48/50 ([0.8629, 0.9951]). R3 and R4 pass.
+- Sensitivity corrected: cut ≥12 AP 0.5710, P@20 17/20, P@50 41/50; cut ≥15 AP 0.3551,
+  P@20 12/20, P@50 26/50; corrosion-only AP 0.7792, P@20 20/20, P@50 48/50; boundary-cell
+  exclusion AP 0.7778, same top-K counts.
+- Branch `branch720_2016_2024` corrected: 446 positives, AP 0.6930, base 0.4978, lift CI
+  +0.1629…+0.2304, match 0.1703, ratio 4.572, P@20 18/20 ([0.6830, 0.9877]), P@50 46/50
+  ([0.8077, 0.9778]). R4 passes; R3 fails.
+- Void pairs corrected: `branch720_2022_2024` AP 0.5705, lift +0.0077…+0.0472, match
+  0.000, ratio 5.314; `main242_2017_2020` AP 0.1259, lift −0.0015…+0.0082, match 0.000,
+  ratio 4.032; `main110_2019_2020` AP 0.1370, lift −0.0025…+0.0196, match 0.000,
+  ratio 2.514.
+- The replication comparison is now 558 vs 562 old PK1 positives and AP 0.7778 vs 0.7795.
+  `docs/DATASET_NPK.md` and `docs/CHARTER_ASSESSMENT_NPK.md` carry the corrected values.
+  The verdict is unchanged: one clean pair, and the 80% claim stays scoped to 572–714 km,
+  2022→2025, cut ≥10%, top-20 and top-50.
+
+## 2026-10-25 — Follow-up: frame keeps NaN-depth rows to mirror normalize()
+- `experiments/npk_pairs.py` no longer drops NaN-depth rows in `frame()`. The frozen
+  `normalize()` keeps them and `features.build()` applies the depth cut. The clean pair and
+  the branch pair are unchanged. The two PK2 void pairs get a larger `kmax` because their
+  maximum-distance rows have no depth: `main242_2017_2020` AP 0.1216, base 0.1218, lift CI
+  −0.0014…+0.0085; `main110_2019_2020` AP 0.1352, base 0.1319, lift CI −0.0024…+0.0200.
+  Both stay void. The docs and result JSONs carry these values.
+
+## 2026-10-25 — Ingest column-match fix
+- `experiments/ingest_npk.py` now matches the longest source header first and maps one
+  source column to one tidy name. Before the fix, `Длина` also claimed `Длина трубы`, so
+  `length_mm` held pipe lengths. `length_mm` now holds `Длина, мм` and `pipe_len` holds
+  `Длина трубы, м`. The pair and sensitivity results are unchanged.

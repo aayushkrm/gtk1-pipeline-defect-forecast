@@ -2,6 +2,10 @@
 
 Use this procedure to generate a ranked 100 m-segment watchlist from a newly arrived VTD anomaly file. Use B1 past-count ranking only. You need no future labels. Scope covers ON + PK1 (December freeze; reviewer round 10).
 
+For the October 2026 archive (`Датасет НПК.rar`), use `docs/DATASET_NPK.md` for the data
+layout and `experiments/npk_pairs.py` for the completed-pair evaluation. The paths and
+section folders below describe the earlier tree. Do not mix the two trees.
+
 B1 model uses per-100 m cell count of past-survey corrosion rows with Depth ≥ 10%. It sets score = count / max-count. "New" everywhere below means newly-reported ≥ 10% row under pipe+2 m/0.5 m/1 h greedy match. This is an operational reporting definition. It is not physical corrosion prediction (docs/GUARDRAILS.md).
 
 ---

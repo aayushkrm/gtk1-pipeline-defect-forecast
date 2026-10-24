@@ -2,6 +2,12 @@
 
 [Читать на русском](README_RU.md)
 
+> **Scope update (2026-10-25).** The authoritative dataset is now `Датасет НПК.rar`
+> (October 2026). The six-section numbers below describe the earlier object and stay as
+> history. New object card: [`docs/DATASET_NPK.md`](docs/DATASET_NPK.md). Charter
+> assessment: [`docs/CHARTER_ASSESSMENT_NPK.md`](docs/CHARTER_ASSESSMENT_NPK.md).
+> Do not pool the two objects.
+
 ## The task
 
 Gazprom transgaz Tomsk inspects main gas pipelines with diagnostic tools that travel inside

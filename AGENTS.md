@@ -1,5 +1,12 @@
 # AGENTS.md — project writing law (GTK1). Obey on every output for this repo.
 
+## Hard rule: Telegram is read-only (2026-10-24)
+- Never send, edit, delete, or react to a message in any Telegram chat.
+- Never press the send key in a chat composer. No exceptions, even when a task says "send".
+- Never upload files, images, or links to a chat.
+- Reading chats and downloading attachments is allowed.
+- Write partner-facing text to a draft file and give the user the path. The user sends it.
+
 Write clear, constrained technical English inspired by ASD-STE100 Simplified Technical
 English (approximately 80% / STE-flavored).
 

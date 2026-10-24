@@ -19,6 +19,11 @@ additional sections. Work continues on current data until then.
 - Team chat, Wednesday 21.10 18:32: the customer said not to use the "выявленные особенности"
   table. The YN-2023 sheet that still fails XML parse is therefore out of scope, not a
   delivery blocker.
+- Answers received 24.10 21:07-21:09: the Tuesday file is deleted, use only the Wednesday
+  archive; 2021 and 2023 are absent for every section; the features table is out of use.
+- The Wednesday archive is a different pipeline from the October tree. Steps 1-7 build a new
+  dataset, not a delta. Do not pool, and do not present the old frozen numbers as results for
+  the new object.
 
 ## On arrival, verify in this order (report same day in chat)
 

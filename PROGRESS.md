@@ -1027,3 +1027,16 @@
   особенности" table. The YN-2023 sheet that still fails XML parse drops as a blocker; the
   file-level defect stays on record in docs/DROP_2026_10.md.
 - Nothing new on the partner disk since 22.10; "Анализ данных" still dated 7-8 October.
+
+## 2026-10-24 — Scope reset: the new archive is a different pipeline
+- Replies in the project chat 21:07-21:09: the Tuesday dataset is deleted ("много битых
+  файлов"), use only the Wednesday archive "Датасет НПК.rar"; 2021 and 2023 are absent for
+  every section; the "выявленные особенности" table is out of use (one 2016 folder on a
+  branch line, no modeling value).
+- Vlad: the set is one trunk pipeline plus branches; all earlier data "не имеют отношения к
+  той трубе" and must not be used. The October tree and its frozen recheck describe another
+  object.
+- Repo effect: scope-reset sections in docs/DROP_2026_10.md and docs/DATASET.md;
+  docs/MONDAY_ACCEPTANCE.md now treats steps 1-7 as a new dataset, not a delta. Old frozen
+  numbers keep their history labels. No code change, nothing re-frozen.
+- The archive is still not in the workspace. The audit waits for the file.

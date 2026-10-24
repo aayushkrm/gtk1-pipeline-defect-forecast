@@ -61,3 +61,8 @@ python3 experiments/evaluate_pair.py --section pk1 --past 2022 --future 2025
 Dense sections carry 27–40% positive cells (learnable); SRTO-1608 carries 6% (wide CIs);
 SRTO-1717 carries 13 positives (suggestive only, never training). Imbalance handling:
 none at training time (bootstrap resampling serves uncertainty intervals only).
+
+Scope reset (2026-10-24): the partner declared the new archive a different pipeline from the
+sections in this card. The counts and splits above describe the old object and stay frozen as
+history. Write the dataset card for the new object only after its audit. No pooling with this
+table is allowed.

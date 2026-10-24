@@ -4,6 +4,17 @@ Vlad, project chat: Tuesday drop delayed (colleague overload, part of staff away
 New date Monday. Requested and confirmed in flight: tool types, pipe characteristics,
 additional sections. Work continues on current data until then.
 
+## Status 2026-10-24
+
+- Re-issued Wednesday 21.10.2026 17:50 in the project chat as "Датасет НПК.rar" (70.3 MB).
+  Vlad: the 15.10 archive was partly damaged when saved from RedOS, integrity re-checked
+  before re-export, all earlier data to be deleted. Supersedes "Датасет ВТД.rar".
+- Not yet in the workspace, so steps 1-7 are still open. Save the file first.
+- Vlad, Tuesday 20.10: one trunk pipeline plus every branch line up to the distribution
+  stations; branch diameter and wall thickness differ; coverage 2016-2025 without 2021 and
+  2023. Our October tree holds 2021 and 2023 surveys, so read this claim per section at step 1.
+- Tool types and pipe characteristics were "still being compiled" on 15.10; not delivered.
+
 ## On arrival, verify in this order (report same day in chat)
 
 1. Inventory vs request: pipe characteristics files present? per-section tool lists present?

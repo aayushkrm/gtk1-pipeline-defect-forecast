@@ -996,3 +996,21 @@
   check_openable.py + results_drop_compare.json, results_drop_revisions.json,
   results_e18_drop_reeval.json, results_openable_drop2026_10.json. GTK1_DATA override added to
   triage/prospective.py (default unchanged). Suite green.
+
+## 2026-10-24 — Package re-issued on 21.10; partner-disk artifacts audited
+- Project chat: Vlad 21.10 17:50 sent "Датасет НПК.rar" (70.3 MB) and asked to delete all
+  earlier data; the 15.10 archive was partly damaged when saved from RedOS and was re-checked
+  before re-export. File is not in the workspace yet, so no audit has run.
+- Vlad 20.10: the set covers one trunk pipeline plus every branch line to the distribution
+  stations; branch diameter and wall thickness differ; coverage 2016-2025 without 2021, 2023.
+  The 2021/2023 exclusion disagrees with our October tree; treat it as a question, not a fact.
+- Workspace since 16.10: no new archive, no new section folders, no pipe or tool lists.
+- Partner Yandex disk (public folder) gained: "Роли\Обязанности.docx", "Установленные
+  задачи. 22.10.docx", "Недельные отчёты/{15-21} .10.2026.docx", recordings of the 15.10 and
+  22.10 calls, and "Программная инженерия/Приложение" (dashboard prototype).
+- Team merged table "ВсеДанныеАномалий.csv" (22.10, 25.1 MB, sha256 faac29c3...1060) read as
+  evidence only: 63,259 rows, 6 sections, 48 columns. Blocks clean use: depth units not
+  normalised (1,600 rows in mm inside "Глубина, %", 438 "% от t", 42 "% от t эквив.", 7
+  "% от Dn" with one -200.00), no 2023 rows, YN stops at 37.2 km against our 151.5 km, 5,863
+  duplicate pipe-distance keys covering 15,312 rows, Pf empty on 31,210 rows. Not a data
+  source for the frozen pipeline.

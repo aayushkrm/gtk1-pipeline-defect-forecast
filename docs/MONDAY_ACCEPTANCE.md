@@ -14,6 +14,11 @@ additional sections. Work continues on current data until then.
   stations; branch diameter and wall thickness differ; coverage 2016-2025 without 2021 and
   2023. Our October tree holds 2021 and 2023 surveys, so read this claim per section at step 1.
 - Tool types and pipe characteristics were "still being compiled" on 15.10; not delivered.
+- Evgeny, Wednesday 21.10 15:37: "new data were sent yesterday" (Tuesday 20.10). The project
+  chat shows no Tuesday attachment, so ask which file and channel before closing step 1.
+- Team chat, Wednesday 21.10 18:32: the customer said not to use the "выявленные особенности"
+  table. The YN-2023 sheet that still fails XML parse is therefore out of scope, not a
+  delivery blocker.
 
 ## On arrival, verify in this order (report same day in chat)
 

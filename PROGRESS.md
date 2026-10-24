@@ -1014,3 +1014,16 @@
   "% от Dn" with one -200.00), no 2023 rows, YN stops at 37.2 km against our 151.5 km, 5,863
   duplicate pipe-distance keys covering 15,312 rows, Pf empty on 31,210 rows. Not a data
   source for the frozen pipeline.
+
+## 2026-10-24 — Chat re-check: arrival ambiguity, features table out of scope
+- Both chats re-read to their top. No message after Thursday 22.10 09:49 in the project chat.
+  In "Газопровод" the only later item is Evgeny today 16:33: Vlad's answer on the site visit
+  (Tomsk or Yurga linear production directorate, compressor station, museum, training ground,
+  VR/AR studios, possibly digital warehouse, dispatch service, analysis centre). No data in it.
+- Arrival ambiguity: Evgeny wrote on Wednesday 21.10 15:37 that new data came "yesterday"
+  (Tuesday 20.10), but the project chat holds no Tuesday attachment; the re-export "Датасет
+  НПК.rar" was posted Wednesday 17:50. Ask which file and channel came on Tuesday.
+- Scope: mug 21.10 18:32 relayed that the customer said not to use the "выявленные
+  особенности" table. The YN-2023 sheet that still fails XML parse drops as a blocker; the
+  file-level defect stays on record in docs/DROP_2026_10.md.
+- Nothing new on the partner disk since 22.10; "Анализ данных" still dated 7-8 October.

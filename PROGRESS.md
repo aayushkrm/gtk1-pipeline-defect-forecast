@@ -1145,3 +1145,13 @@
   `graphify-out/graph.html`, and `graphify-out/manifest.json`. Caches, `cost.json`, and
   machine-specific dotfiles stay local.
 - `bash run_tests.sh` passes. Forecast results and frozen documents are unchanged.
+
+## 2026-10-25 — Graphify install consolidated to the global skill
+- Installed the global OpenCode skill with `graphify install --platform opencode`. The
+  skill is at `~/.config/opencode/skills/graphify/`.
+- Added `~/.config/opencode/commands/graphify.md` so `/graphify` is a real OpenCode
+  command in this workspace.
+- Removed the duplicate project skill `.opencode/skills/graphify/`. The global skill is
+  the single copy. Kept the project plugin, the `AGENTS.md` rule, and `graphify-out/`.
+- Removed the local graph cache and machine-specific dotfiles. The tracked graph is
+  unchanged.

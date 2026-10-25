@@ -1130,3 +1130,18 @@
   source column to one tidy name. Before the fix, `Длина` also claimed `Длина трубы`, so
   `length_mm` held pipe lengths. `length_mm` now holds `Длина, мм` and `pipe_len` holds
   `Длина трубы, м`. The pair and sensitivity results are unchanged.
+
+## 2026-10-25 — Graphify project setup and code graph
+- Installed `graphifyy` 0.9.95 with `uv tool install graphifyy --python 3.12`. The system
+  Python is 3.9.6; Graphify needs 3.10 or later.
+- Installed the project-scoped OpenCode integration with `graphify install --project
+  --platform opencode`. It writes `.opencode/skills/graphify/`,
+  `.opencode/plugins/graphify.js`, and the `## graphify` section in `AGENTS.md`.
+- Built a code-only graph with `graphify extract . --code-only`: 537 nodes, 1,589 links,
+  27 communities. The run used AST extraction only and no LLM tokens.
+- Ran `graphify cluster-only . --no-label` because no LLM backend is configured. Community
+  names stay as placeholders.
+- Committed `graphify-out/graph.json`, `graphify-out/GRAPH_REPORT.md`,
+  `graphify-out/graph.html`, and `graphify-out/manifest.json`. Caches, `cost.json`, and
+  machine-specific dotfiles stay local.
+- `bash run_tests.sh` passes. Forecast results and frozen documents are unchanged.

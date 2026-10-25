@@ -21,6 +21,11 @@ __pycache__/
 *.log
 .DS_Store
 
+# Graphify local state. The graph, report, HTML, and manifest are tracked.
+graphify-out/cache/
+graphify-out/cost.json
+graphify-out/.graphify_*
+
 # Raw tabular dumps inside experiments are excluded; summaries allowed
 experiments/*.csv
 experiments/*.parquet
